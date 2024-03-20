@@ -37,6 +37,14 @@ class MLP:
         delta = y_hat - class_label #Easy derivative calc - should I be using the other softmax deriv, dont think so
         return loss, delta
 
+    # CrossEL Looks good. Only thing I was wondering is if it would be on the softmax of y_hat?
+    # Tested with both but couldn't see a difference in the loss.
+    # def criterion_CrossEL(self, y, y_hat):
+    #     #y_hat = self.softmax(y_hat)
+    #     loss = -np.sum(y * np.log(y_hat))
+    #     delta = y_hat - y
+    #     return loss, delta
+
     def backward(self, delta):
         delta = self.layers[-1].backward(delta,output_layer=True)
         for layer in reversed(self.layers[:-1]):
@@ -69,23 +77,30 @@ class MLP:
     #         print(to_return[k])
     #     return to_return
             
-    def fit(self,X,y,learning_rate=0.1, epochs=30, batch_size=1): #this is normal when using 1. which is expected
+    def fit(self,X,y, X_val, y_val,learning_rate=0.1, epochs=30, batch_size=1): #this is normal when using 1. which is expected
         X=np.array(X)
         y=np.array(y)
+        if X_val is not None:
+            X_val = np.array(X_val)
+            y_val = np.array(y_val)
+            validation_loss = np.zeros((epochs))
+            
         MiniBatches = MiniBatch(X, y, batch_size)
         epoch_loss = np.zeros((epochs))
-
+        
         #print(MiniBatches.no_of_batches)
         #print(MiniBatches.batch_size)
 
         for k in range(epochs): 
             MiniBatches.create_batches()
             loss_minibatch = np.zeros((epochs, MiniBatches.no_of_batches))
+            
             for j in range(0, MiniBatches.no_of_batches): #for each batch - dont need this coz batches are randomised!
                 X_minibatch = MiniBatches.batches_x[j]
                 y_minibatch = MiniBatches.batches_y[j]
                 loss = np.zeros((MiniBatches.batch_size))
                 delta_minibatch = np.zeros((MiniBatches.batch_size, 10))
+                
                 for i in range(0, MiniBatches.batch_size): #for all in batch
                     y_hat = self.forward(X_minibatch[i]) # should be the same
                     loss[i], delta_minibatch[i] = self.criterion_CrossEL(y_minibatch[i], y_hat) #check loss function - ind loss for training example
@@ -96,11 +111,21 @@ class MLP:
                 # print(sum(delta_minibatch)/len(delta_minibatch))
 
                 self.backward(sum(delta_minibatch)/len(delta_minibatch)) #Think this is good, but dont know why loss increases
-
                 self.update(learning_rate)
                 loss_minibatch[k][j] = np.mean(loss)
+                
+            # Calculate the validation loss if validation data is provided
+            if X_val is not None:
+                val_loss = np.zeros((X_val.shape[0]))
+                for i in range(0, X_val.shape[0]):
+                    y_hat = self.forward(X_val[i])
+                    val_loss[i], _ = self.criterion_CrossEL(y_val[i], y_hat)
+                validation_loss[k] = np.mean(val_loss)
+                print("Val loss = {:.5f}\t".format(validation_loss[k]), end='')
+                
             epoch_loss[k] = np.mean(loss_minibatch[k])
-            print(epoch_loss[k])
+            print("Train loss = {:.5f}".format(epoch_loss[k]))
+
         return epoch_loss
 
     def predict(self, x):
