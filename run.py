@@ -29,7 +29,7 @@ def class_to_one_hot(class_label, num_classes):
 #----------------------------------------------------------------------------------------
 
 # Set numpy seed for reproducibility
-np.random.seed(0)
+np.random.seed(1234)
 
 #Make one hot labels
 one_hot_labels = np.zeros((50000, 10))
@@ -37,7 +37,7 @@ for index, label in enumerate(labels):
     one_hot_labels[index] = class_to_one_hot(label, 10)
 
 #Multi class classifer - fitting the neural network
-nn = MLP([128, 64, 32, 10], [None, 'ReLU', 'ReLU', 'softmax']) #can adjust hidden layers and activation functions
+nn = MLP([128, 64, 32, 10], [None, 'ReLU', 'ReLU', 'softmax'], use_batch_norm=True) #can adjust hidden layers and activation functions
 
 ## Create training and validation sets from randomly shuffled data
 indices = np.random.permutation(input.shape[0])
@@ -45,12 +45,18 @@ training_idx, val_idx = indices[:40000], indices[40000:]
 input_training, input_val = input[training_idx,:], input[val_idx,:]
 labels_training, labels_val = one_hot_labels[training_idx,:], one_hot_labels[val_idx,:]
 
+input_training = np.array(input_training)
+labels_training = np.array(labels_training)
+input_val = np.array(input_val)
+labels_val = np.array(labels_val)
+
 # Set numpy seed for reproducibility again before the fit if you want to compare results
 # np.random.seed(0)
 
 # Can pass None in for validation data if we dont want to use it
-CEL = nn.fit(input_training, labels_training, input_val, labels_val, learning_rate=0.001, epochs=5, batch_size=1) #can change parameters
-print('Final training loss:%f'%CEL[-1])
+CEL = nn.fit(input_training, labels_training, input_val, labels_val, learning_rate=0.0005, epochs=10, batch_size=2) #can change parameters
+# CEL = nn.fit(input_training, labels_training, input_val, labels_val, learning_rate=0.001, epochs=5, batch_size=1) #can change parameters
+# print('Final training loss:%f'%CEL[-1])
 
 #Check training accuracy
 output = nn.predict(input_training)

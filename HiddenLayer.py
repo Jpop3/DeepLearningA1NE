@@ -47,7 +47,7 @@ class HiddenLayer(object):
             lin_output if self.activation is None
             else self.activation(lin_output) #Activation function
         )
-        return self.outputD
+        return self.output
         
 
     def backward(self, delta, output_layer=False): #Backwards propagation
@@ -66,8 +66,9 @@ class HiddenLayer(object):
         if self.use_batch_norm:
             delta, self.grad_gamma, self.grad_beta = self.batch_norm_backward(delta, self.bn_cache)
         
+        # print(delta.shape, self.W.shape, self.input.shape, self.input.T.shape)
         # Calculate the gradients of the weights and biases
-        self.grad_W = np.dot(self.input.T, delta)
+        self.grad_W = np.atleast_2d(self.input).T.dot(np.atleast_2d(delta))
         self.grad_b = np.sum(delta, axis=0) # Sum the gradients along the batch axis
         
         delta = delta.dot(self.W.T) * (self.activation_deriv(self.input) if self.activation_deriv else 1)
