@@ -42,17 +42,17 @@ class MLP:
         exp_values_sum = np.sum(exp_values) # Computing sum of these values
         return exp_values/exp_values_sum # Returing the softmax output.
         
-    def criterion_CrossEL(self, y, y_hat, epsilon=1e-9):
-        loss = -np.sum(y * np.log(y_hat + epsilon)) / y.shape[0] # Adding a small value to avoid log(0)
-        delta = y_hat - y
-        return loss, delta
-    
-    # def criterion_CrossEL(self, y, y_hat): #Nup, well defined functions
-    #     loss = 0
-    #     for j in range(len(y_hat)):
-    #         loss += (-1 * y[j] * np.log(y_hat[j])) # y is the one-hot-vector
-    #     delta = y_hat - y #Easy derivative calc - should I be using the other softmax deriv, dont think so
+    # def criterion_CrossEL(self, y, y_hat, epsilon=1e-9):
+    #     loss = -np.sum(y * np.log(y_hat + epsilon)) / y.shape[0] # Adding a small value to avoid log(0)
+    #     delta = y_hat - y
     #     return loss, delta
+    
+    def criterion_CrossEL(self, y, y_hat): #Nup, well defined functions - https://datascience.stackexchange.com/questions/20296/cross-entropy-loss-explanation
+        loss = 0
+        for j in range(len(y_hat)):
+            loss += (-1 * y[j] * np.log(y_hat[j])) # y is the one-hot-vector
+        delta = y_hat - y #Easy derivative calc - should I be using the other softmax deriv, dont think so
+        return loss, delta
 
     # CrossEL Looks good. Only thing I was wondering is if it would be on the softmax of y_hat?
     # Tested with both but couldn't see a difference in the loss.
@@ -164,8 +164,8 @@ class MLP:
             if X_val is not None and y_val is not None:
                 val_loss = np.zeros((X_val.shape[0]))
                 for i in range(len(X_val)):
-                    y_hat_val = self.forward(X_val[i])
-                    val_loss[i], _ = self.criterion_CrossEL(y_val[i], y_hat)
+                    y_hat_val = self.forward(X_val[i]) #y_hat_val is not being used!!!
+                    val_loss[i], _ = self.criterion_CrossEL(y_val[i], y_hat_val) 
                 validation_loss[k] = np.mean(val_loss)
                 
                 print(f"Epoch {k+1}/{epochs}, Train loss: {epoch_loss[k]:.5f}, Val loss: {validation_loss[k]:.5f}")
