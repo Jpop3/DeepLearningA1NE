@@ -1,9 +1,11 @@
 import numpy as np
 from Activation import *
+from AdamOptimiser import *
 
 class HiddenLayer(object):
     def __init__(self, n_in, n_out, activation_last_layer=None, \
-        activation=None, W=None, b=None, use_batch_norm=False): #inputs for the hidden layer
+        activation=None, W=None, b=None, use_batch_norm=False, \
+        optimiser = None): #inputs for the hidden layer
         
         self.input=None
         self.activation=Activation(activation).fn
@@ -33,6 +35,13 @@ class HiddenLayer(object):
         if self.use_batch_norm:
             self.grad_gamma = np.zeros(self.gamma.shape)
             self.grad_beta = np.zeros(self.beta.shape)
+
+        self.W_optimiser = optimiser
+        self.b_optimiser = optimiser
+
+    def set_optimiser(self, learning_rate):
+        self.W_optimiser = AdamOptimiser(learning_rate)
+        self.b_optimiser = AdamOptimiser(learning_rate)
 
     def forward(self, input):
         self.input=input

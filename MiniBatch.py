@@ -1,6 +1,6 @@
 import numpy as np
 
-class MiniBatch:
+class MiniBatch(object):
 
     def __init__(self, train_x, train_y, batch_size):
         self.train_x = train_x

@@ -9,11 +9,11 @@ from MLP import *
 
 # print(sum(x)/len(x))
 
-input = np.load('../Assignment1-Dataset/train_data.npy')
+input = np.load('Assignment1-Dataset/train_data.npy')
 
 #print(input.shape) #50000 vectors of size 128.
 
-labels = np.load('../Assignment1-Dataset/train_label.npy')
+labels = np.load('Assignment1-Dataset/train_label.npy')
 #print(labels.shape) #1 label for each vector of size 128. - Need to convert this to a vector of [0,0,0,1,0, ...]
 
 #https://chat.openai.com/c/83234cc9-7d6b-43eb-8d9e-c87b68e5e125
@@ -35,3 +35,6 @@ for index, label in enumerate(labels):
 
 # print(one_hot_labels)
 # print(one_hot_labels.shape)
+
+x = np.array([0.0, 4.0, 6.0])
+print(x * 0.98)

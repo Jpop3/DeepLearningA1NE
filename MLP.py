@@ -2,9 +2,10 @@ import numpy as np
 from Activation import *
 from HiddenLayer import *
 from MiniBatch import *
+from AdamOptimiser import *
 
 class MLP:
-    def __init__(self, layers, activation=[None,'tanh','tanh', 'softmax'], use_batch_norm=False):
+    def __init__(self, layers, activation=[None,'tanh','tanh', 'softmax'], use_batch_norm=False, weight_decay=1e-5):
         self.layers=[]
         self.params=[]
         self.activation=activation
@@ -73,46 +74,40 @@ class MLP:
         for layer in reversed(self.layers[:-1]):
             delta=layer.backward(delta)
 
-    def update(self, lr):
+    def update(self, lr, weight_decay):
         """
         Updates the weights and biases of all layers, including batch normalization parameters if used.
 
         Parameters:
         - lr (float): Learning rate.
+        - weight_decay (float): Weight decay rate for neural network weights and bias
+        - Adam (AdamOptimiser): AdamOptimiser object
         """
+        
+        # do adams optimiser stuff
         for layer in self.layers:
-            layer.W -= lr * layer.grad_W
-            #layer.W = layer.W * 0.98 #weight decay for weights
-            layer.b -= lr * layer.grad_b
-            #layer.b = layer.b * 0.98 #weight decay for bias
+            #print(layer.W)
+            if layer.W_optimiser != None and layer.b_optimiser != None:
+                layer.W = layer.W - layer.W_optimiser.update(layer.grad_W)
+                #print(layer.W)
+                layer.b = layer.b - layer.b_optimiser.update(layer.grad_b)
+            else:
+                layer.W -= lr * layer.grad_W
+                layer.b -= lr * layer.grad_b
+        else:
+            for layer in self.layers:
+                layer.W -= lr * layer.grad_W
+                #layer.W -= layer.W * weight_decay
+                layer.b -= lr * layer.grad_b
+                #layer.b -= layer.b * weight_decay
+                
+                if layer.use_batch_norm: # not sure if needed if using batch norm
+                    layer.gamma -= lr * layer.grad_gamma
+                    layer.gamma -= layer.gamma * weight_decay
+                    layer.beta -= lr * layer.grad_beta
+                    layer.beta -= layer.beta * weight_decay
             
-            if layer.use_batch_norm:
-                layer.gamma -= lr * layer.grad_gamma
-                layer.beta -= lr * layer.grad_beta
-
-    #Training
-    # def fit(self, X, y, learning_rate=0.1, epochs=100):
-    #     X=np.array(X)
-    #     y=np.array(y)
-    #     to_return = np.zeros(epochs)
-
-    #     for k in range(epochs): 
-    #         loss=np.zeros(X.shape[0])
-    #         for it in range(X.shape[0]): #Mini-batch training should be done here
-    #             i = np.random.randint(X.shape[0]) #taking a random input from the training data
-
-    #             y_hat = self.forward(X[i]) #use input i!
-
-    #             loss[it], delta = self.criterion_CrossEL(y[i], y_hat) #input class labels, and prediced class labels
-
-    #             self.backward(delta)
-    #             y
-    #             self.update(learning_rate)
-    #         to_return[k] = np.mean(loss)
-    #         print(to_return[k])
-    #     return to_return
-            
-    def fit(self,X,y, X_val, y_val,learning_rate=0.1, epochs=30, batch_size=32): #this is normal when using 1. which is expected
+    def fit(self,X,y, X_val, y_val,learning_rate=0.1, epochs=30, batch_size=32, weight_decay=1e-5, optimiser='Adam'): #this is normal when using 1. which is expected
         """
         Trains the MLP using the provided training data.
 
@@ -124,16 +119,17 @@ class MLP:
         - learning_rate (float): Learning rate for the optimizer.
         - epochs (int): Number of epochs to train for.
         - batch_size (int): Size of the mini-batches for training.
+        - weight_decay (float) : Weight decay rate for neural network weights and bias
         """
+        if optimiser == 'Adam':
+            for layer in self.layers:
+                layer.set_optimiser(learning_rate)
         
         if X_val is not None and y_val is not None:
             validation_loss = np.zeros((epochs))
             
         MiniBatches = MiniBatch(X, y, batch_size)
         epoch_loss = np.zeros((epochs))
-        
-        #print(MiniBatches.no_of_batches)
-        #print(MiniBatches.batch_size)
 
         for k in range(epochs): 
             MiniBatches.create_batches()
@@ -147,16 +143,11 @@ class MLP:
                 
                 for i in range(0, MiniBatches.batch_size): #for all in batch
                     y_hat = self.forward(X_minibatch[i]) # should be the same
-                    loss[i], delta_minibatch[i] = self.criterion_CrossEL(y_minibatch[i], y_hat) #check loss function - ind loss for training example
-                #     print("delta_minibatch[i] = {}".format(delta_minibatch[i]))
-                #     print("loss = {}".format(loss[i]))
-                #     print("y = {}".format(y_minibatch[i]))
-                #     print("y_hat = {}".format(y_hat)) #exploding weights problem??
-                # print(sum(delta_minibatch)/len(delta_minibatch))
+                    loss[i], delta_minibatch[i] = self.criterion_CrossEL(y_minibatch[i], y_hat) 
 
                 delta_avg = sum(delta_minibatch)/len(delta_minibatch)
                 self.backward(delta_avg) #Think this is good, but dont know why loss increases
-                self.update(learning_rate)
+                self.update(learning_rate, weight_decay)
                 loss_minibatch[k][j] = np.mean(loss)
                 
             # Calculate the average loss for the epoch
