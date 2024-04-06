@@ -82,7 +82,9 @@ class MLP:
         """
         for layer in self.layers:
             layer.W -= lr * layer.grad_W
+            #layer.W = layer.W * 0.98 #weight decay for weights
             layer.b -= lr * layer.grad_b
+            #layer.b = layer.b * 0.98 #weight decay for bias
             
             if layer.use_batch_norm:
                 layer.gamma -= lr * layer.grad_gamma
