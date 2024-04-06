@@ -5,24 +5,24 @@ from MLP import *
 input = np.load('Assignment1-Dataset/train_data.npy')
 labels = np.load('Assignment1-Dataset/train_label.npy')
 
-
 #https://chat.openai.com/c/83234cc9-7d6b-43eb-8d9e-c87b68e5e125
 def class_to_one_hot(class_label, num_classes):
     one_hot = np.zeros(num_classes)
     one_hot[class_label] = 1.
     return one_hot
 
+
 TRAINING_SIZE = 40000
 # Set numpy seed for reproducibility
 np.random.seed(0)
 
 SETUP = {
-    'epochs': 10,
+    'epochs': 5,
     'lr': 0.001,
     'bn': True,
-    'batch_size': 4,
-    'hidden_layers': [128, 128, 64, 32, 10],
-    'activations': [None, 'ReLU', 'ReLU', 'ReLU', 'softmax'],
+    'batch_size': 2,
+    'hidden_layers': [128, 64, 32, 10],
+    'activations': [None, 'ReLU', 'ReLU', 'softmax'],
     'input_size': 128
 }
 
@@ -52,7 +52,7 @@ nn = MLP(SETUP['hidden_layers'], SETUP['activations'], SETUP['bn'])
 CEL = nn.fit(input_training, labels_training, input_val, labels_val, learning_rate=SETUP['lr'], epochs=SETUP['epochs'], batch_size=SETUP['batch_size'])
 
 
-###### Results ######
+    ###### Results ######
 PRINT_RESULTS = True
 
 ### Training performance ###
