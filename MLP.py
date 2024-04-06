@@ -81,31 +81,24 @@ class MLP:
         Parameters:
         - lr (float): Learning rate.
         - weight_decay (float): Weight decay rate for neural network weights and bias
-        - Adam (AdamOptimiser): AdamOptimiser object
         """
         
         # do adams optimiser stuff
         for layer in self.layers:
-            #print(layer.W)
             if layer.W_optimiser != None and layer.b_optimiser != None:
-                layer.W = layer.W - layer.W_optimiser.update(layer.grad_W)
-                #print(layer.W)
+                layer.W = layer.W - layer.W_optimiser.update(layer.grad_W) #Could even generalise this by setting a default optimiser
                 layer.b = layer.b - layer.b_optimiser.update(layer.grad_b)
             else:
                 layer.W -= lr * layer.grad_W
+                layer.W -= layer.W * weight_decay #currently doesnt weight decay in adam's
                 layer.b -= lr * layer.grad_b
-        else:
-            for layer in self.layers:
-                layer.W -= lr * layer.grad_W
-                #layer.W -= layer.W * weight_decay
-                layer.b -= lr * layer.grad_b
-                #layer.b -= layer.b * weight_decay
-                
+                layer.b -= layer.b * weight_decay
                 if layer.use_batch_norm: # not sure if needed if using batch norm
                     layer.gamma -= lr * layer.grad_gamma
                     layer.gamma -= layer.gamma * weight_decay
                     layer.beta -= lr * layer.grad_beta
                     layer.beta -= layer.beta * weight_decay
+            
             
     def fit(self,X,y, X_val, y_val,learning_rate=0.1, epochs=30, batch_size=32, weight_decay=1e-5, optimiser='Adam'): #this is normal when using 1. which is expected
         """

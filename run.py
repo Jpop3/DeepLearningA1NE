@@ -19,14 +19,14 @@ np.random.seed(0)
 
 SETUP = {
     'epochs': 20,
-    'lr': 0.0001,
+    'lr': 0.003,
     'bn': False,
     'batch_size': 2,
     'hidden_layers': [128, 64, 32, 10],
     'activations': [None, 'ReLU', 'ReLU', 'softmax'],
     'input_size': 128,
     'weight_decay': 0,
-    'optimiser': 'Adam'
+    'optimiser': None
 }
 
 #Make one hot labels
