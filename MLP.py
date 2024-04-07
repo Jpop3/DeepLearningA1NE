@@ -5,16 +5,16 @@ from MiniBatch import *
 from AdamOptimiser import *
 
 class MLP:
-    def __init__(self, layers, activation=[None,'tanh','tanh', 'softmax'], use_batch_norm=False, weight_decay=1e-5):
+    def __init__(self, layers, activation=[None,'tanh','tanh', 'softmax'], use_batch_norm=False, weight_decay=1e-5, dropout_rate=[0.0, 0.0, 0.0, 0.0]):
         self.layers=[]
         self.params=[]
         self.activation=activation
         for i in range(len(layers)-1):
-            self.layers.append(HiddenLayer(layers[i],layers[i+1],activation[i],activation[i+1], use_batch_norm=use_batch_norm))
+            self.layers.append(HiddenLayer(layers[i],layers[i+1],activation[i],activation[i+1], use_batch_norm=use_batch_norm, dropout_rate=dropout_rate[i]))
 
-    def forward(self,input):
+    def forward(self, input, train=False):
         for layer in self.layers: 
-            output=layer.forward(input)
+            output=layer.forward(input, train=train)
             input=output
         return output
 
@@ -43,17 +43,17 @@ class MLP:
         exp_values_sum = np.sum(exp_values) # Computing sum of these values
         return exp_values/exp_values_sum # Returing the softmax output.
         
-    # def criterion_CrossEL(self, y, y_hat, epsilon=1e-9):
-    #     loss = -np.sum(y * np.log(y_hat + epsilon)) / y.shape[0] # Adding a small value to avoid log(0)
-    #     delta = y_hat - y
-    #     return loss, delta
-    
-    def criterion_CrossEL(self, y, y_hat): #Nup, well defined functions - https://datascience.stackexchange.com/questions/20296/cross-entropy-loss-explanation
-        loss = 0
-        for j in range(len(y_hat)):
-            loss += (-1 * y[j] * np.log(y_hat[j])) # y is the one-hot-vector
-        delta = y_hat - y #Easy derivative calc - should I be using the other softmax deriv, dont think so
+    def criterion_CrossEL(self, y, y_hat, epsilon=1e-9):
+        loss = -np.sum(y * np.log(y_hat + epsilon)) # Adding a small value to avoid log(0)
+        delta = y_hat - y
         return loss, delta
+    
+    # def criterion_CrossEL(self, y, y_hat): #Nup, well defined functions - https://datascience.stackexchange.com/questions/20296/cross-entropy-loss-explanation
+    #     loss = 0
+    #     for j in range(len(y_hat)):
+    #         loss += (-1 * y[j] * np.log(y_hat[j])) # y is the one-hot-vector
+    #     delta = y_hat - y #Easy derivative calc - should I be using the other softmax deriv, dont think so
+    #     return loss, delta
 
     # CrossEL Looks good. Only thing I was wondering is if it would be on the softmax of y_hat?
     # Tested with both but couldn't see a difference in the loss.
@@ -134,8 +134,8 @@ class MLP:
                 loss = np.zeros((MiniBatches.batch_size))
                 delta_minibatch = np.zeros((MiniBatches.batch_size, 10))
                 
-                for i in range(0, MiniBatches.batch_size): #for all in batch
-                    y_hat = self.forward(X_minibatch[i]) # should be the same
+                for i in range(0, MiniBatches.batch_size): # for all in batch
+                    y_hat = self.forward(X_minibatch[i], train=True) # apply forward pass (training mode for dropout)
                     loss[i], delta_minibatch[i] = self.criterion_CrossEL(y_minibatch[i], y_hat) 
 
                 delta_avg = sum(delta_minibatch)/len(delta_minibatch)
@@ -150,7 +150,7 @@ class MLP:
             if X_val is not None and y_val is not None:
                 val_loss = np.zeros((X_val.shape[0]))
                 for i in range(len(X_val)):
-                    y_hat_val = self.forward(X_val[i]) #y_hat_val is not being used!!!
+                    y_hat_val = self.forward(X_val[i], train=False) # y_hat_val is not being used!!! (dropout off during validation inference)
                     val_loss[i], _ = self.criterion_CrossEL(y_val[i], y_hat_val) 
                 validation_loss[k] = np.mean(val_loss)
                 
@@ -164,5 +164,5 @@ class MLP:
         x = np.array(x)
         output = np.zeros((x.shape[0],10))
         for i in range(len(x)):
-            output[i] = self.forward(x[i])
+            output[i] = self.forward(x[i], train=False) # dropout off during inference
         return np.array(output)
