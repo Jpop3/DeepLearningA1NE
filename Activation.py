@@ -22,8 +22,9 @@ class Activation(object):
     
     def softmax(self, x):
         exp_values = np.exp(x) # Computing element wise exponential value
-        exp_values_sum = np.sum(exp_values) # Computing sum of these values
-        return exp_values/exp_values_sum # Returing the softmax output.
+        # exp_values_sum = np.sum(exp_values) # Computing sum of these values
+        exp_values_sum = np.sum(exp_values, axis=-1, keepdims=True) # For Batch Computation - axis=-1 row-wise
+        return exp_values / exp_values_sum # Returing the softmax output.
     
     def softmax_deriv(self, a): #from a website - needed??
         jacobian_m = np.diag(a)

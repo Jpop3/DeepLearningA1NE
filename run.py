@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from MLP import *
 import matplotlib.pyplot as plt
+import time
 
 
 input = np.load('Assignment1-Dataset/train_data.npy')
@@ -19,16 +20,17 @@ TRAINING_SIZE = 40000
 np.random.seed(0)
 
 SETUP = {
-    'epochs': 20,
+    'epochs': 5,
     'lr': 0.001,
-    'bn': True,
-    'batch_size': 2,
-    'dropout_rate': [0, 0, 0, 0], # dropout rate for each layer: eg. [0.1, 0.2, 0.4, 0]
+    'bn': False,
+    'batch_size': 32,
+    'dropout_rate': [0, 0.2, 0.1, 0], # dropout rate for each layer: eg. [0.1, 0.2, 0.4, 0]
     'hidden_layers': [128, 64, 32, 10],
     'activations': [None, 'ReLU', 'ReLU', 'softmax'],
     'input_size': 128,
     'weight_decay': 0,
-    'optimiser': 'Adam'
+    'optimiser': 'Adam',
+    'early_stopping': (10, 0.001)
 }
 #Issue, how to allow users to specific params for adams, momentum etc
 
@@ -53,9 +55,19 @@ input_val = np.array(input_val)
 labels_val = np.array(labels_val)
 
 ##### Model #####
-
 nn = MLP(SETUP['hidden_layers'], SETUP['activations'], SETUP['bn'], SETUP['weight_decay'], SETUP['dropout_rate'])
-CEL = nn.fit(input_training, labels_training, input_val, labels_val, learning_rate=SETUP['lr'], epochs=SETUP['epochs'], batch_size=SETUP['batch_size'], optimiser=SETUP['optimiser'])
+
+# Start timer for training
+start = time.time()
+print('Training model...')
+CEL = nn.fit(input_training, labels_training, input_val, labels_val, learning_rate=SETUP['lr'], epochs=SETUP['epochs'], batch_size=SETUP['batch_size'], optimiser=SETUP['optimiser'], early_stopping=SETUP['early_stopping'])
+
+# End timer for training
+end = time.time()
+print(f'Training took {end - start} seconds')
+
+print(CEL)
+
 
 ###### Results ######
 PRINT_RESULTS = True
@@ -101,7 +113,8 @@ for index, array in enumerate(output_test):
    
    
 if PRINT_RESULTS:
-    print('Setup:', SETUP)
+    print('Results from setup:')
+    print(SETUP)
     # Print confusion matrix as a table and integers
     if PRINT_CONFUSION_MATRIX:
         print('\nConfusion matrix for train data:')

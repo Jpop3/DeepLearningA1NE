@@ -2,6 +2,7 @@ import numpy as np
 from Activation import *
 from HiddenLayer import *
 from MiniBatch import *
+import time
 
 class MLP:
     def __init__(self, layers, activation=[None,'tanh','tanh', 'softmax'], use_batch_norm=False, weight_decay=1e-5, dropout_rate=[0.0, 0.0, 0.0, 0.0]):
@@ -47,20 +48,14 @@ class MLP:
         delta = y_hat - y
         return loss, delta
     
-    # def criterion_CrossEL(self, y, y_hat): #Nup, well defined functions - https://datascience.stackexchange.com/questions/20296/cross-entropy-loss-explanation
-    #     loss = 0
-    #     for j in range(len(y_hat)):
-    #         loss += (-1 * y[j] * np.log(y_hat[j])) # y is the one-hot-vector
-    #     delta = y_hat - y #Easy derivative calc - should I be using the other softmax deriv, dont think so
-    #     return loss, delta
-
-    # CrossEL Looks good. Only thing I was wondering is if it would be on the softmax of y_hat?
-    # Tested with both but couldn't see a difference in the loss.
-    # def criterion_CrossEL(self, y, y_hat):
-    #     #y_hat = self.softmax(y_hat)
-    #     loss = -np.sum(y * np.log(y_hat))
-    #     delta = y_hat - y
-    #     return loss, delta
+    def criterion_CrossEL_Batch(self, y, y_hat, epsilon=1e-9):
+        # Compute the cross-entropy loss for each instance in the batch
+        loss = -np.sum(y * np.log(y_hat + epsilon), axis=-1) # axis=-1 row-wise
+        # Calculate the average loss over the batch
+        average_loss = np.mean(loss)
+        # Compute the gradient of the loss w.r.t. the predictions (y_hat)
+        delta = y_hat - y
+        return average_loss, delta
 
     def backward(self, delta):
         """
@@ -95,7 +90,7 @@ class MLP:
                 layer.beta -= layer.beta * weight_decay
             
             
-    def fit(self,X,y, X_val, y_val,learning_rate=0.1, epochs=30, batch_size=32, weight_decay=1e-5, optimiser='Adam'): #this is normal when using 1. which is expected
+    def fit(self,X,y, X_val, y_val,learning_rate=0.1, epochs=30, batch_size=32, weight_decay=1e-5, optimiser='Adam', early_stopping=(10, 0.001)): #this is normal when using 1. which is expected
         """
         Trains the MLP using the provided training data.
 
@@ -113,8 +108,13 @@ class MLP:
         for layer in self.layers:
             layer.set_optimiser(optimiser, learning_rate)
         
+        # Initialize the validation loss array if validation data is provided
         if X_val is not None and y_val is not None:
             validation_loss = np.zeros((epochs))
+            
+        # Early stopping object
+        if early_stopping is not None and X_val is not None and y_val is not None:
+            stop_early = self.EarlyStopping(*early_stopping)
             
         MiniBatches = MiniBatch(X, y, batch_size)
         epoch_loss = np.zeros((epochs))
@@ -129,12 +129,18 @@ class MLP:
                 loss = np.zeros((MiniBatches.batch_size))
                 delta_minibatch = np.zeros((MiniBatches.batch_size, 10))
                 
-                for i in range(0, MiniBatches.batch_size): # for all in batch
-                    y_hat = self.forward(X_minibatch[i], train=True) # apply forward pass (training mode for dropout)
-                    loss[i], delta_minibatch[i] = self.criterion_CrossEL(y_minibatch[i], y_hat) 
+                ######## Update to use vectorized implementation ########
+                # for i in range(0, MiniBatches.batch_size): # for all in batch
+                #    y_hat = self.forward(X_minibatch[i], train=True) # apply forward pass (training mode for dropout)
+                #    loss[i], delta_minibatch[i] = self.criterion_CrossEL(y_minibatch[i], y_hat)
+                # delta_avg = sum(delta_minibatch)/len(delta_minibatch)
+                # self.backward(delta_avg) #Think this is good, but dont know why loss increases
 
-                delta_avg = sum(delta_minibatch)/len(delta_minibatch)
-                self.backward(delta_avg) #Think this is good, but dont know why loss increases
+                # Perform foward pass on the minibatch using vectorized implementation
+                y_hat = self.forward(X_minibatch, train=True)
+                loss, delta_minibatch = self.criterion_CrossEL_Batch(y_minibatch, y_hat)
+                self.backward(delta_minibatch)
+                
                 self.update(learning_rate, weight_decay)
                 loss_minibatch[k][j] = np.mean(loss)
                 
@@ -143,15 +149,28 @@ class MLP:
             
             # Calculate the validation loss if validation data is provided
             if X_val is not None and y_val is not None:
-                val_loss = np.zeros((X_val.shape[0]))
-                for i in range(len(X_val)):
-                    y_hat_val = self.forward(X_val[i], train=False) # y_hat_val is not being used!!! (dropout off during validation inference)
-                    val_loss[i], _ = self.criterion_CrossEL(y_val[i], y_hat_val) 
-                validation_loss[k] = np.mean(val_loss)
+                val_pred = self.predict(X_val)
+                val_loss = np.mean([self.criterion_CrossEL(y_val[i], val_pred[i])[0] for i in range(len(X_val))])
+                validation_loss[k] = val_loss
                 
-                print(f"Epoch {k+1}/{epochs}, Train loss: {epoch_loss[k]:.5f}, Val loss: {validation_loss[k]:.5f}")
+                # Check for early stopping
+                if early_stopping is not None:
+                    stop_early(val_loss)
+                    if stop_early.should_stop:
+                        print(f"Early stopping at epoch {k+1}, validation loss: {val_loss:.5f}, best validation loss: {stop_early.best_score:.5f}")
+                        break
+                
+                print(f"Epoch {k+1}/{epochs}, Train loss: {epoch_loss[k]:.5f}, Val loss: {val_loss:.5f}")
             else:
                 print(f"Epoch {k+1}/{epochs}, Train loss: {epoch_loss[k]:.5f}")
+        
+        if validation_loss is not None:
+            if early_stopping is not None and stop_early.should_stop:
+                return epoch_loss[:k+1], validation_loss[:k+1], k+1
+            else:
+                return epoch_loss, validation_loss, None
+        else:
+            return epoch_loss, None, None
 
         return epoch_loss, validation_loss if validation_loss is not None else None
 
@@ -165,12 +184,9 @@ class MLP:
     
     # Inner class for early stopping
     class EarlyStopping:
-        # lr=0.001, batch_size=16, dropout_rate=0.5
-        # lr=0.001, batch_size=32, dropout_rate=0.5
-        def __init__(self, patience=5, min_delta=0):
+        def __init__(self, patience=10, min_delta=0.001):
             """
             Initializes the EarlyStopping instance.
-            
             Parameters:
                 patience (int): The number of epochs to wait for improvement before stopping the training.
                 min_delta (float): The minimum change in the monitored metric to qualify as an improvement.
@@ -181,15 +197,14 @@ class MLP:
             self.epochs_without_improvement = 0
             self.should_stop = False
 
-        def __call__(self, current_val_accuracy):
+        def __call__(self, current_val_loss):
             """
             Call method to update the early stopping logic.
-            
             Parameters:
-                current_val_accuracy (float): The current epoch's validation accuracy.
+                current_val_loss (float): The current epoch's validation loss.
             """
-            if self.best_score is None or current_val_accuracy > self.best_score + self.min_delta:
-                self.best_score = current_val_accuracy
+            if self.best_score is None or current_val_loss < self.best_score - self.min_delta:
+                self.best_score = current_val_loss
                 self.epochs_without_improvement = 0
             else:
                 self.epochs_without_improvement += 1
