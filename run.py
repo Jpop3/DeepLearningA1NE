@@ -19,9 +19,15 @@ np.random.seed(0)
 
 SETUP = {
     'epochs': 20,
+<<<<<<< HEAD
     'lr': 0.001,
     'bn': False,
+=======
+    'lr': 0.003,
+    'bn': True,
+>>>>>>> e09135c2f7eab6f48796011d10297b7f47c8be1f
     'batch_size': 2,
+    'dropout_rate': [0.1, 0.2, 0.4, 0], # dropout rate for each layer: eg. [0.1, 0.2, 0.4, 0]
     'hidden_layers': [128, 64, 32, 10],
     'activations': [None, 'ReLU', 'ReLU', 'softmax'],
     'input_size': 128,
@@ -52,7 +58,7 @@ labels_val = np.array(labels_val)
 
 ##### Model #####
 
-nn = MLP(SETUP['hidden_layers'], SETUP['activations'], SETUP['bn'], SETUP['weight_decay'])
+nn = MLP(SETUP['hidden_layers'], SETUP['activations'], SETUP['bn'], SETUP['weight_decay'], SETUP['dropout_rate'])
 CEL = nn.fit(input_training, labels_training, input_val, labels_val, learning_rate=SETUP['lr'], epochs=SETUP['epochs'], batch_size=SETUP['batch_size'], optimiser=SETUP['optimiser'])
 
 ###### Results ######
@@ -99,10 +105,11 @@ for index, array in enumerate(output_test):
    
 if PRINT_RESULTS:
     print('Setup:', SETUP)
+    # Print confusion matrix as a table and integers
     print('\nConfusion matrix for train data:')
-    print(confusion_matrix_train)
+    print(pd.DataFrame(confusion_matrix_train.astype(int)))
     print('\nConfusion matrix for test data:')
-    print(confusion_matrix_test)
+    print(pd.DataFrame(confusion_matrix_test.astype(int)))
 
 
 print(f'Train accuracy: {correct_train_count/TRAINING_SIZE} (count {correct_train_count} of {TRAINING_SIZE})') # train accuracy

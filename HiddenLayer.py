@@ -4,13 +4,18 @@ from Optimiser import *
 
 class HiddenLayer(object):
     def __init__(self, n_in, n_out, activation_last_layer=None, \
-        activation=None, W=None, b=None, use_batch_norm=False): #inputs for the hidden layer
+        activation=None, W=None, b=None, use_batch_norm=False, \
+        dropout_rate=0.0): #inputs for the hidden layer
         
         self.input=None
         self.activation=Activation(activation).fn
         self.activation_deriv=None 
         if activation_last_layer:
             self.activation_deriv=Activation(activation_last_layer).fn_deriv #set the derivative
+            
+        # Dropout rate and mask
+        self.dropout_rate = dropout_rate
+        self.mask = None
 
         # Batch normalization stuff
         self.use_batch_norm = use_batch_norm
@@ -49,14 +54,18 @@ class HiddenLayer(object):
             self.W_optimiser = Optimiser(learning_rate)
             self.b_optimiser = Optimiser(learning_rate)
 
-    def forward(self, input):
+    def forward(self, input, train=False):
         self.input=input
         lin_output = np.dot(input, self.W) + self.b #Basic dot product
         
         # Batch normalization step
         if self.use_batch_norm:
             lin_output, self.bn_cache = self.batch_norm_forward(lin_output, self.gamma, self.beta)
-            
+        
+        # Dropout step applied if training and dropout rate > 0
+        if train and self.dropout_rate > 0:
+            self.mask = (np.random.rand(*lin_output.shape) > self.dropout_rate) / (1.0 - self.dropout_rate)
+            lin_output *= self.mask
         
         self.output = (
             lin_output if self.activation is None
@@ -73,6 +82,10 @@ class HiddenLayer(object):
             delta (ndarray): Gradient of the loss with respect to the output of the layer
             output_layer (bool): Whether the layer is the output layer or not
         '''
+        # Apply dropout mask
+        if self.mask is not None:
+            delta *= self.mask
+        
         # Backpropagate the gradient through the activation function
         if self.activation_deriv and not output_layer:
             delta = delta * self.activation_deriv(self.output) # Derivative of the activation function
