@@ -679,10 +679,233 @@ Test accuracy: 0.4214 (count 4214 of 10000)
 
 #################################################################
 
+Epoch 1/20, Train loss: 2.30279, Val loss: 2.25869
+Epoch 2/20, Train loss: 2.20669, Val loss: 2.06537
+Epoch 3/20, Train loss: 2.12320, Val loss: 2.04469
+Epoch 4/20, Train loss: 2.08911, Val loss: 2.03065
+Epoch 5/20, Train loss: 2.05450, Val loss: 1.94949
+Epoch 6/20, Train loss: 2.03361, Val loss: 1.90807
+Epoch 7/20, Train loss: 2.03958, Val loss: 1.97789
+Epoch 8/20, Train loss: 2.02246, Val loss: 1.90858
+Epoch 9/20, Train loss: 2.02536, Val loss: 1.96642
+Epoch 10/20, Train loss: 2.00822, Val loss: 1.89283
+Epoch 11/20, Train loss: 1.99603, Val loss: 1.87841
+Epoch 12/20, Train loss: 1.99984, Val loss: 1.89988
+Epoch 13/20, Train loss: 1.98524, Val loss: 1.87985
+Epoch 14/20, Train loss: 1.98795, Val loss: 1.90902
+Epoch 15/20, Train loss: 2.00152, Val loss: 1.87843
+Epoch 16/20, Train loss: 1.97921, Val loss: 1.90449
+Epoch 17/20, Train loss: 1.98883, Val loss: 1.86363
+Epoch 18/20, Train loss: 1.98040, Val loss: 1.90059
+Epoch 19/20, Train loss: 1.97990, Val loss: 1.89510
+Epoch 20/20, Train loss: 1.99010, Val loss: 1.89180
+Setup: {'epochs': 20, 'lr': 0.005, 'bn': True, 'batch_size': 4, 'dropout_rate': [0.1, 0.25, 0.4, 0], 'hidden_layers': [128, 64, 32, 10], 'activations': [None, 'ReLU', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': None}
+
+Train accuracy: 0.37945 (count 15178 of 40000)
+Test accuracy: 0.3695 (count 3695 of 10000)
+
+#################################################################
+
+Epoch 20/20, Train loss: 2.03735, Val loss: 1.78147
+Setup: {'epochs': 20, 'lr': 0.005, 'bn': True, 'batch_size': 4, 'dropout_rate': [0.1, 0.2, 0.4, 0], 'hidden_layers': [128, 64, 32, 10], 'activations': [None, 'ReLU', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'Adam'}
+
+Train accuracy: 0.413775 (count 16551 of 40000)
+Test accuracy: 0.3997 (count 3997 of 10000)
+
+#################################################################
+
+## Decent model, mess with dropout rate and batch size
+
+Epoch 1/20, Train loss: 2.26558, Val loss: 1.93011
+Epoch 2/20, Train loss: 2.12456, Val loss: 1.87064
+Epoch 3/20, Train loss: 2.08564, Val loss: 1.84123
+Epoch 4/20, Train loss: 2.05125, Val loss: 1.79996
+Epoch 5/20, Train loss: 2.02935, Val loss: 1.77603
+Epoch 6/20, Train loss: 2.01397, Val loss: 1.73954
+Epoch 7/20, Train loss: 2.01048, Val loss: 1.73492
+Epoch 8/20, Train loss: 1.99841, Val loss: 1.71725
+Epoch 9/20, Train loss: 1.97220, Val loss: 1.71929
+Epoch 10/20, Train loss: 1.96910, Val loss: 1.70574
+Epoch 11/20, Train loss: 1.95912, Val loss: 1.68486
+Epoch 12/20, Train loss: 1.96282, Val loss: 1.68939
+Epoch 13/20, Train loss: 1.94760, Val loss: 1.68865
+Epoch 14/20, Train loss: 1.94222, Val loss: 1.67134
+Epoch 15/20, Train loss: 1.94082, Val loss: 1.66971
+Epoch 16/20, Train loss: 1.93143, Val loss: 1.67197
+Epoch 17/20, Train loss: 1.92553, Val loss: 1.64691
+Epoch 18/20, Train loss: 1.92340, Val loss: 1.65116
+Epoch 19/20, Train loss: 1.93305, Val loss: 1.62987
+Epoch 20/20, Train loss: 1.92902, Val loss: 1.62125
+Setup: {'epochs': 20, 'lr': 0.008, 'bn': True, 'batch_size': 2, 'dropout_rate': [0.1, 0.2, 0.4, 0], 'hidden_layers': [128, 64, 32, 10], 'activations': [None, 'ReLU', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'Adam'}
+
+Train accuracy: 0.49245 (count 19698 of 40000)
+Test accuracy: 0.4664 (count 4664 of 10000)
+
+#################################################################
+
+## Decent model
+
+Epoch 1/20, Train loss: 2.22194, Val loss: 1.91962
+Epoch 2/20, Train loss: 2.09606, Val loss: 1.82056
+Epoch 3/20, Train loss: 2.03550, Val loss: 1.79718
+Epoch 4/20, Train loss: 2.01301, Val loss: 1.75496
+Epoch 5/20, Train loss: 1.98685, Val loss: 1.73682
+Epoch 6/20, Train loss: 1.95710, Val loss: 1.71123
+Epoch 7/20, Train loss: 1.95664, Val loss: 1.67576
+Epoch 8/20, Train loss: 1.93342, Val loss: 1.67814
+Epoch 9/20, Train loss: 1.91866, Val loss: 1.63575
+Epoch 10/20, Train loss: 1.91681, Val loss: 1.64878
+Epoch 11/20, Train loss: 1.90215, Val loss: 1.62832
+Epoch 12/20, Train loss: 1.89308, Val loss: 1.60842
+Epoch 13/20, Train loss: 1.88057, Val loss: 1.60003
+Epoch 14/20, Train loss: 1.86021, Val loss: 1.59514
+Epoch 15/20, Train loss: 1.87004, Val loss: 1.59637
+Epoch 16/20, Train loss: 1.85564, Val loss: 1.58080
+Epoch 17/20, Train loss: 1.85532, Val loss: 1.56586
+Epoch 18/20, Train loss: 1.85683, Val loss: 1.56477
+Epoch 19/20, Train loss: 1.83908, Val loss: 1.55881
+Epoch 20/20, Train loss: 1.85080, Val loss: 1.55665
+
+Setup: {'epochs': 20, 'lr': 0.008, 'bn': True, 'batch_size': 2, 'dropout_rate': [0.1, 0.2, 0.4, 0], 'hidden_layers': [128, 128, 64, 10], 'activations': [None, 'ReLU', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'Adam'}
+Train accuracy: 0.534375 (count 21375 of 40000)
+Test accuracy: 0.4969 (count 4969 of 10000)
+
+#################################################################
+
+Epoch 1/20, Train loss: 2.35439, Val loss: 2.11166
+Epoch 2/20, Train loss: 2.13399, Val loss: 1.95131
+Epoch 3/20, Train loss: 2.08278, Val loss: 1.90087
+Epoch 4/20, Train loss: 2.03552, Val loss: 1.86781
+Epoch 5/20, Train loss: 1.98244, Val loss: 1.84716
+Epoch 6/20, Train loss: 1.97593, Val loss: 1.83352
+Epoch 7/20, Train loss: 1.97276, Val loss: 1.79713
+Epoch 8/20, Train loss: 1.94283, Val loss: 1.78037
+Epoch 9/20, Train loss: 1.92307, Val loss: 1.76046
+Epoch 10/20, Train loss: 1.90741, Val loss: 1.75449
+Epoch 11/20, Train loss: 1.89364, Val loss: 1.72471
+Epoch 12/20, Train loss: 1.89549, Val loss: 1.71190
+Epoch 13/20, Train loss: 1.86977, Val loss: 1.71400
+Epoch 14/20, Train loss: 1.86474, Val loss: 1.70334
+Epoch 15/20, Train loss: 1.85972, Val loss: 1.68046
+Epoch 16/20, Train loss: 1.86229, Val loss: 1.68575
+Epoch 17/20, Train loss: 1.84402, Val loss: 1.67121
+Epoch 18/20, Train loss: 1.84884, Val loss: 1.67204
+Epoch 19/20, Train loss: 1.82371, Val loss: 1.65433
+Epoch 20/20, Train loss: 1.82837, Val loss: 1.64468
+Setup: {'epochs': 20, 'lr': 0.008, 'bn': True, 'batch_size': 4, 'dropout_rate': [0.05, 0.15, 0.3, 0], 'hidden_layers': [128, 96, 48, 10], 'activations': [None, 'ReLU', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'Adam'}        
+Train accuracy: 0.461825 (count 18473 of 40000)
+Test accuracy: 0.4427 (count 4427 of 10000)
+
+#################################################################
+
+## Decent setup, improved with further epochs
+
+Epoch 1/20, Train loss: 2.12095, Val loss: 1.87852
+Epoch 2/20, Train loss: 1.97665, Val loss: 1.76078
+Epoch 3/20, Train loss: 1.90800, Val loss: 1.72301
+Epoch 4/20, Train loss: 1.89339, Val loss: 1.69592
+Epoch 5/20, Train loss: 1.85359, Val loss: 1.65195
+Epoch 6/20, Train loss: 1.83356, Val loss: 1.63099
+Epoch 7/20, Train loss: 1.80997, Val loss: 1.62062
+Epoch 8/20, Train loss: 1.79940, Val loss: 1.60157
+Epoch 9/20, Train loss: 1.78451, Val loss: 1.58358
+Epoch 10/20, Train loss: 1.76730, Val loss: 1.57392
+Epoch 11/20, Train loss: 1.76029, Val loss: 1.56658
+Epoch 12/20, Train loss: 1.74808, Val loss: 1.55107
+Epoch 13/20, Train loss: 1.74123, Val loss: 1.54719
+Epoch 14/20, Train loss: 1.73207, Val loss: 1.54296
+Epoch 15/20, Train loss: 1.72302, Val loss: 1.52872
+Epoch 16/20, Train loss: 1.72021, Val loss: 1.53721
+Epoch 17/20, Train loss: 1.71191, Val loss: 1.52167
+Epoch 18/20, Train loss: 1.69788, Val loss: 1.50864
+Epoch 19/20, Train loss: 1.69868, Val loss: 1.51001
+Epoch 20/20, Train loss: 1.69980, Val loss: 1.49851
+Setup: {'epochs': 20, 'lr': 0.01, 'bn': True, 'batch_size': 2, 'dropout_rate': [0.05, 0.15, 0.3, 0], 'hidden_layers': [128, 96, 48, 10], 'activations': [None, 'ReLU', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'Adam'}
+Train accuracy: 0.547525 (count 21901 of 40000)
+Test accuracy: 0.498 (count 4980 of 10000)
 
 
+#################################################################
+
+Epoch 1/20, Train loss: 2.38561, Val loss: 1.95952
+Epoch 2/20, Train loss: 2.09537, Val loss: 1.83450
+Epoch 3/20, Train loss: 2.00702, Val loss: 1.78291
+Epoch 4/20, Train loss: 1.96382, Val loss: 1.74693
+Epoch 5/20, Train loss: 1.92431, Val loss: 1.71146
+Epoch 6/20, Train loss: 1.90111, Val loss: 1.69183
+Epoch 7/20, Train loss: 1.87847, Val loss: 1.67262
+Epoch 8/20, Train loss: 1.86237, Val loss: 1.65039
+Epoch 9/20, Train loss: 1.84747, Val loss: 1.64053
+Epoch 10/20, Train loss: 1.82962, Val loss: 1.62516
+Epoch 11/20, Train loss: 1.81780, Val loss: 1.61452
+Epoch 12/20, Train loss: 1.81471, Val loss: 1.60920
+Epoch 13/20, Train loss: 1.80107, Val loss: 1.60103
+Epoch 14/20, Train loss: 1.78981, Val loss: 1.59490
+Epoch 15/20, Train loss: 1.78294, Val loss: 1.58998
+Epoch 16/20, Train loss: 1.78044, Val loss: 1.59430
+Epoch 17/20, Train loss: 1.76953, Val loss: 1.58053
+Epoch 18/20, Train loss: 1.75646, Val loss: 1.56860
+Epoch 19/20, Train loss: 1.75022, Val loss: 1.56253
+Epoch 20/20, Train loss: 1.75649, Val loss: 1.55882
+Setup: {'epochs': 20, 'lr': 0.0001, 'bn': True, 'batch_size': 2, 'dropout_rate': [0.05, 0.15, 0.3, 0], 'hidden_layers': [128, 96, 48, 10], 'activations': [None, 'ReLU', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'Adam'}
+Train accuracy: 0.5172 (count 20688 of 40000)
+Test accuracy: 0.4798 (count 4798 of 10000)
+
+#################################################################
+
+Epoch 1/20, Train loss: 2.29005, Val loss: 2.07476
+Epoch 2/20, Train loss: 2.15777, Val loss: 1.96638
+Epoch 3/20, Train loss: 2.10967, Val loss: 1.88706
+Epoch 4/20, Train loss: 2.06093, Val loss: 1.82756
+Epoch 5/20, Train loss: 2.03885, Val loss: 1.80356
+Epoch 6/20, Train loss: 2.02805, Val loss: 1.78271
+Epoch 7/20, Train loss: 2.01450, Val loss: 1.75189
+Epoch 8/20, Train loss: 1.99677, Val loss: 1.74923
+Epoch 9/20, Train loss: 1.97597, Val loss: 1.71139
+Epoch 10/20, Train loss: 1.95630, Val loss: 1.70987
+Epoch 11/20, Train loss: 1.95522, Val loss: 1.68970
+Epoch 12/20, Train loss: 1.94317, Val loss: 1.68580
+Epoch 13/20, Train loss: 1.94157, Val loss: 1.67069
+Epoch 14/20, Train loss: 1.93965, Val loss: 1.65085
+Epoch 15/20, Train loss: 1.91533, Val loss: 1.65230
+Epoch 16/20, Train loss: 1.91140, Val loss: 1.65959
+Epoch 17/20, Train loss: 1.90055, Val loss: 1.62316
+Epoch 18/20, Train loss: 1.90692, Val loss: 1.63073
+Epoch 19/20, Train loss: 1.90373, Val loss: 1.61639
+Epoch 20/20, Train loss: 1.89041, Val loss: 1.60410
+Setup: {'epochs': 20, 'lr': 0.01, 'bn': True, 'batch_size': 2, 'dropout_rate': [0.05, 0.15, 0.2, 0.4, 0], 'hidden_layers': [128, 96, 32, 64, 10], 'activations': [None, 'ReLU', 'ReLU', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'Adam'}
+Train accuracy: 0.4961 (count 19844 of 40000)
+Test accuracy: 0.4682 (count 4682 of 10000)
+
+#################################################################
+
+Epoch 1/20, Train loss: 2.18514, Val loss: 1.94386
+Epoch 2/20, Train loss: 2.00048, Val loss: 1.83556
+Epoch 3/20, Train loss: 1.92365, Val loss: 1.78829
+Epoch 4/20, Train loss: 1.89763, Val loss: 1.74598
+Epoch 5/20, Train loss: 1.85667, Val loss: 1.71870
+Epoch 6/20, Train loss: 1.83731, Val loss: 1.68345
+Epoch 7/20, Train loss: 1.81433, Val loss: 1.68628
+Epoch 8/20, Train loss: 1.79715, Val loss: 1.65385
+Epoch 9/20, Train loss: 1.77616, Val loss: 1.62460
+Epoch 10/20, Train loss: 1.75489, Val loss: 1.61349
+Epoch 11/20, Train loss: 1.75274, Val loss: 1.60346
+Epoch 12/20, Train loss: 1.74151, Val loss: 1.59184
+Epoch 13/20, Train loss: 1.72424, Val loss: 1.57696
+Epoch 14/20, Train loss: 1.70879, Val loss: 1.57424
+Epoch 15/20, Train loss: 1.69876, Val loss: 1.56871
+Epoch 16/20, Train loss: 1.68675, Val loss: 1.54569
+Epoch 17/20, Train loss: 1.68772, Val loss: 1.54390
+Epoch 18/20, Train loss: 1.67869, Val loss: 1.54504
+Epoch 19/20, Train loss: 1.66910, Val loss: 1.53938
+Epoch 20/20, Train loss: 1.65798, Val loss: 1.52978
+Setup: {'epochs': 20, 'lr': 0.01, 'bn': True, 'batch_size': 2, 'dropout_rate': [0.05, 0.15, 0.3, 0.2, 0], 'hidden_layers': [128, 96, 64, 32, 10], 'activations': [None, 'ReLU', 'ReLU', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'Adam'}
+Train accuracy: 0.527525 (count 21101 of 40000)
+Test accuracy: 0.4845 (count 4845 of 10000)
 
 
 Key observations -
 - Adams optimisers likes a much lower learning rate (0.0001) !! - Need to also check with seb that it is implemented correctly, ends up getting a good validation loss. Needed to have the optimiser made for each hidden layer.
 - Issues, not replicating Seb's results! May have stuffed up the updates
+
+- Dropout per layer seems to be the best, but slows the training convergence down. Need to test with more epochs

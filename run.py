@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from MLP import *
+import matplotlib.pyplot as plt
 
 
 input = np.load('Assignment1-Dataset/train_data.npy')
@@ -18,16 +19,16 @@ TRAINING_SIZE = 40000
 np.random.seed(0)
 
 SETUP = {
-    'epochs': 20,
-    'lr': 0.003,
+    'epochs': 50,
+    'lr': 0.001,
     'bn': True,
     'batch_size': 2,
-    'dropout_rate': [0.1, 0.2, 0.4, 0], # dropout rate for each layer: eg. [0.1, 0.2, 0.4, 0]
-    'hidden_layers': [128, 64, 32, 10],
+    'dropout_rate': [0.05, 0.3, 0.2, 0], # dropout rate for each layer: eg. [0.1, 0.2, 0.4, 0]
+    'hidden_layers': [128, 96, 64, 10],
     'activations': [None, 'ReLU', 'ReLU', 'softmax'],
     'input_size': 128,
-    'weight_decay': 0,
-    'optimiser': None
+    'weight_decay': 0, # 1e-5 1e-7
+    'optimiser': 'Adam'
 }
 
 #Make one hot labels
@@ -57,6 +58,7 @@ CEL = nn.fit(input_training, labels_training, input_val, labels_val, learning_ra
 
 ###### Results ######
 PRINT_RESULTS = True
+PRINT_CONFUSION_MATRIX = False
 
 ### Training performance ###
 # Training accuracy
@@ -101,14 +103,25 @@ for index, array in enumerate(output_test):
 if PRINT_RESULTS:
     print('Setup:', SETUP)
     # Print confusion matrix as a table and integers
-    print('\nConfusion matrix for train data:')
-    print(pd.DataFrame(confusion_matrix_train.astype(int)))
-    print('\nConfusion matrix for test data:')
-    print(pd.DataFrame(confusion_matrix_test.astype(int)))
+    if PRINT_CONFUSION_MATRIX:
+        print('\nConfusion matrix for train data:')
+        print(pd.DataFrame(confusion_matrix_train.astype(int)))
+        print('\nConfusion matrix for test data:')
+        print(pd.DataFrame(confusion_matrix_test.astype(int)))
 
 
 print(f'Train accuracy: {correct_train_count/TRAINING_SIZE} (count {correct_train_count} of {TRAINING_SIZE})') # train accuracy
 print(f'Test accuracy: {correct_test_count/10000} (count {correct_test_count} of {10000})') # test accuracy
+
+
+# Print a training and validation loss graph
+plt.plot(CEL[0], label='Train loss')
+plt.plot(CEL[1], label='Val loss')
+plt.legend()
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.title('Training and Validation Loss')
+plt.show()
 
 # Seed 0
 # 'input_size': 128, 'hidden_layers': [128, 64, 32, 10], 'activations': [None, 'ReLU', 'ReLU', 'softmax'], 'bn': True,  'lr': 0.001, 'epochs': 5, 'batch_size': 2

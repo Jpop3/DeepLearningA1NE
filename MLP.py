@@ -166,3 +166,37 @@ class MLP:
         for i in range(len(x)):
             output[i] = self.forward(x[i], train=False) # dropout off during inference
         return np.array(output)
+    
+    
+    # Inner class for early stopping
+    class EarlyStopping:
+        # lr=0.001, batch_size=16, dropout_rate=0.5
+        # lr=0.001, batch_size=32, dropout_rate=0.5
+        def __init__(self, patience=5, min_delta=0):
+            """
+            Initializes the EarlyStopping instance.
+            
+            Parameters:
+                patience (int): The number of epochs to wait for improvement before stopping the training.
+                min_delta (float): The minimum change in the monitored metric to qualify as an improvement.
+            """
+            self.patience = patience
+            self.min_delta = min_delta
+            self.best_score = None
+            self.epochs_without_improvement = 0
+            self.should_stop = False
+
+        def __call__(self, current_val_accuracy):
+            """
+            Call method to update the early stopping logic.
+            
+            Parameters:
+                current_val_accuracy (float): The current epoch's validation accuracy.
+            """
+            if self.best_score is None or current_val_accuracy > self.best_score + self.min_delta:
+                self.best_score = current_val_accuracy
+                self.epochs_without_improvement = 0
+            else:
+                self.epochs_without_improvement += 1
+                if self.epochs_without_improvement >= self.patience:
+                    self.should_stop = True
