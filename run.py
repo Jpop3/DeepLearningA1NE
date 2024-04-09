@@ -19,20 +19,15 @@ np.random.seed(0)
 
 SETUP = {
     'epochs': 20,
-<<<<<<< HEAD
     'lr': 0.001,
-    'bn': False,
-=======
-    'lr': 0.003,
     'bn': True,
->>>>>>> e09135c2f7eab6f48796011d10297b7f47c8be1f
     'batch_size': 2,
-    'dropout_rate': [0.1, 0.2, 0.4, 0], # dropout rate for each layer: eg. [0.1, 0.2, 0.4, 0]
+    'dropout_rate': [0, 0, 0, 0], # dropout rate for each layer: eg. [0.1, 0.2, 0.4, 0]
     'hidden_layers': [128, 64, 32, 10],
     'activations': [None, 'ReLU', 'ReLU', 'softmax'],
     'input_size': 128,
     'weight_decay': 0,
-    'optimiser': 'Momentum'
+    'optimiser': 'Adam'
 }
 #Issue, how to allow users to specific params for adams, momentum etc
 
