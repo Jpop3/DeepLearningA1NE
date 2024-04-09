@@ -1,6 +1,7 @@
 import numpy as np
+from Optimiser import *
 
-class AdamOptimiser(object):
+class AdamOptimiser(Optimiser):
 
     def __init__(self, lr, beta1=0.9, beta2=0.999, epsilon=1e-8):
         """
@@ -11,6 +12,7 @@ class AdamOptimiser(object):
         - beta1 (float): decay factor for momentum usually 0.9
         - beta2 (float): decay factor for infinity norm usually 0.999
         """
+        super().__init__(lr)
         self.beta1 = beta1
         self.beta2 = beta2
         self.t = 0
@@ -19,7 +21,6 @@ class AdamOptimiser(object):
         self.m = 0
         self.v_hat = 0
         self.m_hat = 0
-        self.lr = lr
         self.epsilon = epsilon
 
     def update(self, layer_grad):

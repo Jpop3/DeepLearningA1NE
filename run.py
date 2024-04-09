@@ -19,15 +19,16 @@ np.random.seed(0)
 
 SETUP = {
     'epochs': 20,
-    'lr': 0.003,
+    'lr': 0.001,
     'bn': False,
     'batch_size': 2,
     'hidden_layers': [128, 64, 32, 10],
     'activations': [None, 'ReLU', 'ReLU', 'softmax'],
     'input_size': 128,
     'weight_decay': 0,
-    'optimiser': None
+    'optimiser': 'Momentum'
 }
+#Issue, how to allow users to specific params for adams, momentum etc
 
 #Make one hot labels
 one_hot_labels = np.zeros((50000, 10))
@@ -73,7 +74,6 @@ for index, array in enumerate(output_train):
     actual = np.argmax(labels_training[index])
     confusion_matrix_train[actual][predicted] += 1
 
-
 ### Test performance ###
 input_test = np.load('Assignment1-Dataset/test_data.npy') #Load datasets
 labels_test = np.load('Assignment1-Dataset/test_label.npy') #Load datasets
@@ -107,31 +107,3 @@ if PRINT_RESULTS:
 
 print(f'Train accuracy: {correct_train_count/TRAINING_SIZE} (count {correct_train_count} of {TRAINING_SIZE})') # train accuracy
 print(f'Test accuracy: {correct_test_count/10000} (count {correct_test_count} of {10000})') # test accuracy
-
-# Seed 0
-# 'input_size': 128, 'hidden_layers': [128, 64, 32, 10], 'activations': [None, 'ReLU', 'ReLU', 'softmax'], 'bn': True,  'lr': 0.001, 'epochs': 5, 'batch_size': 2
-# Epoch 1/5, Train loss: 2.12096, Val loss: 1.96318
-# Epoch 2/5, Train loss: 1.84372, Val loss: 1.82901
-# Epoch 3/5, Train loss: 1.74219, Val loss: 1.77627
-# Epoch 4/5, Train loss: 1.69962, Val loss: 1.74475
-# Epoch 5/5, Train loss: 1.64490, Val loss: 1.71292
-# Train accuracy: 0.097425 - this is incorrect
-# Test accuracy: 0.4067
-
-#Seed 0
-# 'input_size': 128, 'hidden_layers': [128, 64, 32, 10], 'activations': [None, 'ReLU', 'ReLU', 'softmax'], 'bn': False,  'lr': 0.001, 'epochs': 5, 'batch_size': 2
-# Epoch 1/5, Train loss: 2.05673, Val loss: 1.90639
-# Epoch 2/5, Train loss: 1.80091, Val loss: 1.78973
-# Epoch 3/5, Train loss: 1.71268, Val loss: 1.73610
-# Epoch 4/5, Train loss: 1.66942, Val loss: 1.70069
-# Epoch 5/5, Train loss: 1.61815, Val loss: 1.68146
-
-#Seed 0
-# Epoch 1/5, Train loss: 1.72801, Val loss: 1.78680
-# Epoch 2/5, Train loss: 1.53476, Val loss: 1.64534
-# Epoch 3/5, Train loss: 1.44643, Val loss: 1.60790
-# Epoch 4/5, Train loss: 1.42013, Val loss: 1.59447
-# Epoch 5/5, Train loss: 1.37113, Val loss: 1.57239
-# Setup: {'epochs': 5, 'lr': 0.01, 'bn': False, 'batch_size': 2, 'hidden_layers': [128, 64, 32, 10], 'activations': [None, 'ReLU', 'ReLU', 'softmax'], 'input_size': 128}
-# Train accuracy: 0.4586 (count 18344 of 40000)
-# Test accuracy: 0.446 (count 4460 of 10000)
