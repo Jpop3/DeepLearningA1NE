@@ -2,7 +2,6 @@ import numpy as np
 from Activation import *
 from HiddenLayer import *
 from MiniBatch import *
-from AdamOptimiser import *
 
 class MLP:
     def __init__(self, layers, activation=[None,'tanh','tanh', 'softmax'], use_batch_norm=False, weight_decay=1e-5, dropout_rate=[0.0, 0.0, 0.0, 0.0]):
@@ -83,21 +82,17 @@ class MLP:
         - weight_decay (float): Weight decay rate for neural network weights and bias
         """
         
-        # do adams optimiser stuff
         for layer in self.layers:
-            if layer.W_optimiser != None and layer.b_optimiser != None:
-                layer.W = layer.W - layer.W_optimiser.update(layer.grad_W) #Could even generalise this by setting a default optimiser
-                layer.b = layer.b - layer.b_optimiser.update(layer.grad_b)
-            else:
-                layer.W -= lr * layer.grad_W
-                layer.W -= layer.W * weight_decay #currently doesnt weight decay in adam's
-                layer.b -= lr * layer.grad_b
+            layer.W = layer.W - layer.W_optimiser.update(layer.grad_W)
+            layer.b = layer.b - layer.b_optimiser.update(layer.grad_b)
+            if weight_decay != 0:
+                layer.W -= layer.W * weight_decay
                 layer.b -= layer.b * weight_decay
-                if layer.use_batch_norm: # not sure if needed if using batch norm
-                    layer.gamma -= lr * layer.grad_gamma
-                    layer.gamma -= layer.gamma * weight_decay
-                    layer.beta -= lr * layer.grad_beta
-                    layer.beta -= layer.beta * weight_decay
+            if layer.use_batch_norm: # not sure if needed if using batch norm with certain optimisers
+                layer.gamma -= lr * layer.grad_gamma
+                layer.gamma -= layer.gamma * weight_decay
+                layer.beta -= lr * layer.grad_beta
+                layer.beta -= layer.beta * weight_decay
             
             
     def fit(self,X,y, X_val, y_val,learning_rate=0.1, epochs=30, batch_size=32, weight_decay=1e-5, optimiser='Adam'): #this is normal when using 1. which is expected
@@ -114,9 +109,9 @@ class MLP:
         - batch_size (int): Size of the mini-batches for training.
         - weight_decay (float) : Weight decay rate for neural network weights and bias
         """
-        if optimiser == 'Adam':
-            for layer in self.layers:
-                layer.set_optimiser(learning_rate)
+        
+        for layer in self.layers:
+            layer.set_optimiser(optimiser, learning_rate)
         
         if X_val is not None and y_val is not None:
             validation_loss = np.zeros((epochs))
