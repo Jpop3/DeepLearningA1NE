@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import time
 import sys
 import json
+import pickle
 
 if len(sys.argv) < 2:
     print("Need config file as first argument")
@@ -81,21 +82,16 @@ CEL = nn.fit(input_training, labels_training, input_val, labels_val,
 end = time.time()
 print(f'Training took {end - start} seconds')
 
-print(CEL)
-
-
 ###### Results ######
 PRINT_RESULTS = True
 PRINT_CONFUSION_MATRIX = False
 
 ### Training performance ###
-# Training accuracy
 output_train = nn.predict(input_training)
 correct_train_count = 0
 for index, array in enumerate(output_train):
     if np.argmax(array) == np.argmax(labels_training[index]): #the largest val in the vector indicates what class its predicting.
         correct_train_count += 1
-# print('Train accuracy:', correct_train_count/TRAINING_SIZE) #train accuracy
 
 # Confusion matrix for the training data
 confusion_matrix_train = np.zeros((10,10))
@@ -111,32 +107,36 @@ test_one_hot_labels = np.zeros((10000, 10))
 for index, label in enumerate(labels_test):
     test_one_hot_labels[index] = class_to_one_hot(label, 10) #Make one hot labels
 
-# Test accuracy
-output_test = nn.predict(input_test)
-correct_test_count = 0
-for index, array in enumerate(output_test):
-    if np.argmax(array) == np.argmax(test_one_hot_labels[index]):
-        correct_test_count += 1
-# print('Test accuracy:', correct_test_count/10000) #test accuracy
+# # Test accuracy
+# output_test = nn.predict(input_test)
+# correct_test_count = 0
+# for index, array in enumerate(output_test):
+#     if np.argmax(array) == np.argmax(test_one_hot_labels[index]):
+#         correct_test_count += 1
+# # print('Test accuracy:', correct_test_count/10000) #test accuracy
 
-# Confusion matrix for the test data
-confusion_matrix_test = np.zeros((10,10))
-for index, array in enumerate(output_test):
-    predicted = np.argmax(array)
-    actual = np.argmax(test_one_hot_labels[index])
-    confusion_matrix_test[actual][predicted] += 1
-   
+# # Confusion matrix for the test data
+# confusion_matrix_test = np.zeros((10,10))
+# for index, array in enumerate(output_test):
+#     predicted = np.argmax(array)
+#     actual = np.argmax(test_one_hot_labels[index])
+#     confusion_matrix_test[actual][predicted] += 1
    
 if PRINT_RESULTS:
     print('Results from setup:')
-    print(SETUP)
+    print(config)
     # Print confusion matrix as a table and integers
     if PRINT_CONFUSION_MATRIX:
         print('\nConfusion matrix for train data:')
         print(pd.DataFrame(confusion_matrix_train.astype(int)))
-        print('\nConfusion matrix for test data:')
-        print(pd.DataFrame(confusion_matrix_test.astype(int)))
+        # print('\nConfusion matrix for test data:')
+        # print(pd.DataFrame(confusion_matrix_test.astype(int)))
 
 
 print(f'Train accuracy: {correct_train_count/TRAINING_SIZE} (count {correct_train_count} of {TRAINING_SIZE})') # train accuracy
-print(f'Test accuracy: {correct_test_count/10000} (count {correct_test_count} of {10000})') # test accuracy
+# print(f'Test accuracy: {correct_test_count/10000} (count {correct_test_count} of {10000})') # test accuracy
+
+# Save the trained MLP
+model_pkl_file = "MLP_classifier.pkl"  
+with open(model_pkl_file, 'wb') as file:  
+    pickle.dump(nn, file)
