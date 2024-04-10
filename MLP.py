@@ -5,10 +5,11 @@ from MiniBatch import *
 import time
 
 class MLP:
-    def __init__(self, layers, activation=[None,'tanh','tanh', 'softmax'], use_batch_norm=False, weight_decay=1e-5, dropout_rate=[0.0, 0.0, 0.0, 0.0]):
+    def __init__(self, layers, activation=[None,'tanh','tanh', 'softmax'], use_batch_norm=0, weight_decay=1e-5, dropout_rate=[0.0, 0.0, 0.0, 0.0]):
         self.layers=[]
         self.params=[]
         self.activation=activation
+        self.activation[0] = None #Fixing the "None" issues, just a hot fix
         for i in range(len(layers)-1):
             self.layers.append(HiddenLayer(layers[i],layers[i+1],activation[i],activation[i+1], use_batch_norm=use_batch_norm, dropout_rate=dropout_rate[i]))
 

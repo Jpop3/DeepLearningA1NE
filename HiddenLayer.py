@@ -4,7 +4,7 @@ from Optimiser import *
 
 class HiddenLayer(object):
     def __init__(self, n_in, n_out, activation_last_layer=None, \
-        activation=None, W=None, b=None, use_batch_norm=False, \
+        activation=None, W=None, b=None, use_batch_norm=0, \
         dropout_rate=0.0): #inputs for the hidden layer
         
         self.input=None
@@ -19,7 +19,7 @@ class HiddenLayer(object):
 
         # Batch normalization stuff
         self.use_batch_norm = use_batch_norm
-        if self.use_batch_norm:
+        if self.use_batch_norm == 1:
             self.gamma = np.ones((n_out,))
             self.beta = np.zeros((n_out,))
             self.bn_cache = {} # A cache to store variables for backward pass

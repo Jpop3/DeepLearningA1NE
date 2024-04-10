@@ -3,7 +3,15 @@ import pandas as pd
 from MLP import *
 import matplotlib.pyplot as plt
 import time
+import sys
+import json
 
+if len(sys.argv) < 2:
+    print("Need config file as first argument")
+    exit()
+else:
+    with open(sys.argv[1]) as f:
+        config = json.load(f)
 
 input = np.load('Assignment1-Dataset/train_data.npy')
 labels = np.load('Assignment1-Dataset/train_label.npy')
@@ -19,19 +27,19 @@ TRAINING_SIZE = 40000
 # Set numpy seed for reproducibility
 np.random.seed(0)
 
-SETUP = {
-    'epochs': 5,
-    'lr': 0.001,
-    'bn': False,
-    'batch_size': 32,
-    'dropout_rate': [0, 0.2, 0.1, 0], # dropout rate for each layer: eg. [0.1, 0.2, 0.4, 0]
-    'hidden_layers': [128, 64, 32, 10],
-    'activations': [None, 'ReLU', 'ReLU', 'softmax'],
-    'input_size': 128,
-    'weight_decay': 0,
-    'optimiser': 'Adam',
-    'early_stopping': (10, 0.001)
-}
+# SETUP = {
+#     'epochs': 5,
+#     'lr': 0.001,
+#     'bn': False,
+#     'batch_size': 32,
+#     'dropout_rate': [0, 0.2, 0.1, 0], # dropout rate for each layer: eg. [0.1, 0.2, 0.4, 0]
+#     'hidden_layers': [128, 64, 32, 10],
+#     'activations': [None, 'ReLU', 'ReLU', 'softmax'],
+#     'input_size': 128,
+#     'weight_decay': 0,
+#     'optimiser': 'Adam',
+#     'early_stopping': (10, 0.001)
+# }
 #Issue, how to allow users to specific params for adams, momentum etc
 
 #Make one hot labels
@@ -55,12 +63,19 @@ input_val = np.array(input_val)
 labels_val = np.array(labels_val)
 
 ##### Model #####
-nn = MLP(SETUP['hidden_layers'], SETUP['activations'], SETUP['bn'], SETUP['weight_decay'], SETUP['dropout_rate'])
+nn = MLP(config['SETUP']['hidden_layers'], config['SETUP']['activations'], 
+         config['SETUP']['bn'], config['SETUP']['weight_decay'], 
+         config['SETUP']['dropout_rate'])
 
 # Start timer for training
 start = time.time()
 print('Training model...')
-CEL = nn.fit(input_training, labels_training, input_val, labels_val, learning_rate=SETUP['lr'], epochs=SETUP['epochs'], batch_size=SETUP['batch_size'], optimiser=SETUP['optimiser'], early_stopping=SETUP['early_stopping'])
+CEL = nn.fit(input_training, labels_training, input_val, labels_val, 
+             learning_rate=config['SETUP']['lr'], 
+             epochs=config['SETUP']['epochs'], 
+             batch_size=config['SETUP']['batch_size'], 
+             optimiser=config['SETUP']['optimiser'], 
+             early_stopping=config['SETUP']['early_stopping'])
 
 # End timer for training
 end = time.time()
