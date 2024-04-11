@@ -100,7 +100,7 @@ class MLP:
                 layer.beta -= layer.beta * weight_decay
             
             
-    def fit(self,X,y, X_val, y_val,learning_rate=0.1, epochs=30, batch_size=32, weight_decay=1e-5, optimiser='Adam', early_stopping=(10, 0.001)): #this is normal when using 1. which is expected
+    def fit(self,X,y, X_val, y_val,learning_rate=0.1, epochs=30, batch_size=32, weight_decay=1e-5, optimiser='Adam', early_stopping=(10, 0.001), verbose=True): #this is normal when using 1. which is expected
         """
         Trains the MLP using the provided training data.
 
@@ -170,9 +170,11 @@ class MLP:
                         print(f"\tearly stopping at ep.{k+1}\t train loss: {epoch_loss[k]:.5f}\t val loss: {val_loss:.5f}\t best val loss: {stop_early.best_score:.5f}")
                         break
                 
-                # print(f"epoch: {k+1}/{epochs}\t train loss: {epoch_loss[k]:.5f}\t val loss: {val_loss:.5f}")
+                if verbose:
+                    print(f"epoch: {k+1}/{epochs}\t train loss: {epoch_loss[k]:.5f}\t val loss: {val_loss:.5f}")
             else:
-                print(f"epoch: {k+1}/{epochs}\t train loss: {epoch_loss[k]:.5f}")
+                if verbose:
+                    print(f"epoch: {k+1}/{epochs}\t train loss: {epoch_loss[k]:.5f}")
         
         if validation_loss is not None:
             if early_stopping is not None and stop_early.should_stop:

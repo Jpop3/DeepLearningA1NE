@@ -19,10 +19,7 @@ with open("MLP_classifier.pkl", 'rb') as file:
     model = pickle.load(file)
 
 output_test = model.predict(input_test)
-correct_test_count = 0
-for index, array in enumerate(output_test):
-    if np.argmax(array) == np.argmax(test_one_hot_labels[index]):
-        correct_test_count += 1
+correct_test_count = np.sum(np.argmax(output_test, axis=1) == np.argmax(test_one_hot_labels, axis=1))
 print('Test accuracy:', correct_test_count/10000) #test accuracy
 
 # Confusion matrix for the test data
