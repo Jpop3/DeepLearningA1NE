@@ -1,0 +1,1417 @@
+Begin Hyper-parameter Tuning -
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 16}
+	early stopping at ep.17	 train loss: 0.88703	 val loss: 2.44500	 best val loss: 2.37403
+CV_1 (7.34s) -	 train_loss: 0.88703	 val_loss: 2.44500	 val_acc: 0.33450	 val_recall: 0.33385	 val_f1: 0.32795
+	early stopping at ep.11	 train loss: 0.78747	 val loss: 2.82258	 best val loss: 2.37687
+CV_2 (5.21s) -	 train_loss: 0.78747	 val_loss: 2.82258	 val_acc: 0.32850	 val_recall: 0.32779	 val_f1: 0.32160
+	early stopping at ep.30	 train loss: 0.83872	 val loss: 2.44399	 best val loss: 2.38876
+CV_3 (12.88s) -	 train_loss: 0.83872	 val_loss: 2.44399	 val_acc: 0.35430	 val_recall: 0.35525	 val_f1: 0.34826
+	early stopping at ep.12	 train loss: 0.82074	 val loss: 2.47603	 best val loss: 2.46724
+CV_4 (5.09s) -	 train_loss: 0.82074	 val_loss: 2.47603	 val_acc: 0.34810	 val_recall: 0.34858	 val_f1: 0.34445
+	early stopping at ep.33	 train loss: 0.76007	 val loss: 2.75853	 best val loss: 2.32553
+CV_5 (14.25s) -	 train_loss: 0.76007	 val_loss: 2.75853	 val_acc: 0.35730	 val_recall: 0.35617	 val_f1: 0.35308
+## Experiment results (44.95s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 0.81881 	 val loss: 2.58923 	 val accuracy: 0.34454 	 val recall: 0.34433 	 val f1: 0.33907
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 8}
+	early stopping at ep.14	 train loss: 0.86718	 val loss: 1.96615	 best val loss: 1.88581
+CV_1 (10.19s) -	 train_loss: 0.86718	 val_loss: 1.96615	 val_acc: 0.39330	 val_recall: 0.39384	 val_f1: 0.38720
+	early stopping at ep.32	 train loss: 0.78311	 val loss: 2.15054	 best val loss: 1.91465
+CV_2 (28.71s) -	 train_loss: 0.78311	 val_loss: 2.15054	 val_acc: 0.39620	 val_recall: 0.39462	 val_f1: 0.39793
+	early stopping at ep.33	 train loss: 0.81120	 val loss: 2.06469	 best val loss: 1.96513
+CV_3 (27.36s) -	 train_loss: 0.81120	 val_loss: 2.06469	 val_acc: 0.41180	 val_recall: 0.41165	 val_f1: 0.40550
+	early stopping at ep.14	 train loss: 0.86021	 val loss: 2.12154	 best val loss: 1.92820
+CV_4 (10.14s) -	 train_loss: 0.86021	 val_loss: 2.12154	 val_acc: 0.37540	 val_recall: 0.37661	 val_f1: 0.37412
+	early stopping at ep.16	 train loss: 0.85920	 val loss: 2.12743	 best val loss: 1.87576
+CV_5 (12.03s) -	 train_loss: 0.85920	 val_loss: 2.12743	 val_acc: 0.40060	 val_recall: 0.39909	 val_f1: 0.38818
+## Experiment results (88.60s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 0.83618 	 val loss: 2.08607 	 val accuracy: 0.39546 	 val recall: 0.39516 	 val f1: 0.39059
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 4}
+	early stopping at ep.21	 train loss: 1.05286	 val loss: 1.70487	 best val loss: 1.59948
+CV_1 (27.89s) -	 train_loss: 1.05286	 val_loss: 1.70487	 val_acc: 0.43910	 val_recall: 0.44166	 val_f1: 0.42470
+	early stopping at ep.30	 train loss: 1.01642	 val loss: 1.62413	 best val loss: 1.59429
+CV_2 (39.69s) -	 train_loss: 1.01642	 val_loss: 1.62413	 val_acc: 0.45460	 val_recall: 0.45341	 val_f1: 0.45248
+	early stopping at ep.15	 train loss: 1.07209	 val loss: 1.66409	 best val loss: 1.62657
+CV_3 (20.86s) -	 train_loss: 1.07209	 val_loss: 1.66409	 val_acc: 0.44220	 val_recall: 0.44172	 val_f1: 0.43774
+	early stopping at ep.32	 train loss: 1.00083	 val loss: 1.68042	 best val loss: 1.57493
+CV_4 (42.38s) -	 train_loss: 1.00083	 val_loss: 1.68042	 val_acc: 0.44690	 val_recall: 0.44604	 val_f1: 0.44427
+	early stopping at ep.38	 train loss: 1.03120	 val loss: 1.66753	 best val loss: 1.55952
+CV_5 (50.06s) -	 train_loss: 1.03120	 val_loss: 1.66753	 val_acc: 0.45090	 val_recall: 0.45083	 val_f1: 0.43804
+## Experiment results (181.06s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 1.03468 	 val loss: 1.66821 	 val accuracy: 0.44674 	 val recall: 0.44673 	 val f1: 0.43945
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 2}
+	early stopping at ep.37	 train loss: 1.23708	 val loss: 1.44786	 best val loss: 1.42962
+CV_1 (93.76s) -	 train_loss: 1.23708	 val_loss: 1.44786	 val_acc: 0.48900	 val_recall: 0.49077	 val_f1: 0.48058
+	early stopping at ep.43	 train loss: 1.23243	 val loss: 1.43095	 best val loss: 1.41871
+CV_2 (116.62s) -	 train_loss: 1.23243	 val_loss: 1.43095	 val_acc: 0.48630	 val_recall: 0.48469	 val_f1: 0.48216
+	early stopping at ep.28	 train loss: 1.24398	 val loss: 1.48947	 best val loss: 1.47187
+CV_3 (76.31s) -	 train_loss: 1.24398	 val_loss: 1.48947	 val_acc: 0.47700	 val_recall: 0.47738	 val_f1: 0.47103
+	early stopping at ep.47	 train loss: 1.23498	 val loss: 1.45687	 best val loss: 1.43657
+CV_4 (120.69s) -	 train_loss: 1.23498	 val_loss: 1.45687	 val_acc: 0.48910	 val_recall: 0.48913	 val_f1: 0.48866
+	early stopping at ep.33	 train loss: 1.23873	 val loss: 1.46013	 best val loss: 1.42760
+CV_5 (86.96s) -	 train_loss: 1.23873	 val_loss: 1.46013	 val_acc: 0.48620	 val_recall: 0.48705	 val_f1: 0.48292
+## Experiment results (494.53s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 1.23744 	 val loss: 1.45706 	 val accuracy: 0.48552 	 val recall: 0.48580 	 val f1: 0.48107
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 16}
+	early stopping at ep.11	 train loss: 0.85672	 val loss: 2.87876	 best val loss: 2.64957
+CV_1 (11.63s) -	 train_loss: 0.85672	 val_loss: 2.87876	 val_acc: 0.27430	 val_recall: 0.27447	 val_f1: 0.27587
+	early stopping at ep.13	 train loss: 0.89339	 val loss: 3.12291	 best val loss: 2.75233
+CV_2 (13.98s) -	 train_loss: 0.89339	 val_loss: 3.12291	 val_acc: 0.26250	 val_recall: 0.26163	 val_f1: 0.26095
+	early stopping at ep.11	 train loss: 0.84573	 val loss: 2.93766	 best val loss: 2.68660
+CV_3 (11.84s) -	 train_loss: 0.84573	 val_loss: 2.93766	 val_acc: 0.26410	 val_recall: 0.26369	 val_f1: 0.26120
+	early stopping at ep.11	 train loss: 0.85626	 val loss: 2.75295	 best val loss: 2.67460
+CV_4 (11.93s) -	 train_loss: 0.85626	 val_loss: 2.75295	 val_acc: 0.30290	 val_recall: 0.30303	 val_f1: 0.29654
+	early stopping at ep.11	 train loss: 0.84862	 val loss: 2.77385	 best val loss: 2.65860
+CV_5 (11.71s) -	 train_loss: 0.84862	 val_loss: 2.77385	 val_acc: 0.28830	 val_recall: 0.28733	 val_f1: 0.28198
+## Experiment results (61.39s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 0.86015 	 val loss: 2.89323 	 val accuracy: 0.27842 	 val recall: 0.27803 	 val f1: 0.27531
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 8}
+	early stopping at ep.21	 train loss: 1.36252	 val loss: 1.85305	 best val loss: 1.75563
+CV_1 (40.19s) -	 train_loss: 1.36252	 val_loss: 1.85305	 val_acc: 0.37380	 val_recall: 0.37445	 val_f1: 0.36806
+	early stopping at ep.15	 train loss: 1.36782	 val loss: 1.87332	 best val loss: 1.80363
+CV_2 (29.10s) -	 train_loss: 1.36782	 val_loss: 1.87332	 val_acc: 0.37970	 val_recall: 0.37871	 val_f1: 0.37654
+	early stopping at ep.16	 train loss: 1.44037	 val loss: 1.87343	 best val loss: 1.78689
+CV_3 (30.48s) -	 train_loss: 1.44037	 val_loss: 1.87343	 val_acc: 0.35970	 val_recall: 0.35897	 val_f1: 0.35252
+	early stopping at ep.16	 train loss: 1.41059	 val loss: 1.85946	 best val loss: 1.79366
+CV_4 (31.52s) -	 train_loss: 1.41059	 val_loss: 1.85946	 val_acc: 0.37330	 val_recall: 0.37309	 val_f1: 0.36538
+	early stopping at ep.28	 train loss: 1.40067	 val loss: 1.93786	 best val loss: 1.83506
+CV_5 (53.72s) -	 train_loss: 1.40067	 val_loss: 1.93786	 val_acc: 0.34600	 val_recall: 0.34728	 val_f1: 0.34031
+## Experiment results (185.30s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.39640 	 val loss: 1.87943 	 val accuracy: 0.36650 	 val recall: 0.36650 	 val f1: 0.36056
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 4}
+	early stopping at ep.26	 train loss: 1.88341	 val loss: 1.71538	 best val loss: 1.69360
+CV_1 (101.46s) -	 train_loss: 1.88341	 val_loss: 1.71538	 val_acc: 0.39730	 val_recall: 0.39841	 val_f1: 0.38883
+	early stopping at ep.25	 train loss: 1.88773	 val loss: 1.72332	 best val loss: 1.69668
+CV_2 (90.43s) -	 train_loss: 1.88773	 val_loss: 1.72332	 val_acc: 0.39890	 val_recall: 0.39780	 val_f1: 0.39008
+	early stopping at ep.21	 train loss: 1.88016	 val loss: 1.75129	 best val loss: 1.71029
+CV_3 (76.29s) -	 train_loss: 1.88016	 val_loss: 1.75129	 val_acc: 0.37960	 val_recall: 0.37939	 val_f1: 0.37752
+	early stopping at ep.23	 train loss: 1.89378	 val loss: 1.71599	 best val loss: 1.71000
+CV_4 (83.36s) -	 train_loss: 1.89378	 val_loss: 1.71599	 val_acc: 0.39880	 val_recall: 0.39870	 val_f1: 0.38976
+	early stopping at ep.25	 train loss: 1.87608	 val loss: 1.72632	 best val loss: 1.71195
+CV_5 (89.69s) -	 train_loss: 1.87608	 val_loss: 1.72632	 val_acc: 0.39420	 val_recall: 0.39437	 val_f1: 0.38458
+## Experiment results (441.49s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.88423 	 val loss: 1.72646 	 val accuracy: 0.39376 	 val recall: 0.39373 	 val f1: 0.38615
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 2}
+	early stopping at ep.26	 train loss: 2.30252	 val loss: 2.30356	 best val loss: 2.17064
+CV_1 (181.44s) -	 train_loss: 2.30252	 val_loss: 2.30356	 val_acc: 0.09530	 val_recall: 0.10000	 val_f1: 0.01740
+	early stopping at ep.13	 train loss: 2.28856	 val loss: 2.26322	 best val loss: 2.22687
+CV_2 (93.16s) -	 train_loss: 2.28856	 val_loss: 2.26322	 val_acc: 0.15610	 val_recall: 0.15362	 val_f1: 0.10786
+	early stopping at ep.24	 train loss: 2.30258	 val loss: 2.30238	 best val loss: 2.16847
+CV_3 (170.29s) -	 train_loss: 2.30258	 val_loss: 2.30238	 val_acc: 0.09800	 val_recall: 0.10000	 val_f1: 0.01785
+	early stopping at ep.26	 train loss: 2.29479	 val loss: 2.29318	 best val loss: 2.18127
+CV_4 (181.66s) -	 train_loss: 2.29479	 val_loss: 2.29318	 val_acc: 0.12380	 val_recall: 0.12318	 val_f1: 0.06606
+	early stopping at ep.26	 train loss: 2.30253	 val loss: 2.30403	 best val loss: 2.18006
+CV_5 (185.49s) -	 train_loss: 2.30253	 val_loss: 2.30403	 val_acc: 0.09790	 val_recall: 0.10000	 val_f1: 0.01783
+## Experiment results (812.34s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.29820 	 val loss: 2.29327 	 val accuracy: 0.11422 	 val recall: 0.11536 	 val f1: 0.04540
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 16}
+	early stopping at ep.22	 train loss: 1.54703	 val loss: 2.00533	 best val loss: 1.92574
+CV_1 (15.95s) -	 train_loss: 1.54703	 val_loss: 2.00533	 val_acc: 0.33610	 val_recall: 0.33603	 val_f1: 0.32538
+	early stopping at ep.14	 train loss: 1.43407	 val loss: 2.05378	 best val loss: 1.94769
+CV_2 (12.72s) -	 train_loss: 1.43407	 val_loss: 2.05378	 val_acc: 0.33660	 val_recall: 0.33484	 val_f1: 0.31685
+	early stopping at ep.30	 train loss: 1.45570	 val loss: 1.99932	 best val loss: 1.92199
+CV_3 (20.57s) -	 train_loss: 1.45570	 val_loss: 1.99932	 val_acc: 0.35070	 val_recall: 0.34897	 val_f1: 0.33566
+	early stopping at ep.36	 train loss: 1.45909	 val loss: 1.96865	 best val loss: 1.87899
+CV_4 (25.43s) -	 train_loss: 1.45909	 val_loss: 1.96865	 val_acc: 0.34040	 val_recall: 0.33873	 val_f1: 0.31388
+	early stopping at ep.38	 train loss: 1.44176	 val loss: 2.04502	 best val loss: 1.97204
+CV_5 (27.39s) -	 train_loss: 1.44176	 val_loss: 2.04502	 val_acc: 0.34550	 val_recall: 0.34490	 val_f1: 0.33419
+## Experiment results (102.26s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 1.46753 	 val loss: 2.01442 	 val accuracy: 0.34186 	 val recall: 0.34069 	 val f1: 0.32519
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 8}
+	early stopping at ep.33	 train loss: 1.45264	 val loss: 1.75524	 best val loss: 1.71159
+CV_1 (40.96s) -	 train_loss: 1.45264	 val_loss: 1.75524	 val_acc: 0.41430	 val_recall: 0.41612	 val_f1: 0.41082
+	early stopping at ep.48	 train loss: 1.43801	 val loss: 1.72160	 best val loss: 1.65153
+CV_2 (60.66s) -	 train_loss: 1.43801	 val_loss: 1.72160	 val_acc: 0.40960	 val_recall: 0.40941	 val_f1: 0.39571
+	early stopping at ep.23	 train loss: 1.45574	 val loss: 1.76745	 best val loss: 1.71303
+CV_3 (28.85s) -	 train_loss: 1.45574	 val_loss: 1.76745	 val_acc: 0.38620	 val_recall: 0.38823	 val_f1: 0.37733
+	early stopping at ep.33	 train loss: 1.48513	 val loss: 1.75944	 best val loss: 1.72890
+CV_4 (41.65s) -	 train_loss: 1.48513	 val_loss: 1.75944	 val_acc: 0.38170	 val_recall: 0.38219	 val_f1: 0.37633
+	early stopping at ep.36	 train loss: 1.46808	 val loss: 1.76210	 best val loss: 1.73201
+CV_5 (45.09s) -	 train_loss: 1.46808	 val_loss: 1.76210	 val_acc: 0.40820	 val_recall: 0.40825	 val_f1: 0.39681
+## Experiment results (217.43s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 1.45992 	 val loss: 1.75317 	 val accuracy: 0.40000 	 val recall: 0.40084 	 val f1: 0.39140
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 4}
+	early stopping at ep.40	 train loss: 1.41704	 val loss: 1.59136	 best val loss: 1.56526
+CV_1 (94.72s) -	 train_loss: 1.41704	 val_loss: 1.59136	 val_acc: 0.43850	 val_recall: 0.43982	 val_f1: 0.43279
+	early stopping at ep.33	 train loss: 1.40963	 val loss: 1.62225	 best val loss: 1.57550
+CV_2 (80.56s) -	 train_loss: 1.40963	 val_loss: 1.62225	 val_acc: 0.43010	 val_recall: 0.42867	 val_f1: 0.40976
+	early stopping at ep.46	 train loss: 1.42468	 val loss: 1.59877	 best val loss: 1.55895
+CV_3 (109.17s) -	 train_loss: 1.42468	 val_loss: 1.59877	 val_acc: 0.44550	 val_recall: 0.44541	 val_f1: 0.43824
+	early stopping at ep.22	 train loss: 1.41978	 val loss: 1.61667	 best val loss: 1.58093
+CV_4 (52.62s) -	 train_loss: 1.41978	 val_loss: 1.61667	 val_acc: 0.43720	 val_recall: 0.43710	 val_f1: 0.43858
+	early stopping at ep.35	 train loss: 1.40998	 val loss: 1.65730	 best val loss: 1.54811
+CV_5 (85.30s) -	 train_loss: 1.40998	 val_loss: 1.65730	 val_acc: 0.44310	 val_recall: 0.44387	 val_f1: 0.42899
+## Experiment results (422.56s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 1.41622 	 val loss: 1.61727 	 val accuracy: 0.43888 	 val recall: 0.43897 	 val f1: 0.42967
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 2}
+	early stopping at ep.25	 train loss: 1.38701	 val loss: 1.50587	 best val loss: 1.49426
+CV_1 (116.24s) -	 train_loss: 1.38701	 val_loss: 1.50587	 val_acc: 0.46630	 val_recall: 0.46755	 val_f1: 0.45899
+	early stopping at ep.31	 train loss: 1.37993	 val loss: 1.50484	 best val loss: 1.49409
+CV_2 (144.80s) -	 train_loss: 1.37993	 val_loss: 1.50484	 val_acc: 0.47840	 val_recall: 0.47781	 val_f1: 0.47196
+	early stopping at ep.32	 train loss: 1.36759	 val loss: 1.49585	 best val loss: 1.48084
+CV_3 (148.86s) -	 train_loss: 1.36759	 val_loss: 1.49585	 val_acc: 0.47790	 val_recall: 0.47751	 val_f1: 0.47323
+	early stopping at ep.40	 train loss: 1.37747	 val loss: 1.47258	 best val loss: 1.46269
+CV_4 (185.75s) -	 train_loss: 1.37747	 val_loss: 1.47258	 val_acc: 0.48120	 val_recall: 0.48152	 val_f1: 0.47850
+	early stopping at ep.20	 train loss: 1.38225	 val loss: 1.50154	 best val loss: 1.48920
+CV_5 (92.44s) -	 train_loss: 1.38225	 val_loss: 1.50154	 val_acc: 0.47360	 val_recall: 0.47334	 val_f1: 0.46659
+## Experiment results (688.31s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 1.37885 	 val loss: 1.49613 	 val accuracy: 0.47548 	 val recall: 0.47554 	 val f1: 0.46985
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 16}
+	early stopping at ep.31	 train loss: 1.36803	 val loss: 1.59583	 best val loss: 1.54915
+CV_1 (41.16s) -	 train_loss: 1.36803	 val_loss: 1.59583	 val_acc: 0.43850	 val_recall: 0.44018	 val_f1: 0.42590
+	early stopping at ep.45	 train loss: 1.42214	 val loss: 1.57983	 best val loss: 1.53681
+CV_2 (59.94s) -	 train_loss: 1.42214	 val_loss: 1.57983	 val_acc: 0.43740	 val_recall: 0.43592	 val_f1: 0.43225
+	early stopping at ep.29	 train loss: 1.43298	 val loss: 1.60723	 best val loss: 1.55981
+CV_3 (38.58s) -	 train_loss: 1.43298	 val_loss: 1.60723	 val_acc: 0.43000	 val_recall: 0.43068	 val_f1: 0.42568
+	early stopping at ep.29	 train loss: 1.43666	 val loss: 1.57140	 best val loss: 1.55941
+CV_4 (39.52s) -	 train_loss: 1.43666	 val_loss: 1.57140	 val_acc: 0.44520	 val_recall: 0.44481	 val_f1: 0.44145
+	early stopping at ep.42	 train loss: 1.41140	 val loss: 1.54820	 best val loss: 1.54305
+CV_5 (56.65s) -	 train_loss: 1.41140	 val_loss: 1.54820	 val_acc: 0.44430	 val_recall: 0.44456	 val_f1: 0.43745
+## Experiment results (236.17s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 1.41424 	 val loss: 1.58050 	 val accuracy: 0.43908 	 val recall: 0.43923 	 val f1: 0.43254
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 8}
+	early stopping at ep.24	 train loss: 1.64052	 val loss: 1.52839	 best val loss: 1.51619
+CV_1 (59.05s) -	 train_loss: 1.64052	 val_loss: 1.52839	 val_acc: 0.45550	 val_recall: 0.45679	 val_f1: 0.45092
+	early stopping at ep.32	 train loss: 1.60485	 val loss: 1.51209	 best val loss: 1.51144
+CV_2 (78.02s) -	 train_loss: 1.60485	 val_loss: 1.51209	 val_acc: 0.46430	 val_recall: 0.46256	 val_f1: 0.45904
+	early stopping at ep.36	 train loss: 1.59317	 val loss: 1.52857	 best val loss: 1.51648
+CV_3 (88.66s) -	 train_loss: 1.59317	 val_loss: 1.52857	 val_acc: 0.45390	 val_recall: 0.45456	 val_f1: 0.44864
+	early stopping at ep.34	 train loss: 1.58172	 val loss: 1.53177	 best val loss: 1.50147
+CV_4 (83.05s) -	 train_loss: 1.58172	 val_loss: 1.53177	 val_acc: 0.45410	 val_recall: 0.45471	 val_f1: 0.45008
+	early stopping at ep.46	 train loss: 1.59368	 val loss: 1.51831	 best val loss: 1.50799
+CV_5 (112.18s) -	 train_loss: 1.59368	 val_loss: 1.51831	 val_acc: 0.46290	 val_recall: 0.46260	 val_f1: 0.45819
+## Experiment results (421.26s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.60279 	 val loss: 1.52382 	 val accuracy: 0.45814 	 val recall: 0.45824 	 val f1: 0.45337
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 4}
+	early stopping at ep.47	 train loss: 1.88131	 val loss: 1.63325	 best val loss: 1.62577
+CV_1 (222.58s) -	 train_loss: 1.88131	 val_loss: 1.63325	 val_acc: 0.42660	 val_recall: 0.42806	 val_f1: 0.42036
+	early stopping at ep.47	 train loss: 1.88779	 val loss: 1.64337	 best val loss: 1.61426
+CV_2 (222.46s) -	 train_loss: 1.88779	 val_loss: 1.64337	 val_acc: 0.43950	 val_recall: 0.43836	 val_f1: 0.43193
+	early stopping at ep.37	 train loss: 1.88397	 val loss: 1.64744	 best val loss: 1.63644
+CV_3 (174.93s) -	 train_loss: 1.88397	 val_loss: 1.64744	 val_acc: 0.42390	 val_recall: 0.42418	 val_f1: 0.41920
+	early stopping at ep.43	 train loss: 1.88271	 val loss: 1.62410	 best val loss: 1.61783
+CV_4 (204.23s) -	 train_loss: 1.88271	 val_loss: 1.62410	 val_acc: 0.44130	 val_recall: 0.44203	 val_f1: 0.43195
+	early stopping at ep.39	 train loss: 1.88040	 val loss: 1.64508	 best val loss: 1.62449
+CV_5 (182.02s) -	 train_loss: 1.88040	 val_loss: 1.64508	 val_acc: 0.42950	 val_recall: 0.42891	 val_f1: 0.41612
+## Experiment results (1006.49s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.88324 	 val loss: 1.63865 	 val accuracy: 0.43216 	 val recall: 0.43231 	 val f1: 0.42391
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 2}
+	early stopping at ep.14	 train loss: 2.27600	 val loss: 2.22754	 best val loss: 2.19373
+CV_1 (128.73s) -	 train_loss: 2.27600	 val_loss: 2.22754	 val_acc: 0.18780	 val_recall: 0.18668	 val_f1: 0.12762
+	early stopping at ep.18	 train loss: 2.26362	 val loss: 2.21390	 best val loss: 2.16833
+CV_2 (166.43s) -	 train_loss: 2.26362	 val_loss: 2.21390	 val_acc: 0.18340	 val_recall: 0.18284	 val_f1: 0.14929
+	early stopping at ep.15	 train loss: 2.27437	 val loss: 2.21510	 best val loss: 2.18295
+CV_3 (136.66s) -	 train_loss: 2.27437	 val_loss: 2.21510	 val_acc: 0.18330	 val_recall: 0.18074	 val_f1: 0.12182
+	early stopping at ep.14	 train loss: 2.26603	 val loss: 2.18982	 best val loss: 2.18790
+CV_4 (128.73s) -	 train_loss: 2.26603	 val_loss: 2.18982	 val_acc: 0.19380	 val_recall: 0.19496	 val_f1: 0.16550
+	early stopping at ep.14	 train loss: 2.26124	 val loss: 2.18253	 best val loss: 2.16725
+CV_5 (127.85s) -	 train_loss: 2.26124	 val_loss: 2.18253	 val_acc: 0.20380	 val_recall: 0.20553	 val_f1: 0.16725
+## Experiment results (688.72s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.26825 	 val loss: 2.20578 	 val accuracy: 0.19042 	 val recall: 0.19015 	 val f1: 0.14630
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 16}
+	early stopping at ep.12	 train loss: 2.27311	 val loss: 2.32512	 best val loss: 2.30510
+CV_1 (5.70s) -	 train_loss: 2.27311	 val_loss: 2.32512	 val_acc: 0.10320	 val_recall: 0.10268	 val_f1: 0.02404
+	early stopping at ep.17	 train loss: 2.25499	 val loss: 2.36690	 best val loss: 2.31376
+CV_2 (10.43s) -	 train_loss: 2.25499	 val_loss: 2.36690	 val_acc: 0.11520	 val_recall: 0.11647	 val_f1: 0.04704
+	early stopping at ep.19	 train loss: 2.26428	 val loss: 2.32747	 best val loss: 2.31022
+CV_3 (10.31s) -	 train_loss: 2.26428	 val_loss: 2.32747	 val_acc: 0.11240	 val_recall: 0.11464	 val_f1: 0.04680
+	early stopping at ep.22	 train loss: 2.27525	 val loss: 2.32314	 best val loss: 2.30342
+CV_4 (10.43s) -	 train_loss: 2.27525	 val_loss: 2.32314	 val_acc: 0.11260	 val_recall: 0.11473	 val_f1: 0.04564
+	early stopping at ep.29	 train loss: 2.16325	 val loss: 2.31200	 best val loss: 2.23632
+CV_5 (14.09s) -	 train_loss: 2.16325	 val_loss: 2.31200	 val_acc: 0.15470	 val_recall: 0.15451	 val_f1: 0.08904
+## Experiment results (51.16s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 2.24618 	 val loss: 2.33093 	 val accuracy: 0.11962 	 val recall: 0.12061 	 val f1: 0.05051
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 8}
+	early stopping at ep.14	 train loss: 2.10868	 val loss: 2.23784	 best val loss: 2.17145
+CV_1 (11.42s) -	 train_loss: 2.10868	 val_loss: 2.23784	 val_acc: 0.16690	 val_recall: 0.16433	 val_f1: 0.09465
+	early stopping at ep.23	 train loss: 2.11754	 val loss: 2.17854	 best val loss: 2.16708
+CV_2 (19.29s) -	 train_loss: 2.11754	 val_loss: 2.17854	 val_acc: 0.18540	 val_recall: 0.18401	 val_f1: 0.12268
+	early stopping at ep.22	 train loss: 2.11407	 val loss: 2.21845	 best val loss: 2.17015
+CV_3 (17.72s) -	 train_loss: 2.11407	 val_loss: 2.21845	 val_acc: 0.17780	 val_recall: 0.17913	 val_f1: 0.10685
+	early stopping at ep.30	 train loss: 2.10576	 val loss: 2.25586	 best val loss: 2.14332
+CV_4 (24.34s) -	 train_loss: 2.10576	 val_loss: 2.25586	 val_acc: 0.16750	 val_recall: 0.17017	 val_f1: 0.10448
+	early stopping at ep.36	 train loss: 2.06554	 val loss: 2.22383	 best val loss: 2.13606
+CV_5 (30.02s) -	 train_loss: 2.06554	 val_loss: 2.22383	 val_acc: 0.17520	 val_recall: 0.17376	 val_f1: 0.10778
+## Experiment results (103.03s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 2.10232 	 val loss: 2.22290 	 val accuracy: 0.17456 	 val recall: 0.17428 	 val f1: 0.10729
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 4}
+	early stopping at ep.15	 train loss: 2.04359	 val loss: 2.08644	 best val loss: 2.06287
+CV_1 (22.57s) -	 train_loss: 2.04359	 val_loss: 2.08644	 val_acc: 0.19770	 val_recall: 0.19616	 val_f1: 0.14241
+	early stopping at ep.17	 train loss: 2.04485	 val loss: 2.17341	 best val loss: 2.07054
+CV_2 (25.31s) -	 train_loss: 2.04485	 val_loss: 2.17341	 val_acc: 0.17820	 val_recall: 0.18131	 val_f1: 0.11865
+	early stopping at ep.19	 train loss: 2.01103	 val loss: 2.13258	 best val loss: 2.06718
+CV_3 (30.84s) -	 train_loss: 2.01103	 val_loss: 2.13258	 val_acc: 0.20940	 val_recall: 0.21238	 val_f1: 0.16193
+	early stopping at ep.13	 train loss: 2.03634	 val loss: 2.09380	 best val loss: 2.09327
+CV_4 (20.40s) -	 train_loss: 2.03634	 val_loss: 2.09380	 val_acc: 0.22090	 val_recall: 0.22231	 val_f1: 0.18079
+	early stopping at ep.23	 train loss: 2.05113	 val loss: 2.06841	 best val loss: 2.04152
+CV_5 (34.29s) -	 train_loss: 2.05113	 val_loss: 2.06841	 val_acc: 0.22900	 val_recall: 0.22846	 val_f1: 0.18426
+## Experiment results (133.68s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 2.03739 	 val loss: 2.11093 	 val accuracy: 0.20704 	 val recall: 0.20813 	 val f1: 0.15761
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 2}
+	early stopping at ep.48	 train loss: 1.70711	 val loss: 1.82731	 best val loss: 1.72895
+CV_1 (141.05s) -	 train_loss: 1.70711	 val_loss: 1.82731	 val_acc: 0.36930	 val_recall: 0.36784	 val_f1: 0.34750
+	early stopping at ep.16	 train loss: 1.73530	 val loss: 1.79522	 best val loss: 1.75685
+CV_2 (48.29s) -	 train_loss: 1.73530	 val_loss: 1.79522	 val_acc: 0.37400	 val_recall: 0.37441	 val_f1: 0.35569
+	early stopping at ep.19	 train loss: 1.72785	 val loss: 1.82640	 best val loss: 1.72985
+CV_3 (54.58s) -	 train_loss: 1.72785	 val_loss: 1.82640	 val_acc: 0.36680	 val_recall: 0.36791	 val_f1: 0.35892
+	early stopping at ep.28	 train loss: 1.70246	 val loss: 1.81210	 best val loss: 1.73881
+CV_4 (83.19s) -	 train_loss: 1.70246	 val_loss: 1.81210	 val_acc: 0.33730	 val_recall: 0.33722	 val_f1: 0.32389
+	early stopping at ep.43	 train loss: 1.70678	 val loss: 1.86733	 best val loss: 1.71732
+CV_5 (128.14s) -	 train_loss: 1.70678	 val_loss: 1.86733	 val_acc: 0.34810	 val_recall: 0.34962	 val_f1: 0.32316
+## Experiment results (455.46s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 1.71590 	 val loss: 1.82567 	 val accuracy: 0.35910 	 val recall: 0.35940 	 val f1: 0.34183
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 16}
+	early stopping at ep.43	 train loss: 1.48749	 val loss: 1.65332	 best val loss: 1.57199
+CV_1 (47.59s) -	 train_loss: 1.48749	 val_loss: 1.65332	 val_acc: 0.40480	 val_recall: 0.40586	 val_f1: 0.40262
+	early stopping at ep.38	 train loss: 1.53614	 val loss: 1.64571	 best val loss: 1.56846
+CV_2 (41.98s) -	 train_loss: 1.53614	 val_loss: 1.64571	 val_acc: 0.41960	 val_recall: 0.41895	 val_f1: 0.41412
+	early stopping at ep.31	 train loss: 1.49747	 val loss: 1.59801	 best val loss: 1.58562
+CV_3 (35.51s) -	 train_loss: 1.49747	 val_loss: 1.59801	 val_acc: 0.42680	 val_recall: 0.42753	 val_f1: 0.42447
+	early stopping at ep.33	 train loss: 1.48924	 val loss: 1.61118	 best val loss: 1.57995
+CV_4 (36.86s) -	 train_loss: 1.48924	 val_loss: 1.61118	 val_acc: 0.42810	 val_recall: 0.42772	 val_f1: 0.42739
+	early stopping at ep.37	 train loss: 1.47484	 val loss: 1.61917	 best val loss: 1.57943
+CV_5 (41.30s) -	 train_loss: 1.47484	 val_loss: 1.61917	 val_acc: 0.43150	 val_recall: 0.43109	 val_f1: 0.42372
+## Experiment results (203.58s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 1.49704 	 val loss: 1.62548 	 val accuracy: 0.42216 	 val recall: 0.42223 	 val f1: 0.41847
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 8}
+	early stopping at ep.47	 train loss: 1.66796	 val loss: 1.56617	 best val loss: 1.52769
+CV_1 (95.39s) -	 train_loss: 1.66796	 val_loss: 1.56617	 val_acc: 0.43600	 val_recall: 0.43754	 val_f1: 0.42884
+	early stopping at ep.29	 train loss: 1.67712	 val loss: 1.60173	 best val loss: 1.57170
+CV_2 (58.32s) -	 train_loss: 1.67712	 val_loss: 1.60173	 val_acc: 0.44060	 val_recall: 0.43876	 val_f1: 0.43395
+CV_3 (100.92s) -	 train_loss: 1.62967	 val_loss: 1.56462	 val_acc: 0.44650	 val_recall: 0.44708	 val_f1: 0.44079
+	early stopping at ep.43	 train loss: 1.66368	 val loss: 1.58260	 best val loss: 1.54058
+CV_4 (85.84s) -	 train_loss: 1.66368	 val_loss: 1.58260	 val_acc: 0.43990	 val_recall: 0.43885	 val_f1: 0.42786
+	early stopping at ep.45	 train loss: 1.64753	 val loss: 1.61870	 best val loss: 1.55862
+CV_5 (92.11s) -	 train_loss: 1.64753	 val_loss: 1.61870	 val_acc: 0.42350	 val_recall: 0.42367	 val_f1: 0.41905
+## Experiment results (432.94s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.65719 	 val loss: 1.58676 	 val accuracy: 0.43730 	 val recall: 0.43718 	 val f1: 0.43010
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 4}
+	early stopping at ep.36	 train loss: 1.93524	 val loss: 1.69421	 best val loss: 1.69007
+CV_1 (136.96s) -	 train_loss: 1.93524	 val_loss: 1.69421	 val_acc: 0.40770	 val_recall: 0.40896	 val_f1: 0.39417
+	early stopping at ep.30	 train loss: 1.93053	 val loss: 1.70799	 best val loss: 1.69067
+CV_2 (113.53s) -	 train_loss: 1.93053	 val_loss: 1.70799	 val_acc: 0.41230	 val_recall: 0.41031	 val_f1: 0.40185
+	early stopping at ep.26	 train loss: 1.95858	 val loss: 1.73023	 best val loss: 1.70632
+CV_3 (97.06s) -	 train_loss: 1.95858	 val_loss: 1.73023	 val_acc: 0.39190	 val_recall: 0.39208	 val_f1: 0.38490
+	early stopping at ep.37	 train loss: 1.92854	 val loss: 1.72827	 best val loss: 1.68558
+CV_4 (138.28s) -	 train_loss: 1.92854	 val_loss: 1.72827	 val_acc: 0.39930	 val_recall: 0.39909	 val_f1: 0.38677
+	early stopping at ep.33	 train loss: 1.92728	 val loss: 1.70769	 best val loss: 1.70037
+CV_5 (123.12s) -	 train_loss: 1.92728	 val_loss: 1.70769	 val_acc: 0.40660	 val_recall: 0.40592	 val_f1: 0.39786
+## Experiment results (609.25s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.93603 	 val loss: 1.71368 	 val accuracy: 0.40356 	 val recall: 0.40327 	 val f1: 0.39311
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 2}
+	early stopping at ep.23	 train loss: 2.26672	 val loss: 2.21582	 best val loss: 2.21014
+CV_1 (166.04s) -	 train_loss: 2.26672	 val_loss: 2.21582	 val_acc: 0.19320	 val_recall: 0.19290	 val_f1: 0.13898
+	early stopping at ep.13	 train loss: 2.28395	 val loss: 2.26641	 best val loss: 2.23529
+CV_2 (95.25s) -	 train_loss: 2.28395	 val_loss: 2.26641	 val_acc: 0.14700	 val_recall: 0.14848	 val_f1: 0.10393
+	early stopping at ep.20	 train loss: 2.27954	 val loss: 2.23177	 best val loss: 2.21597
+CV_3 (146.47s) -	 train_loss: 2.27954	 val_loss: 2.23177	 val_acc: 0.17960	 val_recall: 0.17801	 val_f1: 0.10359
+	early stopping at ep.19	 train loss: 2.27670	 val loss: 2.25814	 best val loss: 2.19163
+CV_4 (138.40s) -	 train_loss: 2.27670	 val_loss: 2.25814	 val_acc: 0.14220	 val_recall: 0.14274	 val_f1: 0.11167
+	early stopping at ep.34	 train loss: 2.30267	 val loss: 2.30284	 best val loss: 2.18807
+CV_5 (247.02s) -	 train_loss: 2.30267	 val_loss: 2.30284	 val_acc: 0.09860	 val_recall: 0.10000	 val_f1: 0.01795
+## Experiment results (793.45s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.28192 	 val loss: 2.25500 	 val accuracy: 0.15212 	 val recall: 0.15243 	 val f1: 0.09522
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 16}
+CV_1 (21.73s) -	 train_loss: 1.29093	 val_loss: 1.52704	 val_acc: 0.45480	 val_recall: 0.45577	 val_f1: 0.44485
+CV_2 (21.41s) -	 train_loss: 1.24396	 val_loss: 1.53848	 val_acc: 0.46100	 val_recall: 0.45999	 val_f1: 0.45678
+CV_3 (22.38s) -	 train_loss: 1.23328	 val_loss: 1.55957	 val_acc: 0.44720	 val_recall: 0.44745	 val_f1: 0.43693
+	early stopping at ep.44	 train loss: 1.25108	 val loss: 1.53949	 best val loss: 1.53574
+CV_4 (18.97s) -	 train_loss: 1.25108	 val_loss: 1.53949	 val_acc: 0.45170	 val_recall: 0.45049	 val_f1: 0.44055
+CV_5 (21.26s) -	 train_loss: 1.22754	 val_loss: 1.53429	 val_acc: 0.46420	 val_recall: 0.46458	 val_f1: 0.45850
+## Experiment results (105.96s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 1.24936 	 val loss: 1.53977 	 val accuracy: 0.45578 	 val recall: 0.45566 	 val f1: 0.44752
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 8}
+CV_1 (35.92s) -	 train_loss: 1.43040	 val_loss: 1.53882	 val_acc: 0.44650	 val_recall: 0.44765	 val_f1: 0.44109
+CV_2 (37.15s) -	 train_loss: 1.39875	 val_loss: 1.51404	 val_acc: 0.46590	 val_recall: 0.46482	 val_f1: 0.45736
+CV_3 (36.33s) -	 train_loss: 1.41331	 val_loss: 1.51985	 val_acc: 0.46530	 val_recall: 0.46587	 val_f1: 0.45978
+CV_4 (36.70s) -	 train_loss: 1.42163	 val_loss: 1.51559	 val_acc: 0.46040	 val_recall: 0.46015	 val_f1: 0.45215
+CV_5 (36.92s) -	 train_loss: 1.41940	 val_loss: 1.52053	 val_acc: 0.46170	 val_recall: 0.46111	 val_f1: 0.45523
+## Experiment results (183.30s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 1.41670 	 val loss: 1.52177 	 val accuracy: 0.45996 	 val recall: 0.45992 	 val f1: 0.45312
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 4}
+CV_1 (65.19s) -	 train_loss: 1.63575	 val_loss: 1.65224	 val_acc: 0.41420	 val_recall: 0.41523	 val_f1: 0.40482
+CV_2 (70.63s) -	 train_loss: 1.63171	 val_loss: 1.66158	 val_acc: 0.41070	 val_recall: 0.40934	 val_f1: 0.39927
+CV_3 (70.33s) -	 train_loss: 1.64584	 val_loss: 1.66292	 val_acc: 0.41250	 val_recall: 0.41317	 val_f1: 0.40597
+CV_4 (70.34s) -	 train_loss: 1.61798	 val_loss: 1.64765	 val_acc: 0.41870	 val_recall: 0.41843	 val_f1: 0.40866
+CV_5 (70.37s) -	 train_loss: 1.63692	 val_loss: 1.66596	 val_acc: 0.41120	 val_recall: 0.41047	 val_f1: 0.39445
+## Experiment results (347.13s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 1.63364 	 val loss: 1.65807 	 val accuracy: 0.41346 	 val recall: 0.41333 	 val f1: 0.40263
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 2}
+CV_1 (133.75s) -	 train_loss: 1.85860	 val_loss: 1.85878	 val_acc: 0.33420	 val_recall: 0.33581	 val_f1: 0.30742
+	early stopping at ep.38	 train loss: 1.85307	 val loss: 1.86650	 best val loss: 1.86607
+CV_2 (102.39s) -	 train_loss: 1.85307	 val_loss: 1.86650	 val_acc: 0.34230	 val_recall: 0.34114	 val_f1: 0.31941
+CV_3 (134.92s) -	 train_loss: 1.86230	 val_loss: 1.86584	 val_acc: 0.34050	 val_recall: 0.33957	 val_f1: 0.31421
+	early stopping at ep.33	 train loss: 1.86344	 val loss: 1.86978	 best val loss: 1.86578
+CV_4 (89.37s) -	 train_loss: 1.86344	 val_loss: 1.86978	 val_acc: 0.32460	 val_recall: 0.32601	 val_f1: 0.29521
+	early stopping at ep.45	 train loss: 1.86485	 val loss: 1.87174	 best val loss: 1.86796
+CV_5 (121.78s) -	 train_loss: 1.86485	 val_loss: 1.87174	 val_acc: 0.33260	 val_recall: 0.33223	 val_f1: 0.30837
+## Experiment results (582.43s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 1.86045 	 val loss: 1.86653 	 val accuracy: 0.33484 	 val recall: 0.33495 	 val f1: 0.30892
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': True, 'batch_size': 16}
+	early stopping at ep.24	 train loss: 1.28192	 val loss: 1.80183	 best val loss: 1.67097
+CV_1 (25.50s) -	 train_loss: 1.28192	 val_loss: 1.80183	 val_acc: 0.39130	 val_recall: 0.39274	 val_f1: 0.38700
+	early stopping at ep.23	 train loss: 1.33351	 val loss: 1.71625	 best val loss: 1.66819
+CV_2 (24.46s) -	 train_loss: 1.33351	 val_loss: 1.71625	 val_acc: 0.40230	 val_recall: 0.40139	 val_f1: 0.39996
+	early stopping at ep.24	 train loss: 1.33569	 val loss: 1.74031	 best val loss: 1.67479
+CV_3 (25.44s) -	 train_loss: 1.33569	 val_loss: 1.74031	 val_acc: 0.39240	 val_recall: 0.39293	 val_f1: 0.38967
+	early stopping at ep.23	 train loss: 1.35584	 val loss: 1.77027	 best val loss: 1.66780
+CV_4 (24.36s) -	 train_loss: 1.35584	 val_loss: 1.77027	 val_acc: 0.38640	 val_recall: 0.38601	 val_f1: 0.38360
+	early stopping at ep.26	 train loss: 1.28113	 val loss: 1.87089	 best val loss: 1.65861
+CV_5 (27.42s) -	 train_loss: 1.28113	 val_loss: 1.87089	 val_acc: 0.36730	 val_recall: 0.36700	 val_f1: 0.36559
+## Experiment results (127.54s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 1.31762 	 val loss: 1.77991 	 val accuracy: 0.38794 	 val recall: 0.38801 	 val f1: 0.38516
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': True, 'batch_size': 8}
+	early stopping at ep.30	 train loss: 1.47927	 val loss: 1.70085	 best val loss: 1.64500
+CV_1 (56.93s) -	 train_loss: 1.47927	 val_loss: 1.70085	 val_acc: 0.40900	 val_recall: 0.41049	 val_f1: 0.41013
+	early stopping at ep.29	 train loss: 1.47807	 val loss: 1.71870	 best val loss: 1.63938
+CV_2 (55.70s) -	 train_loss: 1.47807	 val_loss: 1.71870	 val_acc: 0.39560	 val_recall: 0.39456	 val_f1: 0.39231
+	early stopping at ep.25	 train loss: 1.57022	 val loss: 1.70346	 best val loss: 1.67232
+CV_3 (47.34s) -	 train_loss: 1.57022	 val_loss: 1.70346	 val_acc: 0.40000	 val_recall: 0.40000	 val_f1: 0.39580
+	early stopping at ep.29	 train loss: 1.49819	 val loss: 1.75991	 best val loss: 1.64063
+CV_4 (55.05s) -	 train_loss: 1.49819	 val_loss: 1.75991	 val_acc: 0.39140	 val_recall: 0.39115	 val_f1: 0.38808
+	early stopping at ep.30	 train loss: 1.48769	 val loss: 1.76435	 best val loss: 1.65172
+CV_5 (57.35s) -	 train_loss: 1.48769	 val_loss: 1.76435	 val_acc: 0.38580	 val_recall: 0.38571	 val_f1: 0.38701
+## Experiment results (272.72s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.50269 	 val loss: 1.72945 	 val accuracy: 0.39636 	 val recall: 0.39638 	 val f1: 0.39466
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': True, 'batch_size': 4}
+CV_1 (178.36s) -	 train_loss: 1.87348	 val_loss: 1.72922	 val_acc: 0.41570	 val_recall: 0.41688	 val_f1: 0.40904
+	early stopping at ep.49	 train loss: 1.87848	 val loss: 1.74752	 best val loss: 1.72637
+CV_2 (174.69s) -	 train_loss: 1.87848	 val_loss: 1.74752	 val_acc: 0.40430	 val_recall: 0.40287	 val_f1: 0.39420
+CV_3 (178.50s) -	 train_loss: 1.87020	 val_loss: 1.73532	 val_acc: 0.40090	 val_recall: 0.40042	 val_f1: 0.39439
+	early stopping at ep.41	 train loss: 1.87988	 val loss: 1.73686	 best val loss: 1.71522
+CV_4 (145.90s) -	 train_loss: 1.87988	 val_loss: 1.73686	 val_acc: 0.41010	 val_recall: 0.41025	 val_f1: 0.39996
+	early stopping at ep.50	 train loss: 1.88201	 val loss: 1.74509	 best val loss: 1.72207
+CV_5 (177.58s) -	 train_loss: 1.88201	 val_loss: 1.74509	 val_acc: 0.40480	 val_recall: 0.40500	 val_f1: 0.39954
+## Experiment results (855.41s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.87681 	 val loss: 1.73880 	 val accuracy: 0.40716 	 val recall: 0.40708 	 val f1: 0.39942
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': True, 'batch_size': 2}
+	early stopping at ep.40	 train loss: 2.20012	 val loss: 2.07598	 best val loss: 2.07030
+CV_1 (275.09s) -	 train_loss: 2.20012	 val_loss: 2.07598	 val_acc: 0.30470	 val_recall: 0.30535	 val_f1: 0.27576
+	early stopping at ep.50	 train loss: 2.20043	 val loss: 2.07923	 best val loss: 2.07132
+CV_2 (344.99s) -	 train_loss: 2.20043	 val_loss: 2.07923	 val_acc: 0.31080	 val_recall: 0.30980	 val_f1: 0.28291
+	early stopping at ep.48	 train loss: 2.20161	 val loss: 2.07934	 best val loss: 2.07469
+CV_3 (329.43s) -	 train_loss: 2.20161	 val_loss: 2.07934	 val_acc: 0.31150	 val_recall: 0.31060	 val_f1: 0.27774
+	early stopping at ep.48	 train loss: 2.19946	 val loss: 2.07776	 best val loss: 2.07587
+CV_4 (330.60s) -	 train_loss: 2.19946	 val_loss: 2.07776	 val_acc: 0.30680	 val_recall: 0.30849	 val_f1: 0.28168
+	early stopping at ep.50	 train loss: 2.19912	 val loss: 2.07396	 best val loss: 2.06882
+CV_5 (342.83s) -	 train_loss: 2.19912	 val_loss: 2.07396	 val_acc: 0.31850	 val_recall: 0.31870	 val_f1: 0.29794
+## Experiment results (1623.29s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': None, 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.20015 	 val loss: 2.07725 	 val accuracy: 0.31046 	 val recall: 0.31059 	 val f1: 0.28321
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 16}
+CV_1 (38.60s) -	 train_loss: 1.21522	 val_loss: 1.47322	 val_acc: 0.48110	 val_recall: 0.48213	 val_f1: 0.47969
+CV_2 (35.62s) -	 train_loss: 1.25892	 val_loss: 1.46791	 val_acc: 0.47650	 val_recall: 0.47552	 val_f1: 0.46973
+CV_3 (33.92s) -	 train_loss: 1.22468	 val_loss: 1.48251	 val_acc: 0.48140	 val_recall: 0.48168	 val_f1: 0.48171
+CV_4 (39.82s) -	 train_loss: 1.29639	 val_loss: 1.46410	 val_acc: 0.48340	 val_recall: 0.48322	 val_f1: 0.47884
+	early stopping at ep.48	 train loss: 1.22874	 val loss: 1.48310	 best val loss: 1.47558
+CV_5 (34.32s) -	 train_loss: 1.22874	 val_loss: 1.48310	 val_acc: 0.47670	 val_recall: 0.47719	 val_f1: 0.46488
+## Experiment results (182.53s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 1.24479 	 val loss: 1.47417 	 val accuracy: 0.47982 	 val recall: 0.47995 	 val f1: 0.47497
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 8}
+CV_1 (60.93s) -	 train_loss: 1.26229	 val_loss: 1.42810	 val_acc: 0.48970	 val_recall: 0.49223	 val_f1: 0.47865
+CV_2 (71.60s) -	 train_loss: 1.28811	 val_loss: 1.41654	 val_acc: 0.49970	 val_recall: 0.49780	 val_f1: 0.49029
+CV_3 (61.53s) -	 train_loss: 1.27063	 val_loss: 1.43704	 val_acc: 0.49290	 val_recall: 0.49316	 val_f1: 0.49092
+	early stopping at ep.41	 train loss: 1.27773	 val loss: 1.43264	 best val loss: 1.43070
+CV_4 (57.95s) -	 train_loss: 1.27773	 val_loss: 1.43264	 val_acc: 0.48910	 val_recall: 0.48907	 val_f1: 0.47659
+CV_5 (61.26s) -	 train_loss: 1.25412	 val_loss: 1.41655	 val_acc: 0.50090	 val_recall: 0.50110	 val_f1: 0.50020
+## Experiment results (313.52s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 1.27058 	 val loss: 1.42617 	 val accuracy: 0.49446 	 val recall: 0.49467 	 val f1: 0.48733
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 4}
+CV_1 (116.83s) -	 train_loss: 1.30520	 val_loss: 1.40056	 val_acc: 0.50630	 val_recall: 0.50786	 val_f1: 0.50455
+	early stopping at ep.43	 train loss: 1.29669	 val loss: 1.40751	 best val loss: 1.39859
+CV_2 (103.95s) -	 train_loss: 1.29669	 val_loss: 1.40751	 val_acc: 0.50390	 val_recall: 0.50247	 val_f1: 0.49483
+CV_3 (118.62s) -	 train_loss: 1.29466	 val_loss: 1.39854	 val_acc: 0.50390	 val_recall: 0.50481	 val_f1: 0.49975
+CV_4 (118.92s) -	 train_loss: 1.29223	 val_loss: 1.39730	 val_acc: 0.50410	 val_recall: 0.50447	 val_f1: 0.49630
+CV_5 (118.03s) -	 train_loss: 1.29548	 val_loss: 1.41166	 val_acc: 0.50190	 val_recall: 0.50195	 val_f1: 0.49456
+## Experiment results (576.61s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 1.29685 	 val loss: 1.40311 	 val accuracy: 0.50402 	 val recall: 0.50431 	 val f1: 0.49800
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 2}
+	early stopping at ep.46	 train loss: 1.33719	 val loss: 1.40170	 best val loss: 1.40219
+CV_1 (209.04s) -	 train_loss: 1.33719	 val_loss: 1.40170	 val_acc: 0.50230	 val_recall: 0.50377	 val_f1: 0.49543
+CV_2 (225.24s) -	 train_loss: 1.31830	 val_loss: 1.39862	 val_acc: 0.50550	 val_recall: 0.50369	 val_f1: 0.49879
+	early stopping at ep.49	 train loss: 1.33097	 val loss: 1.41869	 best val loss: 1.41405
+CV_3 (221.04s) -	 train_loss: 1.33097	 val_loss: 1.41869	 val_acc: 0.49530	 val_recall: 0.49545	 val_f1: 0.49344
+CV_4 (225.93s) -	 train_loss: 1.33556	 val_loss: 1.41486	 val_acc: 0.50140	 val_recall: 0.50088	 val_f1: 0.49590
+CV_5 (225.64s) -	 train_loss: 1.33784	 val_loss: 1.41079	 val_acc: 0.50080	 val_recall: 0.50120	 val_f1: 0.49490
+## Experiment results (1107.13s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 1.33197 	 val loss: 1.40893 	 val accuracy: 0.50106 	 val recall: 0.50100 	 val f1: 0.49569
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 16}
+CV_1 (65.54s) -	 train_loss: 1.43781	 val_loss: 1.49178	 val_acc: 0.47370	 val_recall: 0.47525	 val_f1: 0.46804
+CV_2 (67.44s) -	 train_loss: 1.45079	 val_loss: 1.49143	 val_acc: 0.47210	 val_recall: 0.47093	 val_f1: 0.46509
+CV_3 (66.06s) -	 train_loss: 1.44493	 val_loss: 1.50208	 val_acc: 0.47400	 val_recall: 0.47422	 val_f1: 0.47141
+CV_4 (65.70s) -	 train_loss: 1.49073	 val_loss: 1.50095	 val_acc: 0.46320	 val_recall: 0.46287	 val_f1: 0.45954
+CV_5 (65.59s) -	 train_loss: 1.43451	 val_loss: 1.49938	 val_acc: 0.47140	 val_recall: 0.47143	 val_f1: 0.46702
+## Experiment results (330.63s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 1.45175 	 val loss: 1.49712 	 val accuracy: 0.47088 	 val recall: 0.47094 	 val f1: 0.46622
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 8}
+	early stopping at ep.40	 train loss: 1.63717	 val loss: 1.53253	 best val loss: 1.52600
+CV_1 (96.56s) -	 train_loss: 1.63717	 val_loss: 1.53253	 val_acc: 0.46560	 val_recall: 0.46708	 val_f1: 0.46264
+	early stopping at ep.48	 train loss: 1.62106	 val loss: 1.54321	 best val loss: 1.52427
+CV_2 (115.44s) -	 train_loss: 1.62106	 val_loss: 1.54321	 val_acc: 0.46110	 val_recall: 0.45946	 val_f1: 0.45506
+	early stopping at ep.45	 train loss: 1.63247	 val loss: 1.52828	 best val loss: 1.52530
+CV_3 (108.17s) -	 train_loss: 1.63247	 val_loss: 1.52828	 val_acc: 0.47040	 val_recall: 0.47076	 val_f1: 0.46433
+	early stopping at ep.40	 train loss: 1.64400	 val loss: 1.53137	 best val loss: 1.52266
+CV_4 (96.54s) -	 train_loss: 1.64400	 val_loss: 1.53137	 val_acc: 0.46620	 val_recall: 0.46642	 val_f1: 0.46116
+CV_5 (120.89s) -	 train_loss: 1.62051	 val_loss: 1.53598	 val_acc: 0.47080	 val_recall: 0.47131	 val_f1: 0.46632
+## Experiment results (537.91s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.63104 	 val loss: 1.53427 	 val accuracy: 0.46682 	 val recall: 0.46701 	 val f1: 0.46190
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 4}
+CV_1 (231.53s) -	 train_loss: 1.90349	 val_loss: 1.69010	 val_acc: 0.43220	 val_recall: 0.43425	 val_f1: 0.42512
+CV_2 (231.25s) -	 train_loss: 1.91069	 val_loss: 1.69744	 val_acc: 0.43250	 val_recall: 0.43132	 val_f1: 0.42567
+CV_3 (230.88s) -	 train_loss: 1.89840	 val_loss: 1.66150	 val_acc: 0.44580	 val_recall: 0.44579	 val_f1: 0.43669
+CV_4 (229.85s) -	 train_loss: 1.90209	 val_loss: 1.68662	 val_acc: 0.43420	 val_recall: 0.43443	 val_f1: 0.42458
+	early stopping at ep.38	 train loss: 1.91099	 val loss: 1.71802	 best val loss: 1.70957
+CV_5 (174.98s) -	 train_loss: 1.91099	 val_loss: 1.71802	 val_acc: 0.42980	 val_recall: 0.43026	 val_f1: 0.42135
+## Experiment results (1098.85s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.90513 	 val loss: 1.69074 	 val accuracy: 0.43490 	 val recall: 0.43521 	 val f1: 0.42668
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 2}
+	early stopping at ep.37	 train loss: 2.17885	 val loss: 2.02822	 best val loss: 2.01750
+CV_1 (334.87s) -	 train_loss: 2.17885	 val_loss: 2.02822	 val_acc: 0.33910	 val_recall: 0.34050	 val_f1: 0.31668
+	early stopping at ep.33	 train loss: 2.17491	 val loss: 2.02342	 best val loss: 2.02426
+CV_2 (299.53s) -	 train_loss: 2.17491	 val_loss: 2.02342	 val_acc: 0.34290	 val_recall: 0.34175	 val_f1: 0.31965
+	early stopping at ep.33	 train loss: 2.17766	 val loss: 2.02900	 best val loss: 2.02179
+CV_3 (296.52s) -	 train_loss: 2.17766	 val_loss: 2.02900	 val_acc: 0.34430	 val_recall: 0.34365	 val_f1: 0.32544
+	early stopping at ep.47	 train loss: 2.17497	 val loss: 2.02967	 best val loss: 2.02595
+CV_4 (425.48s) -	 train_loss: 2.17497	 val_loss: 2.02967	 val_acc: 0.33550	 val_recall: 0.33536	 val_f1: 0.30865
+	early stopping at ep.36	 train loss: 2.17599	 val loss: 2.03370	 best val loss: 2.02721
+CV_5 (324.40s) -	 train_loss: 2.17599	 val_loss: 2.03370	 val_acc: 0.33430	 val_recall: 0.33484	 val_f1: 0.31513
+## Experiment results (1681.18s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.17648 	 val loss: 2.02880 	 val accuracy: 0.33922 	 val recall: 0.33922 	 val f1: 0.31711
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 16}
+	early stopping at ep.49	 train loss: 1.43220	 val loss: 1.77244	 best val loss: 1.76414
+CV_1 (24.39s) -	 train_loss: 1.43220	 val_loss: 1.77244	 val_acc: 0.39090	 val_recall: 0.39188	 val_f1: 0.37616
+	early stopping at ep.18	 train loss: 1.51787	 val loss: 1.90600	 best val loss: 1.84059
+CV_2 (9.48s) -	 train_loss: 1.51787	 val_loss: 1.90600	 val_acc: 0.35390	 val_recall: 0.35342	 val_f1: 0.34593
+	early stopping at ep.23	 train loss: 1.47833	 val loss: 1.87300	 best val loss: 1.79019
+CV_3 (12.39s) -	 train_loss: 1.47833	 val_loss: 1.87300	 val_acc: 0.35240	 val_recall: 0.35449	 val_f1: 0.34880
+	early stopping at ep.31	 train loss: 1.42994	 val loss: 1.93950	 best val loss: 1.79218
+CV_4 (15.38s) -	 train_loss: 1.42994	 val_loss: 1.93950	 val_acc: 0.37950	 val_recall: 0.38089	 val_f1: 0.37455
+	early stopping at ep.36	 train loss: 1.48118	 val loss: 1.83251	 best val loss: 1.76657
+CV_5 (18.90s) -	 train_loss: 1.48118	 val_loss: 1.83251	 val_acc: 0.37590	 val_recall: 0.37680	 val_f1: 0.37642
+## Experiment results (80.74s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 1.46790 	 val loss: 1.86469 	 val accuracy: 0.37052 	 val recall: 0.37150 	 val f1: 0.36437
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 8}
+	early stopping at ep.35	 train loss: 1.35306	 val loss: 1.59219	 best val loss: 1.55871
+CV_1 (27.98s) -	 train_loss: 1.35306	 val_loss: 1.59219	 val_acc: 0.45680	 val_recall: 0.45728	 val_f1: 0.44674
+CV_2 (40.95s) -	 train_loss: 1.36321	 val_loss: 1.55167	 val_acc: 0.44710	 val_recall: 0.44633	 val_f1: 0.44460
+	early stopping at ep.46	 train loss: 1.35012	 val loss: 1.57630	 best val loss: 1.55216
+CV_3 (37.30s) -	 train_loss: 1.35012	 val_loss: 1.57630	 val_acc: 0.42900	 val_recall: 0.42978	 val_f1: 0.41884
+	early stopping at ep.46	 train loss: 1.38243	 val loss: 1.59258	 best val loss: 1.54065
+CV_4 (37.16s) -	 train_loss: 1.38243	 val_loss: 1.59258	 val_acc: 0.44710	 val_recall: 0.44664	 val_f1: 0.44357
+CV_5 (41.12s) -	 train_loss: 1.34874	 val_loss: 1.56416	 val_acc: 0.46140	 val_recall: 0.46058	 val_f1: 0.46237
+## Experiment results (184.79s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 1.35951 	 val loss: 1.57538 	 val accuracy: 0.44828 	 val recall: 0.44812 	 val f1: 0.44322
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 4}
+CV_1 (73.47s) -	 train_loss: 1.35609	 val_loss: 1.46702	 val_acc: 0.47640	 val_recall: 0.47791	 val_f1: 0.47140
+CV_2 (79.21s) -	 train_loss: 1.35466	 val_loss: 1.48175	 val_acc: 0.48060	 val_recall: 0.47880	 val_f1: 0.47014
+	early stopping at ep.45	 train loss: 1.33686	 val loss: 1.48657	 best val loss: 1.45906
+CV_3 (69.97s) -	 train_loss: 1.33686	 val_loss: 1.48657	 val_acc: 0.47500	 val_recall: 0.47488	 val_f1: 0.47075
+CV_4 (77.66s) -	 train_loss: 1.34207	 val_loss: 1.45246	 val_acc: 0.48500	 val_recall: 0.48518	 val_f1: 0.47355
+	early stopping at ep.37	 train loss: 1.35681	 val loss: 1.48633	 best val loss: 1.45491
+CV_5 (58.58s) -	 train_loss: 1.35681	 val_loss: 1.48633	 val_acc: 0.47480	 val_recall: 0.47392	 val_f1: 0.46697
+## Experiment results (359.16s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 1.34930 	 val loss: 1.47482 	 val accuracy: 0.47836 	 val recall: 0.47814 	 val f1: 0.47056
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 2}
+CV_1 (145.12s) -	 train_loss: 1.36403	 val_loss: 1.42402	 val_acc: 0.49800	 val_recall: 0.49966	 val_f1: 0.49030
+	early stopping at ep.44	 train loss: 1.37222	 val loss: 1.44589	 best val loss: 1.42053
+CV_2 (127.59s) -	 train_loss: 1.37222	 val_loss: 1.44589	 val_acc: 0.49400	 val_recall: 0.49252	 val_f1: 0.48818
+	early stopping at ep.37	 train loss: 1.37493	 val loss: 1.45597	 best val loss: 1.43884
+CV_3 (103.64s) -	 train_loss: 1.37493	 val_loss: 1.45597	 val_acc: 0.48460	 val_recall: 0.48434	 val_f1: 0.47490
+	early stopping at ep.30	 train loss: 1.38186	 val loss: 1.46631	 best val loss: 1.43883
+CV_4 (87.12s) -	 train_loss: 1.38186	 val_loss: 1.46631	 val_acc: 0.47810	 val_recall: 0.47759	 val_f1: 0.46855
+	early stopping at ep.42	 train loss: 1.37839	 val loss: 1.45507	 best val loss: 1.43253
+CV_5 (129.08s) -	 train_loss: 1.37839	 val_loss: 1.45507	 val_acc: 0.48330	 val_recall: 0.48307	 val_f1: 0.47833
+## Experiment results (592.79s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 1.37429 	 val loss: 1.44945 	 val accuracy: 0.48760 	 val recall: 0.48744 	 val f1: 0.48005
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 16}
+CV_1 (54.62s) -	 train_loss: 1.51082	 val_loss: 1.56530	 val_acc: 0.44560	 val_recall: 0.44673	 val_f1: 0.44065
+CV_2 (56.47s) -	 train_loss: 1.48145	 val_loss: 1.51427	 val_acc: 0.46530	 val_recall: 0.46427	 val_f1: 0.46181
+CV_3 (55.06s) -	 train_loss: 1.51420	 val_loss: 1.54736	 val_acc: 0.45610	 val_recall: 0.45660	 val_f1: 0.45018
+CV_4 (55.59s) -	 train_loss: 1.53013	 val_loss: 1.55515	 val_acc: 0.44880	 val_recall: 0.44878	 val_f1: 0.44604
+CV_5 (54.89s) -	 train_loss: 1.50314	 val_loss: 1.57742	 val_acc: 0.45220	 val_recall: 0.45218	 val_f1: 0.44722
+## Experiment results (277.03s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 1.50795 	 val loss: 1.55190 	 val accuracy: 0.45360 	 val recall: 0.45371 	 val f1: 0.44918
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 8}
+	early stopping at ep.46	 train loss: 1.68675	 val loss: 1.58281	 best val loss: 1.56774
+CV_1 (92.33s) -	 train_loss: 1.68675	 val_loss: 1.58281	 val_acc: 0.44230	 val_recall: 0.44399	 val_f1: 0.43740
+	early stopping at ep.45	 train loss: 1.68269	 val loss: 1.59639	 best val loss: 1.56824
+CV_2 (89.92s) -	 train_loss: 1.68269	 val_loss: 1.59639	 val_acc: 0.44400	 val_recall: 0.44305	 val_f1: 0.43885
+	early stopping at ep.48	 train loss: 1.69848	 val loss: 1.57472	 best val loss: 1.55663
+CV_3 (95.30s) -	 train_loss: 1.69848	 val_loss: 1.57472	 val_acc: 0.45030	 val_recall: 0.45081	 val_f1: 0.44295
+	early stopping at ep.45	 train loss: 1.69219	 val loss: 1.61192	 best val loss: 1.56631
+CV_4 (90.51s) -	 train_loss: 1.69219	 val_loss: 1.61192	 val_acc: 0.43770	 val_recall: 0.43766	 val_f1: 0.43128
+	early stopping at ep.47	 train loss: 1.68174	 val loss: 1.58631	 best val loss: 1.56870
+CV_5 (93.51s) -	 train_loss: 1.68174	 val_loss: 1.58631	 val_acc: 0.44860	 val_recall: 0.44842	 val_f1: 0.44179
+## Experiment results (461.90s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.68837 	 val loss: 1.59043 	 val accuracy: 0.44458 	 val recall: 0.44478 	 val f1: 0.43845
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 4}
+	early stopping at ep.50	 train loss: 1.95216	 val loss: 1.76002	 best val loss: 1.74067
+CV_1 (187.76s) -	 train_loss: 1.95216	 val_loss: 1.76002	 val_acc: 0.40360	 val_recall: 0.40510	 val_f1: 0.39287
+	early stopping at ep.43	 train loss: 1.96037	 val loss: 1.74967	 best val loss: 1.74303
+CV_2 (160.77s) -	 train_loss: 1.96037	 val_loss: 1.74967	 val_acc: 0.41440	 val_recall: 0.41358	 val_f1: 0.40547
+	early stopping at ep.37	 train loss: 1.96078	 val loss: 1.76089	 best val loss: 1.75682
+CV_3 (137.79s) -	 train_loss: 1.96078	 val_loss: 1.76089	 val_acc: 0.40820	 val_recall: 0.40841	 val_f1: 0.40110
+	early stopping at ep.45	 train loss: 1.96117	 val loss: 1.75139	 best val loss: 1.74656
+CV_4 (167.92s) -	 train_loss: 1.96117	 val_loss: 1.75139	 val_acc: 0.41360	 val_recall: 0.41319	 val_f1: 0.40660
+	early stopping at ep.49	 train loss: 1.95624	 val loss: 1.75495	 best val loss: 1.75115
+CV_5 (182.60s) -	 train_loss: 1.95624	 val_loss: 1.75495	 val_acc: 0.41440	 val_recall: 0.41408	 val_f1: 0.40749
+## Experiment results (837.12s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.95814 	 val loss: 1.75538 	 val accuracy: 0.41084 	 val recall: 0.41087 	 val f1: 0.40270
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 2}
+	early stopping at ep.34	 train loss: 2.22903	 val loss: 2.12970	 best val loss: 2.12300
+CV_1 (245.72s) -	 train_loss: 2.22903	 val_loss: 2.12970	 val_acc: 0.27060	 val_recall: 0.27199	 val_f1: 0.23195
+	early stopping at ep.31	 train loss: 2.22830	 val loss: 2.12863	 best val loss: 2.12156
+CV_2 (226.71s) -	 train_loss: 2.22830	 val_loss: 2.12863	 val_acc: 0.26100	 val_recall: 0.26056	 val_f1: 0.22031
+	early stopping at ep.41	 train loss: 2.22614	 val loss: 2.12769	 best val loss: 2.11803
+CV_3 (299.63s) -	 train_loss: 2.22614	 val_loss: 2.12769	 val_acc: 0.28730	 val_recall: 0.28499	 val_f1: 0.25177
+	early stopping at ep.44	 train loss: 2.22989	 val loss: 2.14281	 best val loss: 2.12304
+CV_4 (315.98s) -	 train_loss: 2.22989	 val_loss: 2.14281	 val_acc: 0.24980	 val_recall: 0.25192	 val_f1: 0.21493
+	early stopping at ep.37	 train loss: 2.23820	 val loss: 2.14733	 best val loss: 2.11767
+CV_5 (267.62s) -	 train_loss: 2.23820	 val_loss: 2.14733	 val_acc: 0.26400	 val_recall: 0.26447	 val_f1: 0.22391
+## Experiment results (1356.03s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.0001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.23031 	 val loss: 2.13523 	 val accuracy: 0.26654 	 val recall: 0.26679 	 val f1: 0.22857
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': False, 'batch_size': 16}
+	early stopping at ep.21	 train loss: 1.71314	 val loss: 2.66421	 best val loss: 2.31367
+CV_1 (9.38s) -	 train_loss: 1.71314	 val_loss: 2.66421	 val_acc: 0.19310	 val_recall: 0.19679	 val_f1: 0.14073
+	early stopping at ep.22	 train loss: 1.78197	 val loss: 2.62947	 best val loss: 2.40619
+CV_2 (9.43s) -	 train_loss: 1.78197	 val_loss: 2.62947	 val_acc: 0.21520	 val_recall: 0.21140	 val_f1: 0.16664
+	early stopping at ep.16	 train loss: 1.69238	 val loss: 2.41619	 best val loss: 2.29606
+CV_3 (6.83s) -	 train_loss: 1.69238	 val_loss: 2.41619	 val_acc: 0.19180	 val_recall: 0.19394	 val_f1: 0.15763
+	early stopping at ep.14	 train loss: 1.62912	 val loss: 2.47749	 best val loss: 2.35195
+CV_4 (6.06s) -	 train_loss: 1.62912	 val_loss: 2.47749	 val_acc: 0.21460	 val_recall: 0.21637	 val_f1: 0.18327
+	early stopping at ep.40	 train loss: 1.65099	 val loss: 2.35027	 best val loss: 2.29900
+CV_5 (17.37s) -	 train_loss: 1.65099	 val_loss: 2.35027	 val_acc: 0.21930	 val_recall: 0.22027	 val_f1: 0.18219
+## Experiment results (49.34s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 1.69352 	 val loss: 2.50753 	 val accuracy: 0.20680 	 val recall: 0.20775 	 val f1: 0.16609
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': False, 'batch_size': 8}
+	early stopping at ep.30	 train loss: 1.53227	 val loss: 2.14898	 best val loss: 2.13343
+CV_1 (21.38s) -	 train_loss: 1.53227	 val_loss: 2.14898	 val_acc: 0.24930	 val_recall: 0.25400	 val_f1: 0.21982
+	early stopping at ep.27	 train loss: 1.48982	 val loss: 2.47916	 best val loss: 2.16414
+CV_2 (19.68s) -	 train_loss: 1.48982	 val_loss: 2.47916	 val_acc: 0.27090	 val_recall: 0.27050	 val_f1: 0.22757
+	early stopping at ep.17	 train loss: 1.57529	 val loss: 2.19713	 best val loss: 2.16229
+CV_3 (13.09s) -	 train_loss: 1.57529	 val_loss: 2.19713	 val_acc: 0.26150	 val_recall: 0.26484	 val_f1: 0.23957
+	early stopping at ep.14	 train loss: 1.54937	 val loss: 2.68803	 best val loss: 2.23225
+CV_4 (10.46s) -	 train_loss: 1.54937	 val_loss: 2.68803	 val_acc: 0.21930	 val_recall: 0.21960	 val_f1: 0.19273
+	early stopping at ep.26	 train loss: 1.49701	 val loss: 2.23973	 best val loss: 2.20762
+CV_5 (19.55s) -	 train_loss: 1.49701	 val_loss: 2.23973	 val_acc: 0.29010	 val_recall: 0.29095	 val_f1: 0.25825
+## Experiment results (84.42s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 1.52875 	 val loss: 2.35061 	 val accuracy: 0.25822 	 val recall: 0.25998 	 val f1: 0.22759
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': False, 'batch_size': 4}
+	early stopping at ep.20	 train loss: 1.38292	 val loss: 2.31221	 best val loss: 2.00969
+CV_1 (26.08s) -	 train_loss: 1.38292	 val_loss: 2.31221	 val_acc: 0.33480	 val_recall: 0.33443	 val_f1: 0.31493
+	early stopping at ep.16	 train loss: 1.40180	 val loss: 2.16198	 best val loss: 2.04135
+CV_2 (22.79s) -	 train_loss: 1.40180	 val_loss: 2.16198	 val_acc: 0.28970	 val_recall: 0.29127	 val_f1: 0.27565
+	early stopping at ep.21	 train loss: 1.36922	 val loss: 2.12555	 best val loss: 1.96352
+CV_3 (29.52s) -	 train_loss: 1.36922	 val_loss: 2.12555	 val_acc: 0.31630	 val_recall: 0.31957	 val_f1: 0.30500
+	early stopping at ep.18	 train loss: 1.36958	 val loss: 2.05844	 best val loss: 1.98278
+CV_4 (25.31s) -	 train_loss: 1.36958	 val_loss: 2.05844	 val_acc: 0.33680	 val_recall: 0.33666	 val_f1: 0.32939
+	early stopping at ep.16	 train loss: 1.41461	 val loss: 2.18634	 best val loss: 2.03078
+CV_5 (22.65s) -	 train_loss: 1.41461	 val_loss: 2.18634	 val_acc: 0.29690	 val_recall: 0.29721	 val_f1: 0.28167
+## Experiment results (126.61s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 1.38763 	 val loss: 2.16890 	 val accuracy: 0.31490 	 val recall: 0.31583 	 val f1: 0.30133
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': False, 'batch_size': 2}
+	early stopping at ep.24	 train loss: 1.32550	 val loss: 1.88698	 best val loss: 1.75719
+CV_1 (63.18s) -	 train_loss: 1.32550	 val_loss: 1.88698	 val_acc: 0.38500	 val_recall: 0.38492	 val_f1: 0.37949
+	early stopping at ep.26	 train loss: 1.31042	 val loss: 1.87975	 best val loss: 1.71735
+CV_2 (64.58s) -	 train_loss: 1.31042	 val_loss: 1.87975	 val_acc: 0.38030	 val_recall: 0.38028	 val_f1: 0.37055
+	early stopping at ep.20	 train loss: 1.34249	 val loss: 1.91662	 best val loss: 1.72575
+CV_3 (52.95s) -	 train_loss: 1.34249	 val_loss: 1.91662	 val_acc: 0.37290	 val_recall: 0.37301	 val_f1: 0.36672
+	early stopping at ep.31	 train loss: 1.32326	 val loss: 1.75788	 best val loss: 1.69754
+CV_4 (76.88s) -	 train_loss: 1.32326	 val_loss: 1.75788	 val_acc: 0.40740	 val_recall: 0.40631	 val_f1: 0.40141
+	early stopping at ep.18	 train loss: 1.33419	 val loss: 1.80865	 best val loss: 1.77856
+CV_5 (44.72s) -	 train_loss: 1.33419	 val_loss: 1.80865	 val_acc: 0.39350	 val_recall: 0.39405	 val_f1: 0.37853
+## Experiment results (302.59s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 1.32717 	 val loss: 1.84998 	 val accuracy: 0.38782 	 val recall: 0.38771 	 val f1: 0.37934
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': True, 'batch_size': 16}
+	early stopping at ep.31	 train loss: 1.33479	 val loss: 2.43647	 best val loss: 2.33327
+CV_1 (32.68s) -	 train_loss: 1.33479	 val_loss: 2.43647	 val_acc: 0.27890	 val_recall: 0.28129	 val_f1: 0.26847
+	early stopping at ep.50	 train loss: 1.34938	 val loss: 2.66992	 best val loss: 2.24278
+CV_2 (52.81s) -	 train_loss: 1.34938	 val_loss: 2.66992	 val_acc: 0.26690	 val_recall: 0.26650	 val_f1: 0.24356
+	early stopping at ep.25	 train loss: 1.30628	 val loss: 2.39255	 best val loss: 2.36526
+CV_3 (26.37s) -	 train_loss: 1.30628	 val_loss: 2.39255	 val_acc: 0.26120	 val_recall: 0.26090	 val_f1: 0.23830
+	early stopping at ep.43	 train loss: 1.16079	 val loss: 2.53461	 best val loss: 2.26400
+CV_4 (45.23s) -	 train_loss: 1.16079	 val_loss: 2.53461	 val_acc: 0.28110	 val_recall: 0.28318	 val_f1: 0.27467
+	early stopping at ep.32	 train loss: 1.18753	 val loss: 2.60710	 best val loss: 2.38152
+CV_5 (33.55s) -	 train_loss: 1.18753	 val_loss: 2.60710	 val_acc: 0.19430	 val_recall: 0.19310	 val_f1: 0.19369
+## Experiment results (191.00s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 1.26775 	 val loss: 2.52813 	 val accuracy: 0.25648 	 val recall: 0.25699 	 val f1: 0.24374
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': True, 'batch_size': 8}
+	early stopping at ep.37	 train loss: 1.33445	 val loss: 1.87908	 best val loss: 1.80469
+CV_1 (69.43s) -	 train_loss: 1.33445	 val_loss: 1.87908	 val_acc: 0.36320	 val_recall: 0.36635	 val_f1: 0.34670
+	early stopping at ep.22	 train loss: 1.42570	 val loss: 1.90832	 best val loss: 1.87797
+CV_2 (42.35s) -	 train_loss: 1.42570	 val_loss: 1.90832	 val_acc: 0.36860	 val_recall: 0.36730	 val_f1: 0.35671
+	early stopping at ep.25	 train loss: 1.33767	 val loss: 1.90437	 best val loss: 1.84227
+CV_3 (47.45s) -	 train_loss: 1.33767	 val_loss: 1.90437	 val_acc: 0.36910	 val_recall: 0.37049	 val_f1: 0.35946
+	early stopping at ep.42	 train loss: 1.37786	 val loss: 1.90882	 best val loss: 1.78687
+CV_4 (79.58s) -	 train_loss: 1.37786	 val_loss: 1.90882	 val_acc: 0.35760	 val_recall: 0.35767	 val_f1: 0.34850
+CV_5 (94.08s) -	 train_loss: 1.38316	 val_loss: 1.90954	 val_acc: 0.37020	 val_recall: 0.37035	 val_f1: 0.35899
+## Experiment results (333.24s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.37177 	 val loss: 1.90203 	 val accuracy: 0.36574 	 val recall: 0.36643 	 val f1: 0.35407
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': True, 'batch_size': 4}
+	early stopping at ep.47	 train loss: 1.86438	 val loss: 1.74008	 best val loss: 1.69030
+CV_1 (166.98s) -	 train_loss: 1.86438	 val_loss: 1.74008	 val_acc: 0.38260	 val_recall: 0.38362	 val_f1: 0.37058
+	early stopping at ep.39	 train loss: 1.87909	 val loss: 1.71887	 best val loss: 1.70738
+CV_2 (139.40s) -	 train_loss: 1.87909	 val_loss: 1.71887	 val_acc: 0.39100	 val_recall: 0.39062	 val_f1: 0.37064
+	early stopping at ep.24	 train loss: 1.86895	 val loss: 1.76204	 best val loss: 1.73584
+CV_3 (85.64s) -	 train_loss: 1.86895	 val_loss: 1.76204	 val_acc: 0.37570	 val_recall: 0.37546	 val_f1: 0.34260
+	early stopping at ep.34	 train loss: 1.87363	 val loss: 1.72595	 best val loss: 1.71155
+CV_4 (121.05s) -	 train_loss: 1.87363	 val_loss: 1.72595	 val_acc: 0.39620	 val_recall: 0.39491	 val_f1: 0.37775
+	early stopping at ep.47	 train loss: 1.86523	 val loss: 1.72925	 best val loss: 1.70027
+CV_5 (167.13s) -	 train_loss: 1.86523	 val_loss: 1.72925	 val_acc: 0.39100	 val_recall: 0.39092	 val_f1: 0.38787
+## Experiment results (680.55s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.87026 	 val loss: 1.73524 	 val accuracy: 0.38730 	 val recall: 0.38711 	 val f1: 0.36989
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': True, 'batch_size': 2}
+	early stopping at ep.27	 train loss: 2.30251	 val loss: 2.30446	 best val loss: 2.16608
+CV_1 (185.46s) -	 train_loss: 2.30251	 val_loss: 2.30446	 val_acc: 0.10100	 val_recall: 0.09941	 val_f1: 0.01840
+	early stopping at ep.16	 train loss: 2.28716	 val loss: 2.28955	 best val loss: 2.27412
+CV_2 (111.21s) -	 train_loss: 2.28716	 val_loss: 2.28955	 val_acc: 0.12650	 val_recall: 0.12954	 val_f1: 0.04992
+	early stopping at ep.11	 train loss: 2.29624	 val loss: 2.28835	 best val loss: 2.22206
+CV_3 (76.69s) -	 train_loss: 2.29624	 val_loss: 2.28835	 val_acc: 0.14050	 val_recall: 0.14205	 val_f1: 0.09673
+	early stopping at ep.29	 train loss: 2.30304	 val loss: 2.30472	 best val loss: 2.16073
+CV_4 (200.10s) -	 train_loss: 2.30304	 val_loss: 2.30472	 val_acc: 0.10080	 val_recall: 0.10000	 val_f1: 0.01831
+	early stopping at ep.12	 train loss: 2.28264	 val loss: 2.25766	 best val loss: 2.25243
+CV_5 (82.99s) -	 train_loss: 2.28264	 val_loss: 2.25766	 val_acc: 0.12850	 val_recall: 0.12900	 val_f1: 0.09369
+## Experiment results (656.78s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': None, 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.29432 	 val loss: 2.28895 	 val accuracy: 0.11946 	 val recall: 0.12000 	 val f1: 0.05541
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': False, 'batch_size': 16}
+	early stopping at ep.14	 train loss: 2.30895	 val loss: 2.32174	 best val loss: 2.31111
+CV_1 (10.41s) -	 train_loss: 2.30895	 val_loss: 2.32174	 val_acc: 0.09530	 val_recall: 0.10000	 val_f1: 0.01740
+	early stopping at ep.23	 train loss: 2.31351	 val loss: 2.31376	 best val loss: 2.31034
+CV_2 (16.51s) -	 train_loss: 2.31351	 val_loss: 2.31376	 val_acc: 0.10310	 val_recall: 0.10000	 val_f1: 0.01869
+	early stopping at ep.13	 train loss: 2.30706	 val loss: 2.34005	 best val loss: 2.31075
+CV_3 (9.10s) -	 train_loss: 2.30706	 val_loss: 2.34005	 val_acc: 0.09830	 val_recall: 0.10010	 val_f1: 0.01808
+	early stopping at ep.14	 train loss: 2.31337	 val loss: 2.32172	 best val loss: 2.31053
+CV_4 (9.57s) -	 train_loss: 2.31337	 val_loss: 2.32172	 val_acc: 0.09750	 val_recall: 0.10000	 val_f1: 0.01777
+	early stopping at ep.33	 train loss: 2.31067	 val loss: 2.32134	 best val loss: 2.31022
+CV_5 (23.40s) -	 train_loss: 2.31067	 val_loss: 2.32134	 val_acc: 0.10190	 val_recall: 0.10000	 val_f1: 0.01850
+## Experiment results (69.25s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 2.31071 	 val loss: 2.32372 	 val accuracy: 0.09922 	 val recall: 0.10002 	 val f1: 0.01809
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': False, 'batch_size': 8}
+	early stopping at ep.19	 train loss: 2.31541	 val loss: 2.31825	 best val loss: 2.31053
+CV_1 (23.57s) -	 train_loss: 2.31541	 val_loss: 2.31825	 val_acc: 0.10300	 val_recall: 0.10000	 val_f1: 0.01868
+	early stopping at ep.18	 train loss: 2.31390	 val loss: 2.32800	 best val loss: 2.31318
+CV_2 (22.82s) -	 train_loss: 2.31390	 val_loss: 2.32800	 val_acc: 0.10270	 val_recall: 0.10000	 val_f1: 0.01863
+	early stopping at ep.15	 train loss: 2.31274	 val loss: 2.31111	 best val loss: 2.31076
+CV_3 (18.92s) -	 train_loss: 2.31274	 val_loss: 2.31111	 val_acc: 0.10580	 val_recall: 0.10000	 val_f1: 0.01914
+	early stopping at ep.27	 train loss: 2.31281	 val loss: 2.31533	 best val loss: 2.30529
+CV_4 (34.09s) -	 train_loss: 2.31281	 val_loss: 2.31533	 val_acc: 0.09800	 val_recall: 0.10000	 val_f1: 0.01785
+	early stopping at ep.20	 train loss: 2.31101	 val loss: 2.32005	 best val loss: 2.30837
+CV_5 (24.90s) -	 train_loss: 2.31101	 val_loss: 2.32005	 val_acc: 0.10060	 val_recall: 0.10000	 val_f1: 0.01828
+## Experiment results (124.53s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 2.31318 	 val loss: 2.31855 	 val accuracy: 0.10202 	 val recall: 0.10000 	 val f1: 0.01851
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': False, 'batch_size': 4}
+	early stopping at ep.13	 train loss: 2.31496	 val loss: 2.31806	 best val loss: 2.30834
+CV_1 (32.30s) -	 train_loss: 2.31496	 val_loss: 2.31806	 val_acc: 0.10160	 val_recall: 0.10000	 val_f1: 0.01845
+	early stopping at ep.14	 train loss: 2.31378	 val loss: 2.32823	 best val loss: 2.30998
+CV_2 (33.15s) -	 train_loss: 2.31378	 val_loss: 2.32823	 val_acc: 0.09910	 val_recall: 0.10000	 val_f1: 0.01803
+	early stopping at ep.14	 train loss: 2.31419	 val loss: 2.30639	 best val loss: 2.30739
+CV_3 (34.80s) -	 train_loss: 2.31419	 val_loss: 2.30639	 val_acc: 0.10180	 val_recall: 0.10000	 val_f1: 0.01848
+	early stopping at ep.14	 train loss: 2.31529	 val loss: 2.31173	 best val loss: 2.30820
+CV_4 (33.14s) -	 train_loss: 2.31529	 val_loss: 2.31173	 val_acc: 0.10340	 val_recall: 0.10000	 val_f1: 0.01874
+	early stopping at ep.13	 train loss: 2.31341	 val loss: 2.31930	 best val loss: 2.31014
+CV_5 (31.92s) -	 train_loss: 2.31341	 val_loss: 2.31930	 val_acc: 0.10190	 val_recall: 0.10000	 val_f1: 0.01850
+## Experiment results (165.54s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 2.31433 	 val loss: 2.31674 	 val accuracy: 0.10156 	 val recall: 0.10000 	 val f1: 0.01844
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': False, 'batch_size': 2}
+	early stopping at ep.22	 train loss: 2.31171	 val loss: 2.30663	 best val loss: 2.30614
+CV_1 (103.50s) -	 train_loss: 2.31171	 val_loss: 2.30663	 val_acc: 0.10300	 val_recall: 0.10000	 val_f1: 0.01868
+	early stopping at ep.15	 train loss: 2.31210	 val loss: 2.32116	 best val loss: 2.30796
+CV_2 (68.40s) -	 train_loss: 2.31210	 val_loss: 2.32116	 val_acc: 0.09870	 val_recall: 0.10000	 val_f1: 0.01797
+	early stopping at ep.12	 train loss: 2.31120	 val loss: 2.31463	 best val loss: 2.30714
+CV_3 (56.14s) -	 train_loss: 2.31120	 val_loss: 2.31463	 val_acc: 0.10180	 val_recall: 0.10000	 val_f1: 0.01848
+	early stopping at ep.15	 train loss: 2.31230	 val loss: 2.31787	 best val loss: 2.30607
+CV_4 (68.88s) -	 train_loss: 2.31230	 val_loss: 2.31787	 val_acc: 0.09750	 val_recall: 0.10000	 val_f1: 0.01777
+	early stopping at ep.20	 train loss: 2.31231	 val loss: 2.30891	 best val loss: 2.30754
+CV_5 (91.29s) -	 train_loss: 2.31231	 val_loss: 2.30891	 val_acc: 0.09970	 val_recall: 0.10000	 val_f1: 0.01813
+## Experiment results (388.46s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 2.31192 	 val loss: 2.31384 	 val accuracy: 0.10014 	 val recall: 0.10000 	 val f1: 0.01820
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': True, 'batch_size': 16}
+	early stopping at ep.37	 train loss: 1.43135	 val loss: 1.68823	 best val loss: 1.65614
+CV_1 (48.79s) -	 train_loss: 1.43135	 val_loss: 1.68823	 val_acc: 0.41440	 val_recall: 0.41671	 val_f1: 0.39785
+CV_2 (65.95s) -	 train_loss: 1.39594	 val_loss: 1.75837	 val_acc: 0.39630	 val_recall: 0.39493	 val_f1: 0.36975
+	early stopping at ep.44	 train loss: 1.42952	 val loss: 1.73885	 best val loss: 1.64591
+CV_3 (58.35s) -	 train_loss: 1.42952	 val_loss: 1.73885	 val_acc: 0.40190	 val_recall: 0.40032	 val_f1: 0.38605
+CV_4 (65.59s) -	 train_loss: 1.41341	 val_loss: 1.66555	 val_acc: 0.42020	 val_recall: 0.41900	 val_f1: 0.41652
+CV_5 (66.30s) -	 train_loss: 1.43172	 val_loss: 1.65828	 val_acc: 0.41810	 val_recall: 0.41657	 val_f1: 0.40407
+## Experiment results (305.35s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 1.42039 	 val loss: 1.70186 	 val accuracy: 0.41018 	 val recall: 0.40950 	 val f1: 0.39485
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': True, 'batch_size': 8}
+	early stopping at ep.41	 train loss: 1.57976	 val loss: 1.56154	 best val loss: 1.52703
+CV_1 (99.54s) -	 train_loss: 1.57976	 val_loss: 1.56154	 val_acc: 0.43620	 val_recall: 0.43719	 val_f1: 0.41934
+	early stopping at ep.42	 train loss: 1.56440	 val loss: 1.54866	 best val loss: 1.51396
+CV_2 (101.22s) -	 train_loss: 1.56440	 val_loss: 1.54866	 val_acc: 0.44800	 val_recall: 0.44625	 val_f1: 0.41957
+	early stopping at ep.38	 train loss: 1.56401	 val loss: 1.53262	 best val loss: 1.53309
+CV_3 (92.52s) -	 train_loss: 1.56401	 val_loss: 1.53262	 val_acc: 0.44830	 val_recall: 0.44784	 val_f1: 0.43630
+	early stopping at ep.32	 train loss: 1.55812	 val loss: 1.58033	 best val loss: 1.53824
+CV_4 (77.15s) -	 train_loss: 1.55812	 val_loss: 1.58033	 val_acc: 0.43910	 val_recall: 0.43854	 val_f1: 0.42951
+	early stopping at ep.46	 train loss: 1.56860	 val loss: 1.54559	 best val loss: 1.52664
+CV_5 (111.40s) -	 train_loss: 1.56860	 val_loss: 1.54559	 val_acc: 0.45580	 val_recall: 0.45521	 val_f1: 0.44514
+## Experiment results (482.19s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.56698 	 val loss: 1.55375 	 val accuracy: 0.44548 	 val recall: 0.44500 	 val f1: 0.42997
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': True, 'batch_size': 4}
+CV_1 (234.38s) -	 train_loss: 1.87135	 val_loss: 1.65942	 val_acc: 0.42710	 val_recall: 0.42798	 val_f1: 0.41820
+	early stopping at ep.25	 train loss: 1.88971	 val loss: 1.65453	 best val loss: 1.65045
+CV_2 (115.82s) -	 train_loss: 1.88971	 val_loss: 1.65453	 val_acc: 0.42120	 val_recall: 0.41933	 val_f1: 0.40900
+CV_3 (231.38s) -	 train_loss: 1.85816	 val_loss: 1.66178	 val_acc: 0.40740	 val_recall: 0.40843	 val_f1: 0.38820
+	early stopping at ep.39	 train loss: 1.87195	 val loss: 1.64044	 best val loss: 1.64045
+CV_4 (179.66s) -	 train_loss: 1.87195	 val_loss: 1.64044	 val_acc: 0.42590	 val_recall: 0.42613	 val_f1: 0.41796
+	early stopping at ep.39	 train loss: 1.88285	 val loss: 1.65078	 best val loss: 1.64900
+CV_5 (180.26s) -	 train_loss: 1.88285	 val_loss: 1.65078	 val_acc: 0.42780	 val_recall: 0.42845	 val_f1: 0.42118
+## Experiment results (941.84s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.87480 	 val loss: 1.65339 	 val accuracy: 0.42188 	 val recall: 0.42206 	 val f1: 0.41091
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': True, 'batch_size': 2}
+	early stopping at ep.22	 train loss: 2.28298	 val loss: 2.27824	 best val loss: 2.21205
+CV_1 (197.70s) -	 train_loss: 2.28298	 val_loss: 2.27824	 val_acc: 0.15560	 val_recall: 0.15770	 val_f1: 0.09877
+	early stopping at ep.11	 train loss: 2.27657	 val loss: 2.25859	 best val loss: 2.21723
+CV_2 (99.55s) -	 train_loss: 2.27657	 val_loss: 2.25859	 val_acc: 0.15260	 val_recall: 0.15169	 val_f1: 0.09903
+	early stopping at ep.21	 train loss: 2.28399	 val loss: 2.25609	 best val loss: 2.21948
+CV_3 (189.04s) -	 train_loss: 2.28399	 val_loss: 2.25609	 val_acc: 0.15490	 val_recall: 0.15120	 val_f1: 0.09353
+	early stopping at ep.30	 train loss: 2.29350	 val loss: 2.27503	 best val loss: 2.21595
+CV_4 (273.18s) -	 train_loss: 2.29350	 val_loss: 2.27503	 val_acc: 0.14560	 val_recall: 0.14682	 val_f1: 0.06863
+	early stopping at ep.17	 train loss: 2.29706	 val loss: 2.29836	 best val loss: 2.21140
+CV_5 (153.18s) -	 train_loss: 2.29706	 val_loss: 2.29836	 val_acc: 0.12600	 val_recall: 0.12645	 val_f1: 0.07087
+## Experiment results (913.01s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Adam', 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.28682 	 val loss: 2.27326 	 val accuracy: 0.14694 	 val recall: 0.14677 	 val f1: 0.08617
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 16}
+	early stopping at ep.13	 train loss: 2.35752	 val loss: 2.69024	 best val loss: 2.46470
+CV_1 (7.01s) -	 train_loss: 2.35752	 val_loss: 2.69024	 val_acc: 0.10160	 val_recall: 0.10000	 val_f1: 0.01845
+	early stopping at ep.11	 train loss: 2.36234	 val loss: 2.60606	 best val loss: 2.41661
+CV_2 (5.65s) -	 train_loss: 2.36234	 val_loss: 2.60606	 val_acc: 0.10390	 val_recall: 0.10000	 val_f1: 0.01882
+	early stopping at ep.23	 train loss: 2.36315	 val loss: 2.55421	 best val loss: 2.36672
+CV_3 (13.15s) -	 train_loss: 2.36315	 val_loss: 2.55421	 val_acc: 0.09600	 val_recall: 0.10000	 val_f1: 0.01752
+	early stopping at ep.31	 train loss: 2.37122	 val loss: 2.56418	 best val loss: 2.39535
+CV_4 (18.44s) -	 train_loss: 2.37122	 val_loss: 2.56418	 val_acc: 0.10080	 val_recall: 0.10000	 val_f1: 0.01831
+	early stopping at ep.15	 train loss: 2.35927	 val loss: 2.97201	 best val loss: 2.39871
+CV_5 (8.03s) -	 train_loss: 2.35927	 val_loss: 2.97201	 val_acc: 0.09790	 val_recall: 0.10000	 val_f1: 0.01783
+## Experiment results (52.52s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 2.36270 	 val loss: 2.67734 	 val accuracy: 0.10004 	 val recall: 0.10000 	 val f1: 0.01819
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 8}
+	early stopping at ep.14	 train loss: 2.39498	 val loss: 2.48895	 best val loss: 2.40897
+CV_1 (11.54s) -	 train_loss: 2.39498	 val_loss: 2.48895	 val_acc: 0.09670	 val_recall: 0.10000	 val_f1: 0.01763
+	early stopping at ep.32	 train loss: 2.40175	 val loss: 2.56743	 best val loss: 2.35990
+CV_2 (26.01s) -	 train_loss: 2.40175	 val_loss: 2.56743	 val_acc: 0.10020	 val_recall: 0.10000	 val_f1: 0.01821
+	early stopping at ep.11	 train loss: 2.39429	 val loss: 2.50211	 best val loss: 2.40413
+CV_3 (9.05s) -	 train_loss: 2.39429	 val_loss: 2.50211	 val_acc: 0.09790	 val_recall: 0.10000	 val_f1: 0.01783
+	early stopping at ep.16	 train loss: 2.40505	 val loss: 2.44810	 best val loss: 2.40042
+CV_4 (14.55s) -	 train_loss: 2.40505	 val_loss: 2.44810	 val_acc: 0.09750	 val_recall: 0.10000	 val_f1: 0.01777
+	early stopping at ep.17	 train loss: 2.39734	 val loss: 2.50794	 best val loss: 2.41346
+CV_5 (14.83s) -	 train_loss: 2.39734	 val_loss: 2.50794	 val_acc: 0.09470	 val_recall: 0.10000	 val_f1: 0.01730
+## Experiment results (76.23s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 2.39868 	 val loss: 2.50291 	 val accuracy: 0.09740 	 val recall: 0.10000 	 val f1: 0.01775
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 4}
+	early stopping at ep.13	 train loss: 2.37292	 val loss: 2.39287	 best val loss: 2.32639
+CV_1 (19.27s) -	 train_loss: 2.37292	 val_loss: 2.39287	 val_acc: 0.10160	 val_recall: 0.10000	 val_f1: 0.01845
+	early stopping at ep.14	 train loss: 2.37335	 val loss: 2.35402	 best val loss: 2.35059
+CV_2 (21.04s) -	 train_loss: 2.37335	 val_loss: 2.35402	 val_acc: 0.09650	 val_recall: 0.10000	 val_f1: 0.01760
+	early stopping at ep.17	 train loss: 2.37149	 val loss: 2.37728	 best val loss: 2.35528
+CV_3 (25.08s) -	 train_loss: 2.37149	 val_loss: 2.37728	 val_acc: 0.10180	 val_recall: 0.10000	 val_f1: 0.01848
+	early stopping at ep.31	 train loss: 2.37091	 val loss: 2.33497	 best val loss: 2.32102
+CV_4 (49.73s) -	 train_loss: 2.37091	 val_loss: 2.33497	 val_acc: 0.09770	 val_recall: 0.10000	 val_f1: 0.01780
+	early stopping at ep.15	 train loss: 2.36771	 val loss: 2.36025	 best val loss: 2.32828
+CV_5 (24.04s) -	 train_loss: 2.36771	 val_loss: 2.36025	 val_acc: 0.10060	 val_recall: 0.10000	 val_f1: 0.01828
+## Experiment results (139.38s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 2.37127 	 val loss: 2.36388 	 val accuracy: 0.09964 	 val recall: 0.10000 	 val f1: 0.01812
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 2}
+	early stopping at ep.11	 train loss: 2.34320	 val loss: 2.38065	 best val loss: 2.31722
+CV_1 (32.18s) -	 train_loss: 2.34320	 val_loss: 2.38065	 val_acc: 0.09530	 val_recall: 0.10000	 val_f1: 0.01740
+	early stopping at ep.15	 train loss: 2.34249	 val loss: 2.36040	 best val loss: 2.31720
+CV_2 (43.27s) -	 train_loss: 2.34249	 val_loss: 2.36040	 val_acc: 0.09650	 val_recall: 0.10000	 val_f1: 0.01760
+	early stopping at ep.14	 train loss: 2.34376	 val loss: 2.33137	 best val loss: 2.31902
+CV_3 (39.95s) -	 train_loss: 2.34376	 val_loss: 2.33137	 val_acc: 0.09790	 val_recall: 0.10000	 val_f1: 0.01783
+	early stopping at ep.40	 train loss: 2.34266	 val loss: 2.33460	 best val loss: 2.31071
+CV_4 (114.22s) -	 train_loss: 2.34266	 val_loss: 2.33460	 val_acc: 0.09770	 val_recall: 0.10000	 val_f1: 0.01780
+	early stopping at ep.11	 train loss: 2.34467	 val loss: 2.34096	 best val loss: 2.31850
+CV_5 (32.52s) -	 train_loss: 2.34467	 val_loss: 2.34096	 val_acc: 0.10590	 val_recall: 0.10000	 val_f1: 0.01915
+## Experiment results (262.37s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 2.34336 	 val loss: 2.34960 	 val accuracy: 0.09866 	 val recall: 0.10000 	 val f1: 0.01796
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 16}
+	early stopping at ep.37	 train loss: 1.43550	 val loss: 1.74437	 best val loss: 1.66359
+CV_1 (40.51s) -	 train_loss: 1.43550	 val_loss: 1.74437	 val_acc: 0.38480	 val_recall: 0.38511	 val_f1: 0.37663
+	early stopping at ep.30	 train loss: 1.45965	 val loss: 1.72901	 best val loss: 1.69008
+CV_2 (33.08s) -	 train_loss: 1.45965	 val_loss: 1.72901	 val_acc: 0.39190	 val_recall: 0.39058	 val_f1: 0.38803
+	early stopping at ep.26	 train loss: 1.46542	 val loss: 1.76571	 best val loss: 1.70709
+CV_3 (29.14s) -	 train_loss: 1.46542	 val_loss: 1.76571	 val_acc: 0.38330	 val_recall: 0.38400	 val_f1: 0.35539
+CV_4 (55.34s) -	 train_loss: 1.46985	 val_loss: 1.71289	 val_acc: 0.40640	 val_recall: 0.40798	 val_f1: 0.40492
+	early stopping at ep.39	 train loss: 1.46987	 val loss: 1.79665	 best val loss: 1.67673
+CV_5 (42.55s) -	 train_loss: 1.46987	 val_loss: 1.79665	 val_acc: 0.37880	 val_recall: 0.38006	 val_f1: 0.36108
+## Experiment results (200.97s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 1.46006 	 val loss: 1.74973 	 val accuracy: 0.38904 	 val recall: 0.38955 	 val f1: 0.37721
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 8}
+	early stopping at ep.28	 train loss: 1.65290	 val loss: 1.69053	 best val loss: 1.59830
+CV_1 (56.77s) -	 train_loss: 1.65290	 val_loss: 1.69053	 val_acc: 0.39690	 val_recall: 0.39771	 val_f1: 0.38072
+	early stopping at ep.37	 train loss: 1.63633	 val loss: 1.59568	 best val loss: 1.57498
+CV_2 (73.57s) -	 train_loss: 1.63633	 val_loss: 1.59568	 val_acc: 0.43510	 val_recall: 0.43446	 val_f1: 0.42973
+	early stopping at ep.44	 train loss: 1.61928	 val loss: 1.60052	 best val loss: 1.56064
+CV_3 (87.28s) -	 train_loss: 1.61928	 val_loss: 1.60052	 val_acc: 0.43360	 val_recall: 0.43454	 val_f1: 0.42122
+	early stopping at ep.36	 train loss: 1.63092	 val loss: 1.61942	 best val loss: 1.59500
+CV_4 (73.67s) -	 train_loss: 1.63092	 val_loss: 1.61942	 val_acc: 0.42180	 val_recall: 0.42101	 val_f1: 0.40879
+	early stopping at ep.35	 train loss: 1.65865	 val loss: 1.59559	 best val loss: 1.59657
+CV_5 (69.07s) -	 train_loss: 1.65865	 val_loss: 1.59559	 val_acc: 0.42250	 val_recall: 0.42291	 val_f1: 0.39634
+## Experiment results (360.72s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.63962 	 val loss: 1.62035 	 val accuracy: 0.42198 	 val recall: 0.42213 	 val f1: 0.40736
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 4}
+	early stopping at ep.38	 train loss: 1.93128	 val loss: 1.72429	 best val loss: 1.69010
+CV_1 (144.48s) -	 train_loss: 1.93128	 val_loss: 1.72429	 val_acc: 0.39440	 val_recall: 0.39348	 val_f1: 0.38440
+	early stopping at ep.29	 train loss: 1.93272	 val loss: 1.71946	 best val loss: 1.69945
+CV_2 (110.03s) -	 train_loss: 1.93272	 val_loss: 1.71946	 val_acc: 0.39640	 val_recall: 0.39420	 val_f1: 0.38915
+	early stopping at ep.21	 train loss: 1.93020	 val loss: 1.76062	 best val loss: 1.72181
+CV_3 (79.79s) -	 train_loss: 1.93020	 val_loss: 1.76062	 val_acc: 0.37020	 val_recall: 0.37160	 val_f1: 0.35629
+	early stopping at ep.26	 train loss: 1.92231	 val loss: 1.69695	 best val loss: 1.69593
+CV_4 (98.22s) -	 train_loss: 1.92231	 val_loss: 1.69695	 val_acc: 0.41320	 val_recall: 0.41272	 val_f1: 0.40672
+	early stopping at ep.22	 train loss: 1.94102	 val loss: 1.75001	 best val loss: 1.72481
+CV_5 (83.05s) -	 train_loss: 1.94102	 val_loss: 1.75001	 val_acc: 0.37840	 val_recall: 0.37709	 val_f1: 0.36409
+## Experiment results (515.92s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.93151 	 val loss: 1.73027 	 val accuracy: 0.39052 	 val recall: 0.38982 	 val f1: 0.38013
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 2}
+	early stopping at ep.15	 train loss: 2.29293	 val loss: 2.27707	 best val loss: 2.24345
+CV_1 (110.91s) -	 train_loss: 2.29293	 val_loss: 2.27707	 val_acc: 0.13190	 val_recall: 0.13270	 val_f1: 0.07907
+	early stopping at ep.16	 train loss: 2.27634	 val loss: 2.24569	 best val loss: 2.22706
+CV_2 (118.07s) -	 train_loss: 2.27634	 val_loss: 2.24569	 val_acc: 0.14950	 val_recall: 0.15180	 val_f1: 0.10155
+	early stopping at ep.27	 train loss: 2.30299	 val loss: 2.30752	 best val loss: 2.25261
+CV_3 (198.30s) -	 train_loss: 2.30299	 val_loss: 2.30752	 val_acc: 0.08720	 val_recall: 0.08895	 val_f1: 0.01717
+	early stopping at ep.11	 train loss: 2.28786	 val loss: 2.26685	 best val loss: 2.23575
+CV_4 (81.77s) -	 train_loss: 2.28786	 val_loss: 2.26685	 val_acc: 0.15750	 val_recall: 0.15837	 val_f1: 0.08439
+	early stopping at ep.11	 train loss: 2.27896	 val loss: 2.28844	 best val loss: 2.26189
+CV_5 (80.98s) -	 train_loss: 2.27896	 val_loss: 2.28844	 val_acc: 0.13620	 val_recall: 0.13608	 val_f1: 0.09558
+## Experiment results (590.29s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 64, 32, 10], 'lr': 0.01, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.28782 	 val loss: 2.27712 	 val accuracy: 0.13246 	 val recall: 0.13358 	 val f1: 0.07555
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 16}
+	early stopping at ep.30	 train loss: 0.41819	 val loss: 2.67758	 best val loss: 2.45093
+CV_1 (17.44s) -	 train_loss: 0.41819	 val_loss: 2.67758	 val_acc: 0.38410	 val_recall: 0.38421	 val_f1: 0.38114
+	early stopping at ep.11	 train loss: 0.47353	 val loss: 2.93695	 best val loss: 2.53792
+CV_2 (6.78s) -	 train_loss: 0.47353	 val_loss: 2.93695	 val_acc: 0.36110	 val_recall: 0.36280	 val_f1: 0.35502
+	early stopping at ep.11	 train loss: 0.44255	 val loss: 2.81146	 best val loss: 2.66775
+CV_3 (6.55s) -	 train_loss: 0.44255	 val_loss: 2.81146	 val_acc: 0.36640	 val_recall: 0.36579	 val_f1: 0.35022
+	early stopping at ep.23	 train loss: 0.43913	 val loss: 2.67629	 best val loss: 2.59289
+CV_4 (15.90s) -	 train_loss: 0.43913	 val_loss: 2.67629	 val_acc: 0.38120	 val_recall: 0.38057	 val_f1: 0.37458
+	early stopping at ep.11	 train loss: 0.47605	 val loss: 3.14183	 best val loss: 2.44687
+CV_5 (6.80s) -	 train_loss: 0.47605	 val_loss: 3.14183	 val_acc: 0.33250	 val_recall: 0.33428	 val_f1: 0.32014
+## Experiment results (53.77s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 0.44989 	 val loss: 2.84882 	 val accuracy: 0.36506 	 val recall: 0.36553 	 val f1: 0.35622
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 8}
+	early stopping at ep.40	 train loss: 0.60555	 val loss: 2.16945	 best val loss: 1.96969
+CV_1 (36.59s) -	 train_loss: 0.60555	 val_loss: 2.16945	 val_acc: 0.43290	 val_recall: 0.43266	 val_f1: 0.42999
+	early stopping at ep.18	 train loss: 0.66129	 val loss: 2.30091	 best val loss: 2.04197
+CV_2 (16.07s) -	 train_loss: 0.66129	 val_loss: 2.30091	 val_acc: 0.40050	 val_recall: 0.39850	 val_f1: 0.39119
+	early stopping at ep.19	 train loss: 0.66399	 val loss: 2.20057	 best val loss: 1.98658
+CV_3 (16.98s) -	 train_loss: 0.66399	 val_loss: 2.20057	 val_acc: 0.40250	 val_recall: 0.40254	 val_f1: 0.39916
+	early stopping at ep.11	 train loss: 0.73800	 val loss: 2.22511	 best val loss: 2.06264
+CV_4 (9.72s) -	 train_loss: 0.73800	 val_loss: 2.22511	 val_acc: 0.40810	 val_recall: 0.40707	 val_f1: 0.39447
+	early stopping at ep.18	 train loss: 0.70387	 val loss: 2.07760	 best val loss: 2.00339
+CV_5 (15.80s) -	 train_loss: 0.70387	 val_loss: 2.07760	 val_acc: 0.42350	 val_recall: 0.42313	 val_f1: 0.42143
+## Experiment results (95.41s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 0.67454 	 val loss: 2.19473 	 val accuracy: 0.41350 	 val recall: 0.41278 	 val f1: 0.40725
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 4}
+	early stopping at ep.40	 train loss: 0.88748	 val loss: 1.61856	 best val loss: 1.56298
+CV_1 (67.30s) -	 train_loss: 0.88748	 val_loss: 1.61856	 val_acc: 0.47330	 val_recall: 0.47489	 val_f1: 0.46610
+	early stopping at ep.25	 train loss: 0.92346	 val loss: 1.58763	 best val loss: 1.58535
+CV_2 (41.84s) -	 train_loss: 0.92346	 val_loss: 1.58763	 val_acc: 0.47850	 val_recall: 0.47683	 val_f1: 0.47046
+	early stopping at ep.28	 train loss: 0.90562	 val loss: 1.66764	 best val loss: 1.61198
+CV_3 (48.12s) -	 train_loss: 0.90562	 val_loss: 1.66764	 val_acc: 0.45290	 val_recall: 0.45360	 val_f1: 0.44359
+	early stopping at ep.29	 train loss: 0.89205	 val loss: 1.66350	 best val loss: 1.61111
+CV_4 (48.87s) -	 train_loss: 0.89205	 val_loss: 1.66350	 val_acc: 0.45880	 val_recall: 0.45708	 val_f1: 0.45534
+	early stopping at ep.20	 train loss: 0.95265	 val loss: 1.66595	 best val loss: 1.61389
+CV_5 (31.75s) -	 train_loss: 0.95265	 val_loss: 1.66595	 val_acc: 0.45120	 val_recall: 0.45264	 val_f1: 0.44620
+## Experiment results (238.18s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 0.91225 	 val loss: 1.64066 	 val accuracy: 0.46294 	 val recall: 0.46301 	 val f1: 0.45634
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 2}
+	early stopping at ep.36	 train loss: 1.19982	 val loss: 1.42895	 best val loss: 1.40689
+CV_1 (107.11s) -	 train_loss: 1.19982	 val_loss: 1.42895	 val_acc: 0.50270	 val_recall: 0.50355	 val_f1: 0.49990
+	early stopping at ep.34	 train loss: 1.17690	 val loss: 1.51279	 best val loss: 1.41131
+CV_2 (101.09s) -	 train_loss: 1.17690	 val_loss: 1.51279	 val_acc: 0.47810	 val_recall: 0.47726	 val_f1: 0.47829
+	early stopping at ep.46	 train loss: 1.16652	 val loss: 1.44856	 best val loss: 1.42376
+CV_3 (137.87s) -	 train_loss: 1.16652	 val_loss: 1.44856	 val_acc: 0.48670	 val_recall: 0.48678	 val_f1: 0.48458
+	early stopping at ep.21	 train loss: 1.21588	 val loss: 1.48818	 best val loss: 1.44070
+CV_4 (65.49s) -	 train_loss: 1.21588	 val_loss: 1.48818	 val_acc: 0.47770	 val_recall: 0.47760	 val_f1: 0.47249
+CV_5 (151.34s) -	 train_loss: 1.16473	 val_loss: 1.46077	 val_acc: 0.49550	 val_recall: 0.49528	 val_f1: 0.48361
+## Experiment results (563.18s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 1.18477 	 val loss: 1.46785 	 val accuracy: 0.48814 	 val recall: 0.48810 	 val f1: 0.48377
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 16}
+	early stopping at ep.11	 train loss: 0.55667	 val loss: 2.85118	 best val loss: 2.75218
+CV_1 (14.88s) -	 train_loss: 0.55667	 val_loss: 2.85118	 val_acc: 0.30800	 val_recall: 0.30819	 val_f1: 0.30561
+	early stopping at ep.11	 train loss: 0.53824	 val loss: 3.10341	 best val loss: 2.77650
+CV_2 (14.82s) -	 train_loss: 0.53824	 val_loss: 3.10341	 val_acc: 0.28480	 val_recall: 0.28384	 val_f1: 0.27885
+	early stopping at ep.11	 train loss: 0.53421	 val loss: 3.17212	 best val loss: 2.60234
+CV_3 (15.30s) -	 train_loss: 0.53421	 val_loss: 3.17212	 val_acc: 0.30180	 val_recall: 0.30237	 val_f1: 0.29333
+	early stopping at ep.11	 train loss: 0.55986	 val loss: 3.14357	 best val loss: 2.69115
+CV_4 (16.24s) -	 train_loss: 0.55986	 val_loss: 3.14357	 val_acc: 0.29090	 val_recall: 0.29065	 val_f1: 0.29036
+	early stopping at ep.11	 train loss: 0.54852	 val loss: 3.07680	 best val loss: 2.66994
+CV_5 (15.44s) -	 train_loss: 0.54852	 val_loss: 3.07680	 val_acc: 0.30790	 val_recall: 0.30766	 val_f1: 0.30604
+## Experiment results (77.14s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 0.54750 	 val loss: 3.06941 	 val accuracy: 0.29868 	 val recall: 0.29854 	 val f1: 0.29484
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 8}
+	early stopping at ep.17	 train loss: 1.26122	 val loss: 2.02539	 best val loss: 1.89541
+CV_1 (37.01s) -	 train_loss: 1.26122	 val_loss: 2.02539	 val_acc: 0.34420	 val_recall: 0.34529	 val_f1: 0.33829
+	early stopping at ep.17	 train loss: 1.24280	 val loss: 2.02468	 best val loss: 1.91259
+CV_2 (37.54s) -	 train_loss: 1.24280	 val_loss: 2.02468	 val_acc: 0.34300	 val_recall: 0.34303	 val_f1: 0.34072
+	early stopping at ep.32	 train loss: 1.22852	 val loss: 2.07565	 best val loss: 1.90605
+CV_3 (73.37s) -	 train_loss: 1.22852	 val_loss: 2.07565	 val_acc: 0.33740	 val_recall: 0.33714	 val_f1: 0.33260
+	early stopping at ep.33	 train loss: 1.26011	 val loss: 1.99820	 best val loss: 1.88934
+CV_4 (74.79s) -	 train_loss: 1.26011	 val_loss: 1.99820	 val_acc: 0.35070	 val_recall: 0.35145	 val_f1: 0.34197
+	early stopping at ep.28	 train loss: 1.21550	 val loss: 2.07923	 best val loss: 1.83987
+CV_5 (64.42s) -	 train_loss: 1.21550	 val_loss: 2.07923	 val_acc: 0.35010	 val_recall: 0.34999	 val_f1: 0.34487
+## Experiment results (287.55s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.24163 	 val loss: 2.04063 	 val accuracy: 0.34508 	 val recall: 0.34538 	 val f1: 0.33969
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 4}
+	early stopping at ep.36	 train loss: 1.86443	 val loss: 1.69288	 best val loss: 1.67148
+CV_1 (144.99s) -	 train_loss: 1.86443	 val_loss: 1.69288	 val_acc: 0.41240	 val_recall: 0.41323	 val_f1: 0.40933
+	early stopping at ep.24	 train loss: 1.85656	 val loss: 1.68366	 best val loss: 1.68395
+CV_2 (93.67s) -	 train_loss: 1.85656	 val_loss: 1.68366	 val_acc: 0.41420	 val_recall: 0.41286	 val_f1: 0.40663
+	early stopping at ep.40	 train loss: 1.85930	 val loss: 1.70424	 best val loss: 1.68740
+CV_3 (156.16s) -	 train_loss: 1.85930	 val_loss: 1.70424	 val_acc: 0.39300	 val_recall: 0.39416	 val_f1: 0.38498
+	early stopping at ep.29	 train loss: 1.87152	 val loss: 1.72615	 best val loss: 1.66021
+CV_4 (112.56s) -	 train_loss: 1.87152	 val_loss: 1.72615	 val_acc: 0.39080	 val_recall: 0.39129	 val_f1: 0.37954
+	early stopping at ep.40	 train loss: 1.84289	 val loss: 1.71634	 best val loss: 1.67828
+CV_5 (157.06s) -	 train_loss: 1.84289	 val_loss: 1.71634	 val_acc: 0.40030	 val_recall: 0.39919	 val_f1: 0.39394
+## Experiment results (664.95s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.85894 	 val loss: 1.70465 	 val accuracy: 0.40214 	 val recall: 0.40215 	 val f1: 0.39488
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 2}
+	early stopping at ep.27	 train loss: 2.28941	 val loss: 2.25705	 best val loss: 2.14040
+CV_1 (202.10s) -	 train_loss: 2.28941	 val_loss: 2.25705	 val_acc: 0.14030	 val_recall: 0.14273	 val_f1: 0.05774
+	early stopping at ep.30	 train loss: 2.30255	 val loss: 2.30305	 best val loss: 2.18607
+CV_2 (224.99s) -	 train_loss: 2.30255	 val_loss: 2.30305	 val_acc: 0.09970	 val_recall: 0.10000	 val_f1: 0.01813
+	early stopping at ep.31	 train loss: 2.30232	 val loss: 2.30390	 best val loss: 2.15932
+CV_3 (232.30s) -	 train_loss: 2.30232	 val_loss: 2.30390	 val_acc: 0.09600	 val_recall: 0.10000	 val_f1: 0.01752
+	early stopping at ep.28	 train loss: 2.28750	 val loss: 2.26881	 best val loss: 2.14637
+CV_4 (210.29s) -	 train_loss: 2.28750	 val_loss: 2.26881	 val_acc: 0.15230	 val_recall: 0.15367	 val_f1: 0.06821
+	early stopping at ep.37	 train loss: 2.30255	 val loss: 2.30301	 best val loss: 2.14774
+CV_5 (276.44s) -	 train_loss: 2.30255	 val_loss: 2.30301	 val_acc: 0.09470	 val_recall: 0.10000	 val_f1: 0.01730
+## Experiment results (1146.59s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': None, 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.29686 	 val loss: 2.28717 	 val accuracy: 0.11660 	 val recall: 0.11928 	 val f1: 0.03578
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 16}
+	early stopping at ep.29	 train loss: 1.52164	 val loss: 2.09423	 best val loss: 1.96926
+CV_1 (25.18s) -	 train_loss: 1.52164	 val_loss: 2.09423	 val_acc: 0.34550	 val_recall: 0.34460	 val_f1: 0.33731
+	early stopping at ep.24	 train loss: 1.39230	 val loss: 2.35158	 best val loss: 2.01732
+CV_2 (21.03s) -	 train_loss: 1.39230	 val_loss: 2.35158	 val_acc: 0.33270	 val_recall: 0.33287	 val_f1: 0.31973
+	early stopping at ep.40	 train loss: 1.45512	 val loss: 2.05257	 best val loss: 2.00143
+CV_3 (35.77s) -	 train_loss: 1.45512	 val_loss: 2.05257	 val_acc: 0.36480	 val_recall: 0.36412	 val_f1: 0.36539
+	early stopping at ep.28	 train loss: 1.50860	 val loss: 2.08967	 best val loss: 2.01400
+CV_4 (27.71s) -	 train_loss: 1.50860	 val_loss: 2.08967	 val_acc: 0.33990	 val_recall: 0.33775	 val_f1: 0.33749
+	early stopping at ep.38	 train loss: 1.43267	 val loss: 1.97335	 best val loss: 1.91282
+CV_5 (33.15s) -	 train_loss: 1.43267	 val_loss: 1.97335	 val_acc: 0.34070	 val_recall: 0.33978	 val_f1: 0.32367
+## Experiment results (143.14s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 1.46207 	 val loss: 2.11228 	 val accuracy: 0.34472 	 val recall: 0.34382 	 val f1: 0.33672
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 8}
+	early stopping at ep.41	 train loss: 1.45672	 val loss: 1.82008	 best val loss: 1.74316
+CV_1 (67.22s) -	 train_loss: 1.45672	 val_loss: 1.82008	 val_acc: 0.40760	 val_recall: 0.40739	 val_f1: 0.39764
+	early stopping at ep.43	 train loss: 1.44235	 val loss: 1.85919	 best val loss: 1.77220
+CV_2 (66.36s) -	 train_loss: 1.44235	 val_loss: 1.85919	 val_acc: 0.39100	 val_recall: 0.39072	 val_f1: 0.37565
+	early stopping at ep.16	 train loss: 1.47684	 val loss: 1.79740	 best val loss: 1.79035
+CV_3 (24.42s) -	 train_loss: 1.47684	 val_loss: 1.79740	 val_acc: 0.38130	 val_recall: 0.37977	 val_f1: 0.37621
+	early stopping at ep.35	 train loss: 1.45254	 val loss: 1.76811	 best val loss: 1.75136
+CV_4 (54.40s) -	 train_loss: 1.45254	 val_loss: 1.76811	 val_acc: 0.39580	 val_recall: 0.39378	 val_f1: 0.38922
+	early stopping at ep.39	 train loss: 1.45881	 val loss: 1.78625	 best val loss: 1.78574
+CV_5 (59.25s) -	 train_loss: 1.45881	 val_loss: 1.78625	 val_acc: 0.39310	 val_recall: 0.39416	 val_f1: 0.38292
+## Experiment results (271.94s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 1.45745 	 val loss: 1.80620 	 val accuracy: 0.39376 	 val recall: 0.39316 	 val f1: 0.38433
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 4}
+	early stopping at ep.17	 train loss: 1.46089	 val loss: 1.66246	 best val loss: 1.64721
+CV_1 (49.65s) -	 train_loss: 1.46089	 val_loss: 1.66246	 val_acc: 0.43900	 val_recall: 0.43949	 val_f1: 0.44009
+	early stopping at ep.23	 train loss: 1.41524	 val loss: 1.62715	 best val loss: 1.62100
+CV_2 (69.16s) -	 train_loss: 1.41524	 val_loss: 1.62715	 val_acc: 0.44050	 val_recall: 0.43860	 val_f1: 0.42792
+	early stopping at ep.16	 train loss: 1.43778	 val loss: 1.66449	 best val loss: 1.65293
+CV_3 (46.65s) -	 train_loss: 1.43778	 val_loss: 1.66449	 val_acc: 0.43570	 val_recall: 0.43515	 val_f1: 0.42360
+	early stopping at ep.37	 train loss: 1.42056	 val loss: 1.61648	 best val loss: 1.60235
+CV_4 (113.00s) -	 train_loss: 1.42056	 val_loss: 1.61648	 val_acc: 0.44200	 val_recall: 0.44079	 val_f1: 0.43633
+	early stopping at ep.15	 train loss: 1.44828	 val loss: 1.64425	 best val loss: 1.63881
+CV_5 (44.14s) -	 train_loss: 1.44828	 val_loss: 1.64425	 val_acc: 0.43260	 val_recall: 0.43303	 val_f1: 0.42231
+## Experiment results (322.91s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 1.43655 	 val loss: 1.64297 	 val accuracy: 0.43796 	 val recall: 0.43741 	 val f1: 0.43005
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 2}
+	early stopping at ep.28	 train loss: 1.36920	 val loss: 1.51962	 best val loss: 1.48812
+CV_1 (157.19s) -	 train_loss: 1.36920	 val_loss: 1.51962	 val_acc: 0.47370	 val_recall: 0.47439	 val_f1: 0.46871
+	early stopping at ep.46	 train loss: 1.34282	 val loss: 1.52096	 best val loss: 1.47702
+CV_2 (258.42s) -	 train_loss: 1.34282	 val_loss: 1.52096	 val_acc: 0.47380	 val_recall: 0.47242	 val_f1: 0.46577
+	early stopping at ep.30	 train loss: 1.35276	 val loss: 1.55589	 best val loss: 1.48879
+CV_3 (166.47s) -	 train_loss: 1.35276	 val_loss: 1.55589	 val_acc: 0.47500	 val_recall: 0.47660	 val_f1: 0.47046
+	early stopping at ep.25	 train loss: 1.35731	 val loss: 1.49248	 best val loss: 1.48303
+CV_4 (146.67s) -	 train_loss: 1.35731	 val_loss: 1.49248	 val_acc: 0.48520	 val_recall: 0.48471	 val_f1: 0.48126
+	early stopping at ep.16	 train loss: 1.39131	 val loss: 1.59816	 best val loss: 1.52948
+CV_5 (91.27s) -	 train_loss: 1.39131	 val_loss: 1.59816	 val_acc: 0.45670	 val_recall: 0.45501	 val_f1: 0.44117
+## Experiment results (820.29s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 1.36268 	 val loss: 1.53742 	 val accuracy: 0.47288 	 val recall: 0.47262 	 val f1: 0.46548
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 16}
+	early stopping at ep.37	 train loss: 1.29768	 val loss: 1.58249	 best val loss: 1.53091
+CV_1 (61.53s) -	 train_loss: 1.29768	 val_loss: 1.58249	 val_acc: 0.45360	 val_recall: 0.45519	 val_f1: 0.44828
+	early stopping at ep.35	 train loss: 1.33431	 val loss: 1.58210	 best val loss: 1.54965
+CV_2 (64.61s) -	 train_loss: 1.33431	 val_loss: 1.58210	 val_acc: 0.44220	 val_recall: 0.44048	 val_f1: 0.43150
+	early stopping at ep.35	 train loss: 1.30496	 val loss: 1.56062	 best val loss: 1.54998
+CV_3 (59.96s) -	 train_loss: 1.30496	 val_loss: 1.56062	 val_acc: 0.45360	 val_recall: 0.45357	 val_f1: 0.45001
+	early stopping at ep.34	 train loss: 1.32871	 val loss: 1.57121	 best val loss: 1.53837
+CV_4 (61.58s) -	 train_loss: 1.32871	 val_loss: 1.57121	 val_acc: 0.44980	 val_recall: 0.44952	 val_f1: 0.44441
+	early stopping at ep.45	 train loss: 1.30137	 val loss: 1.59842	 best val loss: 1.53984
+CV_5 (80.24s) -	 train_loss: 1.30137	 val_loss: 1.59842	 val_acc: 0.44270	 val_recall: 0.44158	 val_f1: 0.43869
+## Experiment results (328.30s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 1.31341 	 val loss: 1.57897 	 val accuracy: 0.44838 	 val recall: 0.44807 	 val f1: 0.44258
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 8}
+	early stopping at ep.37	 train loss: 1.54717	 val loss: 1.49210	 best val loss: 1.47475
+CV_1 (103.68s) -	 train_loss: 1.54717	 val_loss: 1.49210	 val_acc: 0.47330	 val_recall: 0.47457	 val_f1: 0.46829
+	early stopping at ep.50	 train loss: 1.51296	 val loss: 1.50776	 best val loss: 1.47329
+CV_2 (147.89s) -	 train_loss: 1.51296	 val_loss: 1.50776	 val_acc: 0.46500	 val_recall: 0.46405	 val_f1: 0.46252
+	early stopping at ep.36	 train loss: 1.51903	 val loss: 1.52114	 best val loss: 1.47770
+CV_3 (109.38s) -	 train_loss: 1.51903	 val_loss: 1.52114	 val_acc: 0.45800	 val_recall: 0.45806	 val_f1: 0.45257
+	early stopping at ep.28	 train loss: 1.57164	 val loss: 1.52507	 best val loss: 1.48221
+CV_4 (79.90s) -	 train_loss: 1.57164	 val_loss: 1.52507	 val_acc: 0.45650	 val_recall: 0.45614	 val_f1: 0.45095
+	early stopping at ep.34	 train loss: 1.54442	 val loss: 1.50825	 best val loss: 1.48371
+CV_5 (99.97s) -	 train_loss: 1.54442	 val_loss: 1.50825	 val_acc: 0.47190	 val_recall: 0.47208	 val_f1: 0.46483
+## Experiment results (541.24s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.53904 	 val loss: 1.51086 	 val accuracy: 0.46494 	 val recall: 0.46498 	 val f1: 0.45983
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 4}
+	early stopping at ep.23	 train loss: 1.87928	 val loss: 1.62325	 best val loss: 1.61779
+CV_1 (121.81s) -	 train_loss: 1.87928	 val_loss: 1.62325	 val_acc: 0.43230	 val_recall: 0.43433	 val_f1: 0.41885
+	early stopping at ep.41	 train loss: 1.86379	 val loss: 1.60108	 best val loss: 1.59518
+CV_2 (217.53s) -	 train_loss: 1.86379	 val_loss: 1.60108	 val_acc: 0.44410	 val_recall: 0.44267	 val_f1: 0.43441
+	early stopping at ep.34	 train loss: 1.87239	 val loss: 1.64144	 best val loss: 1.60868
+CV_3 (179.85s) -	 train_loss: 1.87239	 val_loss: 1.64144	 val_acc: 0.43040	 val_recall: 0.43158	 val_f1: 0.42123
+	early stopping at ep.46	 train loss: 1.86794	 val loss: 1.58872	 best val loss: 1.58793
+CV_4 (244.22s) -	 train_loss: 1.86794	 val_loss: 1.58872	 val_acc: 0.44570	 val_recall: 0.44470	 val_f1: 0.43439
+	early stopping at ep.34	 train loss: 1.87542	 val loss: 1.62550	 best val loss: 1.60557
+CV_5 (180.73s) -	 train_loss: 1.87542	 val_loss: 1.62550	 val_acc: 0.44050	 val_recall: 0.44138	 val_f1: 0.43149
+## Experiment results (944.58s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.87176 	 val loss: 1.61600 	 val accuracy: 0.43860 	 val recall: 0.43893 	 val f1: 0.42807
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 2}
+	early stopping at ep.17	 train loss: 2.26538	 val loss: 2.19831	 best val loss: 2.15801
+CV_1 (179.25s) -	 train_loss: 2.26538	 val_loss: 2.19831	 val_acc: 0.18990	 val_recall: 0.19225	 val_f1: 0.13885
+	early stopping at ep.21	 train loss: 2.26191	 val loss: 2.20420	 best val loss: 2.18598
+CV_2 (220.93s) -	 train_loss: 2.26191	 val_loss: 2.20420	 val_acc: 0.18020	 val_recall: 0.18186	 val_f1: 0.13569
+	early stopping at ep.16	 train loss: 2.26597	 val loss: 2.20041	 best val loss: 2.17020
+CV_3 (166.94s) -	 train_loss: 2.26597	 val_loss: 2.20041	 val_acc: 0.19710	 val_recall: 0.19649	 val_f1: 0.16599
+	early stopping at ep.16	 train loss: 2.26576	 val loss: 2.20232	 best val loss: 2.19002
+CV_4 (167.39s) -	 train_loss: 2.26576	 val_loss: 2.20232	 val_acc: 0.18940	 val_recall: 0.19128	 val_f1: 0.15033
+	early stopping at ep.18	 train loss: 2.28054	 val loss: 2.23682	 best val loss: 2.16871
+CV_5 (187.13s) -	 train_loss: 2.28054	 val_loss: 2.23682	 val_acc: 0.17530	 val_recall: 0.17536	 val_f1: 0.12310
+## Experiment results (922.09s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Adam', 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.26791 	 val loss: 2.20841 	 val accuracy: 0.18638 	 val recall: 0.18745 	 val f1: 0.14279
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 16}
+	early stopping at ep.26	 train loss: 2.24759	 val loss: 2.38681	 best val loss: 2.29836
+CV_1 (16.78s) -	 train_loss: 2.24759	 val_loss: 2.38681	 val_acc: 0.11780	 val_recall: 0.11875	 val_f1: 0.05982
+	early stopping at ep.17	 train loss: 2.19498	 val loss: 2.32878	 best val loss: 2.31249
+CV_2 (11.05s) -	 train_loss: 2.19498	 val_loss: 2.32878	 val_acc: 0.11820	 val_recall: 0.11439	 val_f1: 0.04768
+	early stopping at ep.20	 train loss: 2.12031	 val loss: 2.32319	 best val loss: 2.30545
+CV_3 (12.60s) -	 train_loss: 2.12031	 val_loss: 2.32319	 val_acc: 0.16210	 val_recall: 0.15718	 val_f1: 0.09415
+	early stopping at ep.18	 train loss: 2.09566	 val loss: 2.60039	 best val loss: 2.29851
+CV_4 (11.73s) -	 train_loss: 2.09566	 val_loss: 2.60039	 val_acc: 0.18660	 val_recall: 0.18732	 val_f1: 0.12570
+	early stopping at ep.14	 train loss: 2.19575	 val loss: 2.35595	 best val loss: 2.31099
+CV_5 (8.97s) -	 train_loss: 2.19575	 val_loss: 2.35595	 val_acc: 0.13650	 val_recall: 0.13779	 val_f1: 0.07710
+## Experiment results (61.35s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 2.17086 	 val loss: 2.39902 	 val accuracy: 0.14424 	 val recall: 0.14309 	 val f1: 0.08089
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 8}
+	early stopping at ep.17	 train loss: 2.09350	 val loss: 2.20638	 best val loss: 2.17797
+CV_1 (18.48s) -	 train_loss: 2.09350	 val_loss: 2.20638	 val_acc: 0.16880	 val_recall: 0.16810	 val_f1: 0.10566
+	early stopping at ep.21	 train loss: 2.08815	 val loss: 2.20080	 best val loss: 2.15108
+CV_2 (21.55s) -	 train_loss: 2.08815	 val_loss: 2.20080	 val_acc: 0.17890	 val_recall: 0.17858	 val_f1: 0.12265
+	early stopping at ep.14	 train loss: 2.09889	 val loss: 2.20364	 best val loss: 2.18142
+CV_3 (14.23s) -	 train_loss: 2.09889	 val_loss: 2.20364	 val_acc: 0.18410	 val_recall: 0.18482	 val_f1: 0.12763
+	early stopping at ep.27	 train loss: 2.09680	 val loss: 2.26292	 best val loss: 2.15058
+CV_4 (27.02s) -	 train_loss: 2.09680	 val_loss: 2.26292	 val_acc: 0.17540	 val_recall: 0.17706	 val_f1: 0.11628
+	early stopping at ep.17	 train loss: 2.08144	 val loss: 2.19513	 best val loss: 2.16936
+CV_5 (16.44s) -	 train_loss: 2.08144	 val_loss: 2.19513	 val_acc: 0.14900	 val_recall: 0.14917	 val_f1: 0.08296
+## Experiment results (97.99s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 2.09176 	 val loss: 2.21377 	 val accuracy: 0.17124 	 val recall: 0.17155 	 val f1: 0.11103
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 4}
+	early stopping at ep.46	 train loss: 2.01554	 val loss: 2.08512	 best val loss: 2.03305
+CV_1 (84.32s) -	 train_loss: 2.01554	 val_loss: 2.08512	 val_acc: 0.24380	 val_recall: 0.24666	 val_f1: 0.18586
+	early stopping at ep.19	 train loss: 2.01540	 val loss: 2.12469	 best val loss: 2.06463
+CV_2 (35.20s) -	 train_loss: 2.01540	 val_loss: 2.12469	 val_acc: 0.23180	 val_recall: 0.23449	 val_f1: 0.18735
+	early stopping at ep.14	 train loss: 2.02043	 val loss: 2.07462	 best val loss: 2.06163
+CV_3 (25.86s) -	 train_loss: 2.02043	 val_loss: 2.07462	 val_acc: 0.22590	 val_recall: 0.22923	 val_f1: 0.18751
+	early stopping at ep.25	 train loss: 2.02937	 val loss: 2.11190	 best val loss: 2.06917
+CV_4 (46.88s) -	 train_loss: 2.02937	 val_loss: 2.11190	 val_acc: 0.20780	 val_recall: 0.20875	 val_f1: 0.17170
+	early stopping at ep.16	 train loss: 2.03362	 val loss: 2.07885	 best val loss: 2.04753
+CV_5 (29.68s) -	 train_loss: 2.03362	 val_loss: 2.07885	 val_acc: 0.22820	 val_recall: 0.22812	 val_f1: 0.18231
+## Experiment results (222.15s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 2.02287 	 val loss: 2.09504 	 val accuracy: 0.22750 	 val recall: 0.22945 	 val f1: 0.18295
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 2}
+	early stopping at ep.22	 train loss: 1.70413	 val loss: 1.79901	 best val loss: 1.73682
+CV_1 (74.87s) -	 train_loss: 1.70413	 val_loss: 1.79901	 val_acc: 0.38010	 val_recall: 0.38172	 val_f1: 0.36999
+	early stopping at ep.29	 train loss: 1.70127	 val loss: 1.77769	 best val loss: 1.69422
+CV_2 (98.39s) -	 train_loss: 1.70127	 val_loss: 1.77769	 val_acc: 0.37650	 val_recall: 0.37496	 val_f1: 0.36599
+	early stopping at ep.29	 train loss: 1.69185	 val loss: 1.75508	 best val loss: 1.70816
+CV_3 (101.83s) -	 train_loss: 1.69185	 val_loss: 1.75508	 val_acc: 0.37700	 val_recall: 0.37777	 val_f1: 0.38188
+	early stopping at ep.38	 train loss: 1.69152	 val loss: 1.77335	 best val loss: 1.71551
+CV_4 (136.74s) -	 train_loss: 1.69152	 val_loss: 1.77335	 val_acc: 0.38590	 val_recall: 0.38535	 val_f1: 0.36963
+	early stopping at ep.23	 train loss: 1.68787	 val loss: 1.84646	 best val loss: 1.74149
+CV_5 (78.92s) -	 train_loss: 1.68787	 val_loss: 1.84646	 val_acc: 0.36920	 val_recall: 0.36981	 val_f1: 0.36162
+## Experiment results (491.03s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': False, 'batch_size': 2}
+# Metrics - train loss: 1.69533 	 val loss: 1.79032 	 val accuracy: 0.37774 	 val recall: 0.37792 	 val f1: 0.36982
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 16}
+	early stopping at ep.36	 train loss: 1.46822	 val loss: 1.56096	 best val loss: 1.52062
+CV_1 (49.77s) -	 train_loss: 1.46822	 val_loss: 1.56096	 val_acc: 0.44430	 val_recall: 0.44490	 val_f1: 0.44407
+	early stopping at ep.44	 train loss: 1.44159	 val loss: 1.59658	 best val loss: 1.54191
+CV_2 (73.55s) -	 train_loss: 1.44159	 val_loss: 1.59658	 val_acc: 0.43530	 val_recall: 0.43455	 val_f1: 0.43190
+	early stopping at ep.34	 train loss: 1.42458	 val loss: 1.62886	 best val loss: 1.54538
+CV_3 (46.83s) -	 train_loss: 1.42458	 val_loss: 1.62886	 val_acc: 0.41330	 val_recall: 0.41321	 val_f1: 0.40796
+	early stopping at ep.38	 train loss: 1.39064	 val loss: 1.63287	 best val loss: 1.55094
+CV_4 (53.37s) -	 train_loss: 1.39064	 val_loss: 1.63287	 val_acc: 0.42860	 val_recall: 0.42836	 val_f1: 0.42129
+	early stopping at ep.27	 train loss: 1.47584	 val loss: 1.58950	 best val loss: 1.57823
+CV_5 (36.86s) -	 train_loss: 1.47584	 val_loss: 1.58950	 val_acc: 0.43250	 val_recall: 0.43230	 val_f1: 0.42107
+## Experiment results (260.70s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 16}
+# Metrics - train loss: 1.44017 	 val loss: 1.60175 	 val accuracy: 0.43080 	 val recall: 0.43067 	 val f1: 0.42526
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 8}
+	early stopping at ep.42	 train loss: 1.65852	 val loss: 1.53683	 best val loss: 1.53384
+CV_1 (96.55s) -	 train_loss: 1.65852	 val_loss: 1.53683	 val_acc: 0.45710	 val_recall: 0.45829	 val_f1: 0.45392
+	early stopping at ep.33	 train loss: 1.62725	 val loss: 1.54498	 best val loss: 1.53678
+CV_2 (77.50s) -	 train_loss: 1.62725	 val_loss: 1.54498	 val_acc: 0.45100	 val_recall: 0.44969	 val_f1: 0.44478
+	early stopping at ep.37	 train loss: 1.62232	 val loss: 1.55341	 best val loss: 1.54146
+CV_3 (85.18s) -	 train_loss: 1.62232	 val_loss: 1.55341	 val_acc: 0.45190	 val_recall: 0.45349	 val_f1: 0.44862
+	early stopping at ep.30	 train loss: 1.63958	 val loss: 1.55879	 best val loss: 1.53680
+CV_4 (65.94s) -	 train_loss: 1.63958	 val_loss: 1.55879	 val_acc: 0.44700	 val_recall: 0.44651	 val_f1: 0.43750
+	early stopping at ep.28	 train loss: 1.63130	 val loss: 1.56728	 best val loss: 1.54889
+CV_5 (62.59s) -	 train_loss: 1.63130	 val_loss: 1.56728	 val_acc: 0.44440	 val_recall: 0.44347	 val_f1: 0.43576
+## Experiment results (388.17s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 8}
+# Metrics - train loss: 1.63579 	 val loss: 1.55226 	 val accuracy: 0.45028 	 val recall: 0.45029 	 val f1: 0.44411
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 4}
+	early stopping at ep.26	 train loss: 1.93292	 val loss: 1.69984	 best val loss: 1.68595
+CV_1 (108.75s) -	 train_loss: 1.93292	 val_loss: 1.69984	 val_acc: 0.39970	 val_recall: 0.40002	 val_f1: 0.39372
+	early stopping at ep.39	 train loss: 1.92081	 val loss: 1.69452	 best val loss: 1.65495
+CV_2 (161.87s) -	 train_loss: 1.92081	 val_loss: 1.69452	 val_acc: 0.41610	 val_recall: 0.41509	 val_f1: 0.40855
+CV_3 (206.66s) -	 train_loss: 1.91550	 val_loss: 1.68515	 val_acc: 0.40810	 val_recall: 0.40921	 val_f1: 0.40459
+	early stopping at ep.34	 train loss: 1.92668	 val loss: 1.67968	 best val loss: 1.66125
+CV_4 (140.30s) -	 train_loss: 1.92668	 val_loss: 1.67968	 val_acc: 0.41930	 val_recall: 0.41967	 val_f1: 0.41348
+	early stopping at ep.33	 train loss: 1.92788	 val loss: 1.72321	 best val loss: 1.68257
+CV_5 (138.08s) -	 train_loss: 1.92788	 val_loss: 1.72321	 val_acc: 0.40450	 val_recall: 0.40492	 val_f1: 0.39505
+## Experiment results (756.03s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 4}
+# Metrics - train loss: 1.92476 	 val loss: 1.69648 	 val accuracy: 0.40954 	 val recall: 0.40978 	 val f1: 0.40308
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 2}
+	early stopping at ep.12	 train loss: 2.29415	 val loss: 2.28937	 best val loss: 2.20814
+CV_1 (96.77s) -	 train_loss: 2.29415	 val_loss: 2.28937	 val_acc: 0.10740	 val_recall: 0.10756	 val_f1: 0.05912
+	early stopping at ep.11	 train loss: 2.27766	 val loss: 2.24146	 best val loss: 2.20485
+CV_2 (88.65s) -	 train_loss: 2.27766	 val_loss: 2.24146	 val_acc: 0.19010	 val_recall: 0.18821	 val_f1: 0.13697
+	early stopping at ep.17	 train loss: 2.28983	 val loss: 2.25974	 best val loss: 2.21334
+CV_3 (135.30s) -	 train_loss: 2.28983	 val_loss: 2.25974	 val_acc: 0.17640	 val_recall: 0.17759	 val_f1: 0.10769
+	early stopping at ep.16	 train loss: 2.28259	 val loss: 2.25505	 best val loss: 2.22899
+CV_4 (127.89s) -	 train_loss: 2.28259	 val_loss: 2.25505	 val_acc: 0.16060	 val_recall: 0.16219	 val_f1: 0.10612
+	early stopping at ep.11	 train loss: 2.27580	 val loss: 2.23874	 best val loss: 2.22313
+CV_5 (87.83s) -	 train_loss: 2.27580	 val_loss: 2.23874	 val_acc: 0.14490	 val_recall: 0.14593	 val_f1: 0.10712
+## Experiment results (536.84s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.001, 'optimiser': 'Momentum', 'bn': True, 'batch_size': 2}
+# Metrics - train loss: 2.28401 	 val loss: 2.25687 	 val accuracy: 0.15588 	 val recall: 0.15630 	 val f1: 0.10340
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 16}
+	early stopping at ep.49	 train loss: 1.18157	 val loss: 1.57586	 best val loss: 1.51373
+CV_1 (27.83s) -	 train_loss: 1.18157	 val_loss: 1.57586	 val_acc: 0.44470	 val_recall: 0.44401	 val_f1: 0.44504
+CV_2 (33.15s) -	 train_loss: 1.18483	 val_loss: 1.59848	 val_acc: 0.44550	 val_recall: 0.44459	 val_f1: 0.43744
+	early stopping at ep.46	 train loss: 1.15140	 val loss: 1.57275	 best val loss: 1.53401
+CV_3 (28.63s) -	 train_loss: 1.15140	 val_loss: 1.57275	 val_acc: 0.44900	 val_recall: 0.44996	 val_f1: 0.44808
+CV_4 (27.86s) -	 train_loss: 1.15351	 val_loss: 1.53132	 val_acc: 0.45870	 val_recall: 0.45840	 val_f1: 0.46134
+	early stopping at ep.42	 train loss: 1.20637	 val loss: 1.58577	 best val loss: 1.53334
+CV_5 (26.00s) -	 train_loss: 1.20637	 val_loss: 1.58577	 val_acc: 0.43980	 val_recall: 0.44083	 val_f1: 0.42721
+## Experiment results (143.75s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 16}
+# Metrics - train loss: 1.17554 	 val loss: 1.57284 	 val accuracy: 0.44754 	 val recall: 0.44756 	 val f1: 0.44382
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 8}
+CV_1 (49.87s) -	 train_loss: 1.39733	 val_loss: 1.50492	 val_acc: 0.46600	 val_recall: 0.46658	 val_f1: 0.46221
+CV_2 (46.02s) -	 train_loss: 1.39385	 val_loss: 1.50258	 val_acc: 0.47290	 val_recall: 0.47195	 val_f1: 0.46821
+CV_3 (47.43s) -	 train_loss: 1.39930	 val_loss: 1.51295	 val_acc: 0.46490	 val_recall: 0.46453	 val_f1: 0.45443
+CV_4 (47.00s) -	 train_loss: 1.38818	 val_loss: 1.49636	 val_acc: 0.47010	 val_recall: 0.47014	 val_f1: 0.46402
+CV_5 (46.33s) -	 train_loss: 1.39973	 val_loss: 1.51083	 val_acc: 0.46650	 val_recall: 0.46707	 val_f1: 0.46163
+## Experiment results (236.90s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 8}
+# Metrics - train loss: 1.39568 	 val loss: 1.50553 	 val accuracy: 0.46808 	 val recall: 0.46806 	 val f1: 0.46210
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 4}
+CV_1 (85.80s) -	 train_loss: 1.63509	 val_loss: 1.64843	 val_acc: 0.41710	 val_recall: 0.41857	 val_f1: 0.40616
+CV_2 (90.80s) -	 train_loss: 1.61504	 val_loss: 1.64611	 val_acc: 0.41850	 val_recall: 0.41760	 val_f1: 0.40317
+CV_3 (92.13s) -	 train_loss: 1.61280	 val_loss: 1.65192	 val_acc: 0.42240	 val_recall: 0.42301	 val_f1: 0.41323
+CV_4 (93.38s) -	 train_loss: 1.63459	 val_loss: 1.64436	 val_acc: 0.41450	 val_recall: 0.41477	 val_f1: 0.40187
+CV_5 (88.54s) -	 train_loss: 1.61830	 val_loss: 1.64701	 val_acc: 0.42170	 val_recall: 0.42090	 val_f1: 0.40516
+## Experiment results (450.88s) - {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 4}
+# Metrics - train loss: 1.62316 	 val loss: 1.64757 	 val accuracy: 0.41884 	 val recall: 0.41897 	 val f1: 0.40592
+
+
+### Running model {'weight_decay': 0.0, 'dropout': [0.0, 0.0, 0.0, 0.0], 'hidden_layers': [128, 96, 64, 10], 'lr': 0.0001, 'optimiser': None, 'bn': False, 'batch_size': 2}
+	early stopping at ep.29	 train loss: 1.85669	 val loss: 1.85468	 best val loss: 1.85539
+CV_1 (93.21s) -	 train_loss: 1.85669	 val_loss: 1.85468	 val_acc: 0.33910	 val_recall: 0.34038	 val_f1: 0.31100
+	early stopping at ep.34	 train loss: 1.85738	 val loss: 1.86902	 best val loss: 1.86846
+CV_2 (108.27s) -	 train_loss: 1.85738	 val_loss: 1.86902	 val_acc: 0.33790	 val_recall: 0.33701	 val_f1: 0.31044

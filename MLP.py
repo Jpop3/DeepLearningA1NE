@@ -2,7 +2,6 @@ import numpy as np
 from Activation import *
 from HiddenLayer import *
 from MiniBatch import *
-import time
 
 class MLP:
     def __init__(self, layers, activation=[None,'tanh','tanh', 'softmax'], use_batch_norm=False, weight_decay=1e-5, dropout_rate=[0.0, 0.0, 0.0, 0.0]):
@@ -11,6 +10,12 @@ class MLP:
         self.activation=activation
         for i in range(len(layers)-1):
             self.layers.append(HiddenLayer(layers[i],layers[i+1],activation[i],activation[i+1], use_batch_norm=use_batch_norm, dropout_rate=dropout_rate[i]))
+    
+    # Static class to one hot function
+    def class_to_one_hot(class_label, num_classes):
+        one_hot = np.zeros(num_classes)
+        one_hot[class_label] = 1.
+        return one_hot
 
     def forward(self, input, train=False):
         for layer in self.layers: 
@@ -39,8 +44,12 @@ class MLP:
         return loss, delta
     
     def softmax(self, values):
-        exp_values = np.exp(values) # Computing element wise exponential value
-        exp_values_sum = np.sum(exp_values) # Computing sum of these values
+        # Shift values by subtracting the max value to prevent overflow
+        values_shifted = values - np.max(values, axis=1, keepdims=True)
+        exp_values = np.exp(values_shifted)
+        exp_values_sum = np.sum(exp_values, axis=1, keepdims=True)
+        # exp_values = np.exp(values) # Computing element wise exponential value
+        # exp_values_sum = np.sum(exp_values) # Computing sum of these values
         return exp_values/exp_values_sum # Returing the softmax output.
         
     def criterion_CrossEL(self, y, y_hat, epsilon=1e-9):
@@ -104,7 +113,6 @@ class MLP:
         - batch_size (int): Size of the mini-batches for training.
         - weight_decay (float) : Weight decay rate for neural network weights and bias
         """
-        
         for layer in self.layers:
             layer.set_optimiser(optimiser, learning_rate)
         
@@ -126,10 +134,10 @@ class MLP:
             for j in range(0, MiniBatches.no_of_batches): #for each batch - dont need this coz batches are randomised!
                 X_minibatch = MiniBatches.batches_x[j]
                 y_minibatch = MiniBatches.batches_y[j]
-                loss = np.zeros((MiniBatches.batch_size))
-                delta_minibatch = np.zeros((MiniBatches.batch_size, 10))
                 
                 ######## Update to use vectorized implementation ########
+                # loss = np.zeros((MiniBatches.batch_size))
+                # delta_minibatch = np.zeros((MiniBatches.batch_size, 10))
                 # for i in range(0, MiniBatches.batch_size): # for all in batch
                 #    y_hat = self.forward(X_minibatch[i], train=True) # apply forward pass (training mode for dropout)
                 #    loss[i], delta_minibatch[i] = self.criterion_CrossEL(y_minibatch[i], y_hat)
@@ -150,19 +158,20 @@ class MLP:
             # Calculate the validation loss if validation data is provided
             if X_val is not None and y_val is not None:
                 val_pred = self.predict(X_val)
-                val_loss = np.mean([self.criterion_CrossEL(y_val[i], val_pred[i])[0] for i in range(len(X_val))])
+                val_loss = self.criterion_CrossEL_Batch(y_val, val_pred)[0]
+                # val_loss = np.mean([self.criterion_CrossEL(y_val[i], val_pred[i])[0] for i in range(len(X_val))])
                 validation_loss[k] = val_loss
                 
                 # Check for early stopping
                 if early_stopping is not None:
-                    stop_early(val_loss)
+                    stop_early(val_loss, k)
                     if stop_early.should_stop:
-                        print(f"Early stopping at epoch {k+1}, validation loss: {val_loss:.5f}, best validation loss: {stop_early.best_score:.5f}")
+                        print(f"\tearly stopping at ep.{k+1}\t train loss: {epoch_loss[k]:.5f}\t val loss: {val_loss:.5f}\t best val loss: {stop_early.best_score:.5f}")
                         break
                 
-                print(f"Epoch {k+1}/{epochs}, Train loss: {epoch_loss[k]:.5f}, Val loss: {val_loss:.5f}")
+                # print(f"epoch: {k+1}/{epochs}\t train loss: {epoch_loss[k]:.5f}\t val loss: {val_loss:.5f}")
             else:
-                print(f"Epoch {k+1}/{epochs}, Train loss: {epoch_loss[k]:.5f}")
+                print(f"epoch: {k+1}/{epochs}\t train loss: {epoch_loss[k]:.5f}")
         
         if validation_loss is not None:
             if early_stopping is not None and stop_early.should_stop:
@@ -172,13 +181,12 @@ class MLP:
         else:
             return epoch_loss, None, None
 
-        return epoch_loss, validation_loss if validation_loss is not None else None
-
     def predict(self, x):
         x = np.array(x)
-        output = np.zeros((x.shape[0],10))
-        for i in range(len(x)):
-            output[i] = self.forward(x[i], train=False) # dropout off during inference
+        # output = np.zeros((x.shape[0],10))
+        # for i in range(len(x)):
+        #     output[i] = self.forward(x[i], train=False) # dropout off during inference
+        output = self.forward(x, train=False)
         return np.array(output)
     
     
@@ -197,7 +205,7 @@ class MLP:
             self.epochs_without_improvement = 0
             self.should_stop = False
 
-        def __call__(self, current_val_loss):
+        def __call__(self, current_val_loss, epoch):
             """
             Call method to update the early stopping logic.
             Parameters:
@@ -210,3 +218,6 @@ class MLP:
                 self.epochs_without_improvement += 1
                 if self.epochs_without_improvement >= self.patience:
                     self.should_stop = True
+            # Early stop for high validation loss
+            # if epoch > 20 and current_val_loss >= 2 and self.best_score >= 2:
+            #     self.should_stop = True

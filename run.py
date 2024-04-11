@@ -20,16 +20,16 @@ TRAINING_SIZE = 40000
 np.random.seed(0)
 
 SETUP = {
-    'epochs': 5,
-    'lr': 0.001,
-    'bn': False,
-    'batch_size': 32,
-    'dropout_rate': [0, 0.2, 0.1, 0], # dropout rate for each layer: eg. [0.1, 0.2, 0.4, 0]
+    'epochs': 15,
+    'lr': 0.01,
+    'bn': True,
+    'batch_size': 16,
+    'dropout_rate': [0.05, 0.2, 0.2, 0], # dropout rate for each layer: eg. [0.1, 0.2, 0.4, 0]
     'hidden_layers': [128, 64, 32, 10],
     'activations': [None, 'ReLU', 'ReLU', 'softmax'],
     'input_size': 128,
     'weight_decay': 0,
-    'optimiser': 'Adam',
+    'optimiser': 'Momentum', # 'Adam', 'Momentum', None for normal SGD
     'early_stopping': (10, 0.001)
 }
 #Issue, how to allow users to specific params for adams, momentum etc
@@ -60,34 +60,30 @@ nn = MLP(SETUP['hidden_layers'], SETUP['activations'], SETUP['bn'], SETUP['weigh
 # Start timer for training
 start = time.time()
 print('Training model...')
+# Catch output from fit function and don't print to terminal, but save to file
+# 
 CEL = nn.fit(input_training, labels_training, input_val, labels_val, learning_rate=SETUP['lr'], epochs=SETUP['epochs'], batch_size=SETUP['batch_size'], optimiser=SETUP['optimiser'], early_stopping=SETUP['early_stopping'])
+
+
 
 # End timer for training
 end = time.time()
 print(f'Training took {end - start} seconds')
 
-print(CEL)
-
-
 ###### Results ######
 PRINT_RESULTS = True
 PRINT_CONFUSION_MATRIX = False
+print('Testing model...')
 
 ### Training performance ###
 # Training accuracy
 output_train = nn.predict(input_training)
-correct_train_count = 0
-for index, array in enumerate(output_train):
-    if np.argmax(array) == np.argmax(labels_training[index]): #the largest val in the vector indicates what class its predicting.
-        correct_train_count += 1
-# print('Train accuracy:', correct_train_count/TRAINING_SIZE) #train accuracy
+correct_train_count = np.sum(np.argmax(output_train, axis=1) == np.argmax(labels_training, axis=1))
+# correct_train_count = 0
+# for index, array in enumerate(output_train):
+    # if np.argmax(array) == np.argmax(labels_training[index]): #the largest val in the vector indicates what class its predicting.
+        # correct_train_count += 1
 
-# Confusion matrix for the training data
-confusion_matrix_train = np.zeros((10,10))
-for index, array in enumerate(output_train):
-    predicted = np.argmax(array)
-    actual = np.argmax(labels_training[index])
-    confusion_matrix_train[actual][predicted] += 1
 
 ### Test performance ###
 input_test = np.load('Assignment1-Dataset/test_data.npy') #Load datasets
@@ -98,30 +94,34 @@ for index, label in enumerate(labels_test):
 
 # Test accuracy
 output_test = nn.predict(input_test)
-correct_test_count = 0
-for index, array in enumerate(output_test):
-    if np.argmax(array) == np.argmax(test_one_hot_labels[index]):
-        correct_test_count += 1
-# print('Test accuracy:', correct_test_count/10000) #test accuracy
+correct_test_count = np.sum(np.argmax(output_test, axis=1) == np.argmax(test_one_hot_labels, axis=1))
+# correct_test_count = 0
+# for index, array in enumerate(output_test):
+#     if np.argmax(array) == np.argmax(test_one_hot_labels[index]):
+#         correct_test_count += 1
 
-# Confusion matrix for the test data
-confusion_matrix_test = np.zeros((10,10))
-for index, array in enumerate(output_test):
-    predicted = np.argmax(array)
-    actual = np.argmax(test_one_hot_labels[index])
-    confusion_matrix_test[actual][predicted] += 1
-   
-   
+
 if PRINT_RESULTS:
     print('Results from setup:')
     print(SETUP)
     # Print confusion matrix as a table and integers
     if PRINT_CONFUSION_MATRIX:
+        # Confusion matrix for the training data
+        confusion_matrix_train = np.zeros((10,10))
+        for index, array in enumerate(output_train):
+            predicted = np.argmax(array)
+            actual = np.argmax(labels_training[index])
+            confusion_matrix_train[actual][predicted] += 1
+        # Confusion matrix for the test data
+        confusion_matrix_test = np.zeros((10,10))
+        for index, array in enumerate(output_test):
+            predicted = np.argmax(array)
+            actual = np.argmax(test_one_hot_labels[index])
+            confusion_matrix_test[actual][predicted] += 1
         print('\nConfusion matrix for train data:')
         print(pd.DataFrame(confusion_matrix_train.astype(int)))
         print('\nConfusion matrix for test data:')
         print(pd.DataFrame(confusion_matrix_test.astype(int)))
 
-
-print(f'Train accuracy: {correct_train_count/TRAINING_SIZE} (count {correct_train_count} of {TRAINING_SIZE})') # train accuracy
-print(f'Test accuracy: {correct_test_count/10000} (count {correct_test_count} of {10000})') # test accuracy
+print(f'Train accuracy:\t{correct_train_count/TRAINING_SIZE} ({correct_train_count} of {TRAINING_SIZE})') # train accuracy
+print(f'Test accuracy:\t{correct_test_count/10000} ({correct_test_count} of {10000})') # test accuracy
