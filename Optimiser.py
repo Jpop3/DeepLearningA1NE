@@ -84,13 +84,13 @@ class AdamOptimiser(Optimiser):
 
     def update(self, layer_grad):
         self.update_params(layer_grad)
-        return self.lr * self.m_hat / (np.sqrt(self.v_hat + self.epsilon)) # step 4
+        return self.lr * self.m_hat / (np.sqrt(self.v_hat + self.epsilon))
     
     def update_params(self, layer_grad):
         self.grad = layer_grad
         self.t += 1
-        self.m = self.beta1 * self.m + (1 - self.beta1) * self.grad # step 1
-        self.v = self.beta2 * self.v + (1 - self.beta2) * (self.grad ** 2) # step 2
-        self.m_hat = self.m / (1 - self.beta1 ** self.t) # step 3
-        self.v_hat = self.v / (1 - self.beta2 ** self.t) # step 3
+        self.m = self.beta1 * self.m + (1 - self.beta1) * self.grad
+        self.v = self.beta2 * self.v + (1 - self.beta2) * (self.grad ** 2)
+        self.m_hat = self.m / (1 - self.beta1 ** self.t)
+        self.v_hat = self.v / (1 - self.beta2 ** self.t)
         return
