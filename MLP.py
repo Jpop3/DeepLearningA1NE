@@ -176,7 +176,7 @@ class MLP:
                 if verbose:
                     print(f"epoch: {k+1}/{epochs}\t train loss: {epoch_loss[k]:.5f}")
         
-        if validation_loss is not None:
+        if X_val is not None and y_val is not None and validation_loss is not None:
             if early_stopping is not None and stop_early.should_stop:
                 return epoch_loss[:k+1], validation_loss[:k+1], k+1
             else:

@@ -1,0 +1,10 @@
+{
+    "ablation_dict": {
+        "batch_size": [2, 4, 8, 32, 64],
+        "weight_decay": [0.0001, 0.001, 0.005, 0.01],
+        "dropout_rate": [[0, 0.1, 0.1, 0], [0.05, 0.2, 0.2, 0], [0.1, 0.3, 0.3, 0], [0.2, 0.4, 0.3, 0]],
+        "optimiser": ["SGD", "Momentum"],
+        "bn": [1],
+        "activations": [["None", "tanh", "tanh", "softmax"], ["None", "ReLU", "tanh", "softmax"], ["None", "tanh", "ReLU", "softmax"]]
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "ablation_dict": {
+        "weight_decay": [0.005, 0.01, 0.02, 0.05]
+    }
+}

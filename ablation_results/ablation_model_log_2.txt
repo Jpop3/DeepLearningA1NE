@@ -8,8 +8,8 @@
 ## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 2, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [10, 0.001]}
 ## Results (115.63381814956665s) avg val accuracy: 0.46670000000000006 - {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 2, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [10, 0.001]}
 
-## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [10, 0.001]}
-## Results (52.58699941635132s) avg val accuracy: 0.43513999999999997 - {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [10, 0.001]}
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 8, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [10, 0.001]}
+## Results (26.640315532684326s) avg val accuracy: 0.41007999999999994
 
 ## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 16, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [10, 0.001]}
 ## Results (11.0s) avg val accuracy: 0.3527 - {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 16, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [10, 0.001]}

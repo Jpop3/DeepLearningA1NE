@@ -1,0 +1,60 @@
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (57.25225639343262s) avg val accuracy: 0.44652000000000003
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 1, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (189.34957361221313s) avg val accuracy: 0.4672600000000001
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 2, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (106.90177464485168s) avg val accuracy: 0.4686800000000001
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 8, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (36.754886865615845s) avg val accuracy: 0.40784000000000004
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 16, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (22.582558155059814s) avg val accuracy: 0.35734
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 32, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (15.637285709381104s) avg val accuracy: 0.3391
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 64, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (12.815171241760254s) avg val accuracy: 0.3107399999999999
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0.0001, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (58.17601418495178s) avg val accuracy: 0.44656
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0.001, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (58.72286605834961s) avg val accuracy: 0.44638
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0.005, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (59.8639235496521s) avg val accuracy: 0.44838000000000006
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0.01, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (57.56335639953613s) avg val accuracy: 0.44767999999999997
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0.1, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (62.615397453308105s) avg val accuracy: 0.4447400000000001
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0.05, 0.2, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (67.21354031562805s) avg val accuracy: 0.4508
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0.1, 0.3, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (66.22408890724182s) avg val accuracy: 0.44542000000000004
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0.2, 0.4, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (65.46513676643372s) avg val accuracy: 0.44256
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'Adam', 'early_stopping': [50, 0.001]}
+## Results (93.16327548027039s) avg val accuracy: 0.44356
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'Momentum', 'early_stopping': [50, 0.001]}
+## Results (63.375776290893555s) avg val accuracy: 0.25749999999999995
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 1, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'ReLU', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (147.45698070526123s) avg val accuracy: 0.40034000000000003
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'logistic', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (57.80556607246399s) avg val accuracy: 0.41656000000000004
+
+## Running model {'epochs': 50, 'lr': 0.001, 'bn': 0, 'batch_size': 4, 'dropout_rate': [0, 0, 0], 'hidden_layers': [128, 32, 10], 'activations': ['None', 'tanh', 'softmax'], 'input_size': 128, 'weight_decay': 0, 'optimiser': 'SGD', 'early_stopping': [50, 0.001]}
+## Results (56.819026947021484s) avg val accuracy: 0.43454

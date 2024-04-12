@@ -24,7 +24,7 @@ def class_to_one_hot(class_label, num_classes):
     return one_hot
 
 
-TRAINING_SIZE = 40000
+TRAINING_SIZE = 50000 # 40000 for training, 10000 for validation
 # Set numpy seed for reproducibility
 np.random.seed(0)
 
@@ -71,7 +71,7 @@ nn = MLP(config['SETUP']['hidden_layers'], config['SETUP']['activations'],
 # Start timer for training
 start = time.time()
 print('Training model...')
-CEL = nn.fit(input_training, labels_training, input_val, labels_val, 
+CEL = nn.fit(input_training, labels_training, None, None, 
              learning_rate=config['SETUP']['lr'], 
              epochs=config['SETUP']['epochs'], 
              batch_size=config['SETUP']['batch_size'], 
@@ -133,6 +133,10 @@ print(f'Train accuracy: {correct_train_count/TRAINING_SIZE} (count {correct_trai
 # print(f'Test accuracy: {correct_test_count/10000} (count {correct_test_count} of {10000})') # test accuracy
 
 # Save the trained MLP
-model_pkl_file = "MLP_classifier.pkl"  
-with open(model_pkl_file, 'wb') as file:  
+if len(sys.argv) >= 3:
+    model_pkl_file = sys.argv[2]
+else:
+    model_pkl_file = "MLP_classifier.pkl"
+# model_pkl_file = "MLP_classifier.pkl"  
+with open(model_pkl_file, 'wb') as file:
     pickle.dump(nn, file)
